@@ -1,0 +1,141 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+\documentclass[11pt,twoside]{book}
+
+\usepackage{epigraph}
+\usepackage{etoolbox}
+\usepackage{titlesec}
+
+\usepackage{makeidx}
+\makeindex
+
+\usepackage{needspace}
+\usepackage{fontspec}
+\usepackage{xunicode} % for real tildes with \textasciitilde
+\usepackage{xltxtra} % for xelatex logo
+\setmainfont[Renderer=ICU,Mapping=tex-text]{Charis SIL}
+\newcommand{\TC}[1]{{\tradchinesefont #1}}
+\newcommand{\SC}[1]{{\simpchinesefont #1}}
+\newcommand{\STEDTU}[1]{{\stedtfont #1}}
+
+\usepackage{fullpage}
+\usepackage{parskip}
+%\usepackage[toc]{multitoc}
+\usepackage{supertabular,ltxtable,booktabs}
+\setcounter{LTchunksize}{600} % use more memory for fewer compiles
+% \usepackage{graphicx}
+\usepackage[export]{adjustbox} % loads also graphicx
+\usepackage{float}
+% \usepackage{microtype} % only works in pdftex, which we are not using...
+\usepackage{tablefootnote}
+\usepackage{array} % use array and ragged2e for raggedright inside tables
+% \usepackage[document,raggedrightboxes]{ragged2e}
+% \setlength{\RaggedRightRightskip}{0pt plus 3em} % must be defined after fonts are loaded
+\usepackage[yyyymmdd,hhmmss]{datetime}
+
+\raggedbottom
+
+\usepackage{layout}
+
+\usepackage{fancyhdr}
+
+\title{Window to a Vanished World:\\Lahu Texts from the 1960’s\\--DRAFT--}
+\author{James A. Matisoff}
+%%%%%% the following line is  for use in master.tt
+%%%% \author{[% author %]}
+\date{2014}
+\usepackage[bookmarks]{hyperref}
+\hypersetup{%
+        pdfborder={0 0 1},
+        pdfborderstyle={/S/U/W 1}, % make links underlined (instead of surrounded by red boxes)
+        pdftitle = {Window to a Vanished World}, 
+        pdfauthor = {\textcopyright\ The Regents of the University of California}, 
+}
+
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+%\patchcmd{\chapter}{}{}{}{}
+\makeatother
+
+\usepackage{covington}
+\usepackage{acronym}
+\usepackage{natbib}
+\usepackage{fix-cm}
+\usepackage{lettrine}
+
+\setlength{\headsep}{10pt}
+
+\titleformat{\chapter}[hang]{\Large\bfseries}{\thechapter}{10pt}{\Large\bfseries}
+
+\pagestyle{fancy}
+ 
+\fancyhead{}
+
+\renewcommand*{\sectionmark}[1]{ \markright{#1} }
+\renewcommand*{\chaptermark}[1]{ \markboth{#1}{} }
+
+\fancyhead[RE]{\large{Window to a Vanished World: Lahu Texts from the 1960’s} \vspace{0.5em}}
+\fancyhead[LO]{\large{} \vspace{0.5em}}
+
+\fancyhead[RO]{\large{\leftmark} \vspace{0.5em}}
+\fancyhead[LE]{\large{\rightmark} \vspace{0.5em}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\lfoot{}
+\cfoot{\thepage}
+\rfoot{}
+
+% citation aliases
+\defcitealias{STC}{STC}
+\defcitealias{JAM-HPTB}{HPTB}
+\defcitealias{JAM-TBRS}{TBRS}
+\defcitealias{JAM-VSTB}{VSTB}
+
+% packages for drawing trees
+\usepackage{tikz}
+\usepackage{tikz-qtree}
+
+% package for enhancing lists
+\usepackage[shortlabels]{enumitem}
+
+\begin{document}
+
+%\layout
+%\the\textwidth
+%
+%\the\columnwidth
+%
+%\the\columnsep
+
+\setcounter{secnumdepth}{0} % don't number sections, just chapters
+
+\frontmatter
+
+\include{halftitle}
+\maketitle
+\include{copyright}
+
+\pdfbookmark[0]{Table of Contents}{TOC}
+\tableofcontents
+
+\include{introduction}
+\thispagestyle{empty}
+\cleardoublepage
+
+\mainmatter
+\pdfbookmark[0]{Window to a Vanished World}{TOC}
+
+% insert includes here
+
+\cleardoublepage
+
+\backmatter
+\fancyhead[LE]{\large{References} \vspace{0.5em}}
+\fancyhead[RO]{\large{References} \vspace{0.5em}}
+\bibliographystyle{authordate1}
+\renewcommand{\bibname}{References}
+\bibliography{stedtreferences}
+\addcontentsline{toc}{part}{References}
+
+\end{document}

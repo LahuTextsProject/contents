@@ -1,0 +1,32 @@
+The files in this directory support the production of Jim's
+
+Window to a Vanished World:
+Preservation and Analysis of Lahu Texts from the 1960's
+
+This is a provisional title, of course!
+
+To make the PDF, set up the environment:
+
+XeLaTeX, aka TeXLive
+SIL Charis
+
+Then type:
+
+    ./makeLahuTexts.sh 4testLahuTexts.xml
+
+in a terminal window.
+
+(all the work occurs in the /tex directory, the contents of 
+which can be removed, and should certainly not be check in to svn!)
+
+There is a "transducer testing" script, invoked as follows:
+
+   python test.py
+
+which reads the file named "lahu_writing.txt" and output the results of
+transduction to the console.
+
+or, if you have a "full XML dump" in the "generic XML format", try that.
+
+JBL 7/23/14
+

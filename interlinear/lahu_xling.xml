@@ -1,0 +1,2839 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE lingPaper PUBLIC   "-//XMLmind//DTD XLingPap//EN" "XLingPap.dtd">
+<lingPaper><frontMatter><title>(1) Remarks on the Lahu</title><author>[Insert author's name here]</author></frontMatter><section1 id="s1"><secTitle>Interlinear text</secTitle>
+  
+    
+    
+      
+        
+          <p>paragraph 1</p><example num="x1"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">Lâhū-yâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Lahu people</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̀-lɔn</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">about</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 2</p><example num="x2"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">chi-bə̀ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.time </item>
+                    <item type="gls" lang="en">now</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Lâhū-yâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Lahu people</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Gen</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̀-lɔn</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">about</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">a-cí</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">a little</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qôʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">say</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mā</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">teach</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">Bene Prt</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">gâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">Des</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Decl.Aff</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 3</p><example num="x3"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">Lâhū-yâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Lahu people</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qôʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">say</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ̀</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">Top</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ô</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.loc </item>
+                    <item type="gls" lang="en">there</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">thâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Tem Prt</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.loc </item>
+                    <item type="gls" lang="en">here</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Thây</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Thailand</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">country</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">Cont</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Rel</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">human</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">hêʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">be true</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 4</p><example num="x4"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">Man mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">N.place </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">Cont</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Rel</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">human</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Decl.Aff</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 5</p><example num="x5"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">qhe</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">à-thòʔ-ma</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron.intg </item>
+                    <item type="gls" lang="en">what</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.loc </item>
+                    <item type="gls" lang="en">here</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Thây</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Thailand</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">country</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ca</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">v.V </item>
+                    <item type="gls" lang="en">seek to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">Cont</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">le</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Qm</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qôʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">say</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qo</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">if</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">,</item>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">nɔ̀-hɨ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">you (pl)</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">šī</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">know</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhe-lê</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Decl.Aff</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 6</p><example num="x6"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">Man mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">N.place </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ̀</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">Top</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chi-bə̀ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.time </item>
+                    <item type="gls" lang="en">now</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂-ša</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V+Vv </item>
+                    <item type="gls" lang="en">well; healthy; free from care</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tù</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v-nom </item>
+                    <item type="gls" lang="en">Nom.purp</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Rel</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">country</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">hêʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">be true</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">o</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Emph</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 7</p><example num="x7"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">ô</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.loc </item>
+                    <item type="gls" lang="en">there</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">thâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Tem Prt</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhe</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">le</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Qm</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">a-šu</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">who</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tê g̈â</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">Q </item>
+                    <item type="gls" lang="en">one person</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">le-le</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">B.n </item>
+                    <item type="gls" lang="en">each</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yɔ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">third person; he; she</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qha</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">all</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">dɔ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">think</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhe-lê</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qha</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">all</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhe-lê</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">g̈a</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">v.V </item>
+                    <item type="gls" lang="en">get to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">hêʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">be true</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">o</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Emph</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 8</p><example num="x8"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">chi</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Dem </item>
+                    <item type="gls" lang="en">this</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Hɛ̂ʔ-pā</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">China</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ni</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">look</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Gen</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̀-lî</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">custom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̀-ší</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">heritage</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ca</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">v.V </item>
+                    <item type="gls" lang="en">seek to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tɔ̂ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">come out</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">and</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">human</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tê g̈â</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">Q </item>
+                    <item type="gls" lang="en">one person</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">le-le</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">B.n </item>
+                    <item type="gls" lang="en">each</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yɔ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">he</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qha</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">all</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">gâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">Des</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhe-lê</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">phɛ̀ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">be able</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 9</p><example num="x9"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">qhe</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yɔ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">he</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">gâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">Des</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhe-lê</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">g̈a</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">v.V </item>
+                    <item type="gls" lang="en">get to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qo</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">if</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">human</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qôʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">say</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Rel</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tê</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Num </item>
+                    <item type="gls" lang="en">one</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">cə̀</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Clf </item>
+                    <item type="gls" lang="en">thing</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ̀</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">Top</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ni-ma</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">heart</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ha</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Num </item>
+                    <item type="gls" lang="en">hundred</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ̀</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">Top</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">hêʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">be true</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 10</p><example num="x10"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">qhe-te-lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Conj </item>
+                    <item type="gls" lang="en">thereupon; then; after that</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">nɔ̀-hɨ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">you (pl)</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.loc </item>
+                    <item type="gls" lang="en">here</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kà</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Locative</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">g̈a</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">v.V </item>
+                    <item type="gls" lang="en">get to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">phɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">flee</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en" />
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">hɛ́</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">maybe/possible</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ŋà</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">I</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">dɔ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">think</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Decl.Aff</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 11</p><example num="x11"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">chi</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Dem </item>
+                    <item type="gls" lang="en">this</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Man mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">N.place </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">Cont</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Rel</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Lâhū-yâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Lahu people</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tê</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Num </item>
+                    <item type="gls" lang="en">one</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">pa</item>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ô</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.loc </item>
+                    <item type="gls" lang="en">there</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">thâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Tem Prt</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qo</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">topicalizer</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Man mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">N.place </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">Cont</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Rel</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">human</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tɛ̀-tɛ̀</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">M.pfx </item>
+                    <item type="gls" lang="en">really; truly</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">hêʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">be true</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 12</p><example num="x12"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">Hɛ̂ʔ-pā</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">China</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">country</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Yūnān</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Yunnan</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">country</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qôʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">say</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kɨ̀</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v-nom </item>
+                    <item type="gls" lang="en">Nom.loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">Cont</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Decl.Aff</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 13</p><example num="x13"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">à-thòʔ-ma</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron.intg </item>
+                    <item type="gls" lang="en">what</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">and</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chi</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Dem </item>
+                    <item type="gls" lang="en">this</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Man mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">N.place </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">Cont</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">le</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Qm</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qôʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">say</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qo</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">if</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">,</item>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yɔ̂-hɨ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">them</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ô</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.loc </item>
+                    <item type="gls" lang="en">there</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">thâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Tem Prt</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">nî</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Num </item>
+                    <item type="gls" lang="en">two</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ha</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Num </item>
+                    <item type="gls" lang="en">hundred</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhɔ̀ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Clf </item>
+                    <item type="gls" lang="en">year</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">šɛ̂ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Num </item>
+                    <item type="gls" lang="en">three</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ha</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Num </item>
+                    <item type="gls" lang="en">hundred</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhɔ̀ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Clf </item>
+                    <item type="gls" lang="en">year</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhe</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">thâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Tem Prt</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Hɛ̂ʔ-pā</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">China</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">with</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">dàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">mutual/reciprocal action</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">and</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Man mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">N.place </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">phɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">flee</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">descend</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 14</p><example num="x14"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">Man mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">N.place </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">phɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">flee</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">descend</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">thâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Tem Prt</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yɔ̂-hɨ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">them</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tùʔ-khān</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">suffer</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">jâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">very</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tɛ̀-tɛ̀</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">M.pfx </item>
+                    <item type="gls" lang="en">really; truly</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Decl.Aff</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 15</p><example num="x15"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">qhe</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Man mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">N.place </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chɛ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.v </item>
+                    <item type="gls" lang="en">Cont</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">á</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">Perf</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">and</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V.adj </item>
+                    <item type="gls" lang="en">long time</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Clf </item>
+                    <item type="gls" lang="en">grade (school)</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qo</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">if</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Man</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">acôyàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">government</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chi</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Dem </item>
+                    <item type="gls" lang="en">this</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Man</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Burma</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lâthâbân</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">government</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chi</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Dem </item>
+                    <item type="gls" lang="en">this</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Hɛ̂ʔ-pā</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">China</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Gen</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̀-lî</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">custom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qɔ̀ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">v.V </item>
+                    <item type="gls" lang="en">do again; re-do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tɔ̂ʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">emerge; come/go out</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">and</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Lâhū</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Lahu</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">chi</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Dem </item>
+                    <item type="gls" lang="en">this</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Pî-chɔ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Eth </item>
+                    <item type="gls" lang="en">Shan</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qhe-lê</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N.ext </item>
+                    <item type="gls" lang="en">like</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Thây</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Thailand</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">country</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">phɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">flee</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">descend</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Decl.Aff</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 16</p><example num="x16"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">Thây</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Thailand</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mû-mì</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">country</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ɔ̄</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.n </item>
+                    <item type="gls" lang="en">Loc</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Lâhū</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">Lahu</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Līšɔ̂</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Eth </item>
+                    <item type="gls" lang="en">Lisu</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">and</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">Hɛ̂ʔ-pā</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">N </item>
+                    <item type="gls" lang="en">China</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tê g̈ɨ̀</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">Q </item>
+                    <item type="gls" lang="en">plural</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">kàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">even</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">phɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">flee</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">descend</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">mâ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Adv </item>
+                    <item type="gls" lang="en">Neg</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">à</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">Ass</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+      
+        
+          <p>paragraph 17</p><example num="x17"><interlinear><phrase>
+            
+            <words>
+              <iword>
+                <item type="txt" lang="en">à-thòʔ-ma</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron.intg </item>
+                    <item type="gls" lang="en">what</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">te</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">do</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">lɛ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">and</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yɔ̂-hɨ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">Pron </item>
+                    <item type="gls" lang="en">them</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">phɔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">flee</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yàʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">descend</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">la</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.v </item>
+                    <item type="gls" lang="en">come to</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">ve</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.univ </item>
+                    <item type="gls" lang="en">Nom</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">le</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Qm</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qôʔ</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">V </item>
+                    <item type="gls" lang="en">say</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qo</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.unf </item>
+                    <item type="gls" lang="en">if</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">tê g̈â</item>
+                <morphemes><morphset>
+                  <morph type="phrase">
+                    <item type="msa" lang="en">Q </item>
+                    <item type="gls" lang="en">one person</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">le-le</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">B.n </item>
+                    <item type="gls" lang="en">each</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">qha-šū</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">AE </item>
+                    <item type="gls" lang="en">in the same way</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="txt" lang="en">yò</item>
+                <morphemes><morphset>
+                  <morph type="stem">
+                    <item type="msa" lang="en">P.uf </item>
+                    <item type="gls" lang="en">Decl.Aff</item>
+                  </morph>
+                </morphset></morphemes>
+              </iword>
+              <iword>
+                <item type="punct" lang="en">.</item>
+              </iword>
+            </words>
+            
+          </phrase></interlinear></example>
+        
+      
+    
+    
+      
+    
+  
+</section1><backMatter><endnotes /><references /></backMatter><languages><language id="en" font-family="Times New Roman" name="vernacular" /></languages><types><type id="tHomographNumber" font-size="65%" cssSpecial="vertical-align:sub" xsl-foSpecial="baseline-shift='sub'" /><type id="tVariantTypes" /></types></lingPaper>
