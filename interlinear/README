@@ -28,5 +28,12 @@ transduction to the console.
 
 or, if you have a "full XML dump" in the "generic XML format", try that.
 
-JBL 7/23/14
+Other details:
+
+ grep "title" lahutexts.xml | perl -pe 's/^.*?>(.*?)<.*/\1/' > flextitles.txt
+ 
+ (this makes a list of all the titles in the FLEX xml dump)
+
+
+JBL 7/23/14, 5/12/15
 
