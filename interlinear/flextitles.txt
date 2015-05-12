@@ -47,8 +47,8 @@
 (34) Farting and Playing Tag
 (35) In Unity there is strength
 (37) The Song of the Reconciliation of the Brother and Sister
-(38) The Swindler and the Merchant
-(39) The Swindler's Spear and the Merchants
+(38) The Trickster and the Merchant
+(39) The Trickster’s Spear and the Merchants
 (4) Elicitation of individual vocabulary items
 (40) The Trickster and the Village Women
 (46a) Welcome to the Village of Shatudui
@@ -90,7 +90,7 @@
 (9) Agriculture and Livelihood
 (90) Proverbs
 (91) Laying up Riches in Heaven
-(92) The Swindler and the Old Bonze
+(92) The Trickster and the Old Bonze
 (94) The Fingerless Lord
 (95) Further Adventures of the Trickster
 (96) The Little Crabs Who Walked zig-zag
