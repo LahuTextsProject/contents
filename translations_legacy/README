@@ -1,0 +1,3 @@
+ls | perl -ne 'chomp;$x=$_;tr/A-Z/a-z/;s/^(\d+)(\w?)(\_)/sprintf("\%03d",$1).$2."\_"/e;s/ +/_/g;print "cp \"$x\" \"../rtfs/$_\"\n" unless /\.doc/' > cpfiles.sh
+
+
