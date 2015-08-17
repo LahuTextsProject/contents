@@ -1,0 +1,27 @@
+Lahu text workflow:
+
+FLEx:
+  Major tasks:
+    Interlinearization:
+      Type up and interlinearize:
+        Walker texts (translations need to be typed up too)
+        Lahu bilingual humor texts (already translated: ##s 101, 102, 103, 105, 107a, 108, 110)
+      Interlinearize:
+        127 Founding a new village (text already in FLEx, but needs analyzed)
+      Do a second/third pass of interlinearization for all texts
+    Lexicon:
+      Mark all variation as free, not dialectal
+      Move senses to their own/other headwords where appropriate
+      Myriad other tasks
+    Grammar:
+      Clean up inconsistencies in form class designations?
+    Minor issues:
+      weird alphabetization (deal with via software? is there a FLEx-internal solution?)
+
+Translations:
+  Texify — can this be automated without grief?
+  Edit in github, not dropbox
+
+Software:
+  sequencer for texts
+  
