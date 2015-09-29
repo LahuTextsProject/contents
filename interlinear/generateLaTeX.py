@@ -25,7 +25,7 @@ offscale = 999
 for text in texts:
 
     # extract title info, add this info to our list of texts
-    title = text.find(".//item[@type='title']")
+    title = text.find(".//item")
     textnumbermatch = numberpattern.search(title.text)
     
     if textnumbermatch:
@@ -50,7 +50,7 @@ for text in texts:
     sentences = []
     for p in phrases:
         for s in p.findall('.//word/words'):
-            sentencenumber = s.find(".//item[@type='segnum']")
+            # sentencenumber = s.find(".//item[@type='segnum']")
             print >> O, "\\item\n"
             print >> O, "\glll ",
             BaptistSentence = ''
