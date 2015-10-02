@@ -4,14 +4,18 @@ FLEx:
   Major tasks:
     Interlinearization:
       Type up and interlinearize:
-        Walker texts (translations need to be typed up too)
-        Lahu bilingual humor texts (already translated: ##s 101, 102, 103, 105, 107a, 108, 110)
+        7 Walker texts (translations need to be typed up too)
+          Add hyphens where needed
+        About 10 Lahu bilingual humor texts (already translated: ##s 101, 102, 103, 105, 107a, 108, 110)
+          Black Lahu / Shan (6)
+          Black Lahu / Yellow Lahu (4)
       Interlinearize:
-        127 Founding a new village (text already in FLEx, but needs analyzed)
+        Complete! (90% as of 10/3)
       Do a second/third pass of interlinearization for all texts
     Lexicon:
       Mark all variation as free, not dialectal
       Move senses to their own/other headwords where appropriate
+      Implement correct Lahu collation (Ginny)
       Myriad other tasks
     Grammar:
       Clean up inconsistencies in form class designations?
@@ -19,9 +23,29 @@ FLEx:
       weird alphabetization (deal with via software? is there a FLEx-internal solution?)
 
 Translations:
+  Finish all translations
   Texify — can this be automated without grief?
-  Edit in github, not dropbox
+  Polish free translations (Susan can help)
+  Review and rework footnotes
+  Edit in github, not dropbox!
+  Integrate with rest of text
+  Create Lahu titles for all texts (Jim)
 
 Software:
-  sequencer for texts
+  sequencer for texts: genre and then within genre (requires updating Catalog)
+  incorporate translations
+  revise PDF output to be more compact
+  
+Catalog:
+  Update spreadsheet for genre and sequence with genre
+  Update status of text: status of translations, etc.
+  
+Bibliography:
+  Enter all citations, include in deliverables
+  
+Final Deliverables:
+  Interlinear Texts deployed on the web (@ Lacito? On a site by itself?)
+  Print version (only JAM's transcription)
+  Find a publisher
+  
   
