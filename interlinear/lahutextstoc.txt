@@ -178,4 +178,3 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 88	7	2	5_3	20:01	22:19	02:18	82a	The smoker and the non-smoker dispute a pipe	story	679-718	7		Y	[SEE 121]	Entered	No pauses from 81-83; cf. no. 121		679	718	39	1201.0	1339.0	x	82a	138.0	0.28
 93	3	2	6_1	13:23	18:00	04:37	86a	Hymn		122-164	19				Defer			122	164	42	803.0	1080.0	x		277.0	0.15
 94	3	2	6_1	18:01	24:27	06:26	86b	Sermon (cont'd)		164-224	x				Defer			164	224	60	1081.0	1467.0	x		386.0	0.16
-
