@@ -15,12 +15,11 @@ FLEx:
     Lexicon:
       Mark all variation as free, not dialectal
       Move senses to their own/other headwords where appropriate
-      Implement correct Lahu collation (Ginny)
       Myriad other tasks
     Grammar:
       Clean up inconsistencies in form class designations?
     Minor issues:
-      weird alphabetization (deal with via software? is there a FLEx-internal solution?)
+      Implement correct Lahu collation (Ginny) in Flex
 
 Translations:
   Finish all translations

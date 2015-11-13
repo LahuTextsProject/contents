@@ -21,7 +21,7 @@
 \usepackage{fullpage}
 \usepackage{parskip}
 %\usepackage[toc]{multitoc}
-\usepackage{supertabular,ltxtable,booktabs}
+%\usepackage{supertabular,ltxtable,booktabs}
 \setcounter{LTchunksize}{600} % use more memory for fewer compiles
 % \usepackage{graphicx}
 \usepackage[export]{adjustbox} % loads also graphicx
@@ -51,7 +51,7 @@
 }
 
 \makeatletter
-\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+%\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
 %\patchcmd{\chapter}{}{}{}{}
 \makeatother
 
@@ -106,7 +106,7 @@
 %
 %\the\columnsep
 
-\setcounter{secnumdepth}{0} % don't number sections, just chapters
+%\setcounter{secnumdepth}{0} % don't number sections, just chapters
 
 \frontmatter
 

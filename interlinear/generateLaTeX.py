@@ -85,7 +85,7 @@ for text in texts:
     # ok, let's parse each text and create the needed data structures
     # we create one output text for each input text
     OutLaTeX = codecs.open(outputfilename, 'w', 'utf-8')
-    print >> OutLaTeX, '\chapter{%s}' % titlestring
+    print >> OutLaTeX, '\section{%s}' % titlestring
     phrases = text.findall('.//phrases')
     print >> OutLaTeX, '\\begin{examples}'
     sentences = []
@@ -156,10 +156,14 @@ for text in texts:
 # write out the texts in order so they can be sucked in by
 # LaTex in order
 for part in structure:
-    print >> filestotex, '\part*{%s}' % part[0]
+    print >> filestotex, '\part{%s}' % part[0]
+    print "part %s" % part[0]
     for genre in part[1]:
-        print >> filestotex, '\section*{%s}' % genre[1]
+        print >> filestotex, '\chapter{%s}' % genre[1]
+        print "  chapter %s" % genre[1]
         for textnumber in sorted(listoffiles.keys()):
             if int(textnumber) == genre[0]:
                 print >> filestotex, '\include{%s}' % listoffiles[textnumber]
+                print "    %s " % textnumber
+
 

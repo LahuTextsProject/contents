@@ -33,9 +33,10 @@ STEPS TO CREATE THE FULL XML DUMP
 1. Select (highlight) Interlinear Text from Text & Words
 2. Select Export Interlinear from File menu
 3. Select Verifiable generic XML from the list of formats
-4. Select all texts by clicking twice on the No Genre checkbox in the Choose Text dialog
-5. Click Export
+4. Click Export
+5. Select all texts by clicking twice on the No Genre checkbox in the Choose Text dialog, Click OK
 6. Enter a filename, e.g. “lahutext20150707.xml”
+7. Click Save.
 
 (takes a while … a few minutes)
 
@@ -46,5 +47,5 @@ Other details:
  (this makes a list of all the titles in the FLEX xml dump)
 
 
-JBL, CAC 7/23/14, 5/12/15, 7/7/15
+JBL, CAC VD 7/23/14, 5/12/15, 7/7/15, 11/13/15
 

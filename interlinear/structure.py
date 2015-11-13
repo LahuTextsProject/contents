@@ -1,28 +1,21 @@
 structure = [
-    ["Part I. Lahu Daily Life in the 1960's", [
+    ["Lahu Daily Life in the 1960's", [
         [1, "Discussions of Serious Topics"],
         [2, "Lectures and Speeches (monologues)"],
-        [3, "Candid Conversations"],
-        [4, "Subsistence Activities (skits)"]
+        [3, "Subsistence Activities (skits)"]
     ]],
-    ["Part II. The Lahu Imagination", [
-        [5, "Etiological Myths: How Things Got This Way"],
-        [6, "Fairy Tales"],
-        [7, "Human Frailty: Stupidity, Ineptitude, Vice, Truculence"],
-        [8, "Picaresque Stories: Lovable Rascals"],
-        [9, "Jokes and Anecdotes"],
-        [10, "Verbal Humor: Interlingual Interference"],
-        [11, "Modern Songs"],
-        [12, "Fables and Edifying Tales"]
+    ["The Lahu Imagination", [
+        [4, "Myths and Fairy Tales"],
+        [5, "Fables and Edifying Tales"],
+        [6, "Human Frailties and Picaresque Stories"],
+        [7, "Verbal Humor: Interlingual Interference"],
     ]],
-    ["Part III. Lahu Aesthetic and Spiritual Life", [
-        [13, "Animist Religion"],
-        [14, "Traditional Poetry"],
-        [15, "Traditional Songs"],
-        [16, "Traditional Instrumental Music"],
-        [17, "Christian Sermons"],
-        [18, "Bible Readings"],
-        [19, "Christian Hymns"]
+    ["Lahu Aesthetic and Spiritual Life", [
+        [8, "Animist Religion"],
+        [9, "Traditional Love Songs"],
+        [10, "Modern Songs"],
+        [11, "Christian Hymns"],
+        [12, "Bible Readings and Christian Sermons"]
     ]]
 ]
 
