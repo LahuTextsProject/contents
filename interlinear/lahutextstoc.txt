@@ -27,7 +27,7 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 166	5	2	10_2	01:41	46	00:49	157	I'm feeling sad	monologue	011-017	2	10	Y	Y	157_im_feeling_sad.rtf 	Entered	y	Red Lahu; chanting style		11	17	6	101.0	0.0	x		49.0	0.12		
 22	1	2	2_1	10:16	13:30	03:14	23	Candid conversation about building a house and feasting		093-120	3	1	Y	Y	023_candid_conversation.rtf	Entered	y			93	120	27	616.0	810.0	x	23	194.0	0.14		
 23	1	2	2_1	13:31	22:30	08:59	24	Building a house and feasting	playlet	121-201	3	2	Y	Y	024_building_a_house.rtf 	Entered	y			121	201	80	811.0	1350.0	x	24	539.0	0.15		
-168	5	2	10_2	15:17	24:51	09:34	159	The Lahu agricultural cycle	discussion	154-240	3	3		Y	159_lahu_agricultral_cycle.rtf	Entered	y			154	240	86	917.0	1491.0	x		574.0	0.15		
+168	5	2	10_2	15:17	24:51	09:34	159	The Lahu agricultural cycle	discussion	154-240	3	3		Y	159_lahu_agricultural_cycle.rtf	Entered	y			154	240	86	917.0	1491.0	x		574.0	0.15		
 9	1	1	1_3	12:33	24:14	11:41	9	Agriculture and livelihood	discussion	334-413	3	4	Y	Y	009to10_agriculture_and_the_need_for_unity.rtf	Entered	y	Also Lh. fair copy	x	334	413	79	753.0	1454.0	x	9	701.0	0.11		
 69	4	2	4_1	12:13	17:59	05:46	65	Visiting the village's fields	monologue	116-184	3	5		Y	065_visiting_the_village_s_fields.rtf 	Entered	y			116	184	68	733.0	1079.0	x	65	346.0	0.20		
 164	4	1	10_1	18:30	20:32	02:02	156	Simple dialogue		828-876	3	6		Y	156_simple_dialogue.rtf	Entered	y	Red Lahu		828	876	48	1110.0	1232.0	x		122.0	0.39		

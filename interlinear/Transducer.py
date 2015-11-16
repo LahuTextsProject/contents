@@ -21,7 +21,7 @@ decompose = {'\xc9\x99': '\xc9\x99', '\xc5\x8d': 'o\xcc\x84', '\xc9\x9b': '\xc9\
              'a': 'a', 'c': 'c', 'b': 'b', '\xcc\x82': '\xcc\x82', 'd': 'd', 'g': 'g', 'f': 'f', 'i': 'i', 'h': 'h',
              'k': 'k', 'j': 'j', 'm': 'm', 'l': 'l', 'o': 'o', 'n': 'n', 'q': 'q', 'p': 'p', 'u': 'u', 't': 't',
              'v': 'v', '\xcc\x82\xca\x94': '\xcc\x82\xca\x94', 'qh': 'qh', '\xcc\x84': '\xcc\x84',
-             '-': '-', ',': ',', '.': '.', '"': '"', "'": "'",
+             '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":",
              'ch\xc9\xa8': 'ch\xc9\xa8'}
 
 baptist = {'ch': 'ch', 'a\xcc\x81w': 'ao\xc2\xaf', 'a\xcc\x81y': 'ai\xc2\xaf',
@@ -37,7 +37,7 @@ baptist = {'ch': 'ch', 'a\xcc\x81w': 'ao\xc2\xaf', 'a\xcc\x81y': 'ai\xc2\xaf',
            'w\xc9\x9b': 'aweh', 'phu': 'hpfuh', 'a': 'a', 'c': 'c', 'e': 'e', '\xcc\x80': '\xe1\xb5\xa5',
            '\xcc\x81': '\xc2\xaf', 'i': 'i', 'k': 'k', 'kh': 'hk', 'm': 'm', 'o': 'o', 'q': 'k\xe2\x80\x99',
            'u': 'uh',
-           '-': '-', ',': ',', '.': '.', '"': '"', "'": "'",
+           '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":",
            'y': 'y', '\xc4\xb1': 'i'}
 
 chinese = {'ch': 'ch', 'a\xcc\x81w': 'aoq', 'a\xcc\x81y': 'aiq', '\xcc\x80\xca\x94': 'r',
@@ -50,7 +50,7 @@ chinese = {'ch': 'ch', 'a\xcc\x81w': 'aoq', 'a\xcc\x81y': 'aiq', '\xcc\x80\xca\x
            'g': 'g', 'a\xcc\x80w': 'aol', '\xe2\x80\xa6': '\xe2\x80\xa6', 'a\xcc\x80y': 'ail', 'w\xc9\x9b': 'uie',
            'g\xcc\x88': 'x', 'c': 'c', 'e': 'e', '\xcc\x80': 'l', '\xcc\x81': 'q', 'i': 'i', 'k': 'k', 'kh': 'kh',
            'm': 'm', 'o': 'o', 'q': 'q', 'u': 'u', 'y': 'y', '\xc4\xb1': 'i',
-           '-': '-', ',': ',', '.': '.', '"': '"', "'": "'",
+           '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":",
            } #includes diphthongs
 
 
