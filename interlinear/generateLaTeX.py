@@ -24,7 +24,11 @@ def getTofCinfo(filename):
     try:
         TofCinfo = {}
         for row, values in enumerate(csvfile):
+            # skip header line
             if row == 0:
+                continue
+            # are we using this text?
+            if values[17] != 'y':
                 continue
             try:
                 TofCinfo[values[7]] = ["%s.%02d" % (values[11], int('0'+values[12])), values[15].replace('.rtf','').replace('.tex','').strip(), values[11]]
@@ -41,7 +45,12 @@ def getTofCinfo(filename):
     f.close()
     return TofCinfo
 
-
+def escape(str):
+    str = str.replace('&','\\&')
+    str = str.replace('#','\\#')
+    str = str.replace('_','\\_')
+    #str = str.replace('-','\\-')
+    return str
 
 numberpattern = re.compile('\((\d+)\) *(.*)')
 
@@ -102,10 +111,7 @@ for text in texts:
                         #form = codecs.encode(i.text,'utf8')
                         form = i.text
                         form = transduce(form,decompose)
-                        form = form.replace('&','\\&')
-                        form = form.replace('#','\\#')
-                        form = form.replace('_','\\_')
-                        #form = form.replace('-','\\-')
+                        form = escape(form)
                         BaptistSentence += ' %s' % transduce(form,baptist)
                         ChineseSentence += ' %s' % transduce(form,chinese)
             for level in ['txt', 'msa', 'gls']:
@@ -121,10 +127,8 @@ for text in texts:
                                 form = str(i.text)
                         elif i.attrib['type'] == level:
                             form = str(i.text)
-                        form = form.replace('&','\\&')
-                        form = form.replace('#','\\#')
-                        form = form.replace('_','\\_')
-                        #form = form.replace('-','\\-')
+                            form = re.sub(r'/.*$','',form)
+                        form = escape(form)
                         itemToOutput = ' {%s}' % form
                     print >> OutLaTeX, itemToOutput,
                 print >> OutLaTeX
@@ -135,11 +139,11 @@ for text in texts:
 
     print >> OutLaTeX, '\subsection*{%s}' % 'Chinese'
     for i,sentence in enumerate(sentences):
-        print >> OutLaTeX,  '[%s] %s \n' % (i+1, sentence[1])
+        print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[1].replace(' ,',',').replace(' .','.'))
 
     print >> OutLaTeX, '\subsection*{%s}' % 'Baptist'
     for i,sentence in enumerate(sentences):
-        print >> OutLaTeX,  '[%s] %s \n' % (i+1, sentence[0])
+        print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[0].replace(' ,',',').replace(' .','.'))
 
     if textnumber in TofCinfo:
         if TofCinfo[textnumber][1] != '':

@@ -1,10 +1,12 @@
-for f in `ls ../rtfs/*.rtf`
+rm ../t2/*
+cp ../rtfs/*.rtf ../t2
+for f in `ls ../t2/*.rtf`
 do
   rtf2latex2e $f
 done
-for f in `ls ../rtfs/*.tex`
+for f in `ls ../t2/*.tex`
 do
   r=$(basename "$f")
-  sed -n '/begin/,$p' $f | tail -n +2 | sed -n '/end{document}/q;p' | grep -v 'newpage' > ../transTeX/$r
+  sed -n '/begin/,$p' $f | tail -n +2 | sed -n '/end{document}/q;p' | grep -v 'newpage' | perl editTex.pl > ../transTeX/$r
   rm $f
 done
