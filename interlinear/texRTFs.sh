@@ -1,4 +1,5 @@
-rm ../t2/*
+rm -rf ../t2
+mkdir ../t2
 cp ../rtfs/*.rtf ../t2
 for f in `ls ../t2/*.rtf`
 do
@@ -10,3 +11,4 @@ do
   sed -n '/begin/,$p' $f | tail -n +2 | sed -n '/end{document}/q;p' | grep -v 'newpage' | python editTex.py > ../transTeX/$r
   #rm $f
 done
+rm -rf ../t2
