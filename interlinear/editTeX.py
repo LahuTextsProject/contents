@@ -12,6 +12,7 @@ for line in fileinput.input():
     line = line.replace('\texttt{"}', '"')
     line = re.sub(r'\@(.*?)\@', '_{\1}', line);
     line = line.replace('\Huge{}', '');
+    line = line.replace('\huge{}', '');
     if 'vspace' in line: continue
     if 'parindent' in line: continue
     if 'baselineskip' in line: continue
