@@ -11,7 +11,8 @@ def fixLine(line):
     
     line = line.strip()
     line = re.sub(r'\\texttt\{(.*?)\}', r'\1', line);
-    line = re.sub(r'\@(.*?)\@', '_{\1}', line);
+    line = re.sub(r'([A-Z])\@(.*?)\@', r'$\1_\2$', line);
+    line = re.sub(r'\@([a-z])\@(.*?)', r'$_{\1}\2$', line);
     line = line.replace('\Huge{}', '');
     line = line.replace('\huge{}', '');
 
@@ -64,8 +65,7 @@ addnote(footnote,footHash)
     
 for line in lineArray:
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
-    line = re.sub(r'(\[\d+\])\.', r'\.\1', line)
-    #line = re.sub(r'([\d+])', r'\1', line)
+    line = re.sub(r'(\[\d+\])\.', r'.\1', line)
     for fn in footHash:
         line = line.replace('[%s]' % fn, ("\\footnote{%s}" % footHash[fn]))
     print line
