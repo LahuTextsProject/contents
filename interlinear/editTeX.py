@@ -27,7 +27,9 @@ for line in fileinput.input():
     else:
         lineArray.append(line)
 for line in lineArray:
-    line = re.sub(r'([\d+])\.', '\.\1', line)
+    # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
+    line = re.sub(r'(\[\d+\])\.', r'\.\1', line)
+    #line = re.sub(r'([\d+])', r'\1', line)
     for fn in footHash:
         line = line.replace('[%s]' % fn, ("\\footnote{%s}" % footHash[fn]))
     print line
