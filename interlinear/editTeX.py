@@ -10,6 +10,8 @@ footnote_number_pattern = re.compile(r'^\[(\d+)\] *(.*)')
 def fixLine(line):
     
     line = line.strip()
+    line = re.sub(r'\\texttt\{"\}', r'``', line);
+    line = re.sub(r'\\texttt\{\'\}', r'`', line);
     line = re.sub(r'\\texttt\{(.*?)\}', r'\1', line);
     line = re.sub(r'([A-Z])\@(.*?)\@', r'$\1_\2$', line);
     line = re.sub(r'\@([a-z])\@(.*?)', r'$_{\1}\2$', line);
