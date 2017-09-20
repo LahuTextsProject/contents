@@ -1,3 +1,6 @@
+# Compiled output
+interlinear/tex/
+
 # Mac stuff to ignore
 .DS_Store
 
