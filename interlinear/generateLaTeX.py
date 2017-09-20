@@ -159,12 +159,12 @@ for text in texts:
 
 # write out the texts in order so they can be sucked in by
 # LaTex in order
-for part in structure:
+for partno, part  in enumerate(structure):
     print >> filestotex, '\part{%s}' % part[0]
-    print "part %s" % part[0]
-    for genre in part[1]:
+    print "part %s. %s" % (partno+1, part[0])
+    for chapterno, genre in enumerate(part[1]):
         print >> filestotex, '\chapter{%s}' % genre[1]
-        print "  chapter %s" % genre[1]
+        print "  chapter %s %s" % (chapterno+1, genre[1])
         for textnumber in sorted(listoffiles.keys()):
             if int(textnumber) == genre[0]:
                 print >> filestotex, '\include{%s}' % listoffiles[textnumber]

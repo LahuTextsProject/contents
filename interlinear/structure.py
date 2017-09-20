@@ -1,21 +1,25 @@
 structure = [
-    ["Lahu Daily Life in the 1960's", [
-        [1, "Discussions of Serious Topics"],
-        [2, "Lectures and Speeches (monologues)"],
-        [3, "Subsistence Activities (skits)"]
+    ['Lahu Daily Life in the 1960\'s', [
+        [1, 'Generalities'],
+        [2, 'Subsistence activities: Agriculture'],
+        [3, 'Subsistence activities: Hunting'],
+        [4, 'Subsistence activities: Fishing'],
+        [5, 'Lahu village life and customs'],
+        [6, 'Conversations']
     ]],
-    ["The Lahu Imagination", [
-        [4, "Myths and Fairy Tales"],
-        [5, "Fables and Edifying Tales"],
-        [6, "Human Frailties and Picaresque Stories"],
-        [7, "Verbal Humor: Interlingual Interference"],
+    ['The Lahu imagination', [
+        [7, 'Fables and edifying stories'],
+        [8, 'Myths and fairy tales'],
+        [8, 'Human frailty: silliness, stupidity, cowardice'],
+        [10, 'Lovable rascals'],
+        [11, 'Bilingual humor']
     ]],
-    ["Lahu Aesthetic and Spiritual Life", [
-        [8, "Animist Religion"],
-        [9, "Traditional Love Songs"],
-        [10, "Modern Songs"],
-        [11, "Christian Hymns"],
-        [12, "Bible Readings and Christian Sermons"]
+    ['Lahu spiritual and musical life', [
+        [12, 'Traditional "theo - animism"'],
+        [13, 'Traditional songs'],
+        [14, 'Modern secular songs'],
+        [15, 'Christian hymns'],
+        [16, 'Sermons and announcements in church']
     ]]
 ]
 
