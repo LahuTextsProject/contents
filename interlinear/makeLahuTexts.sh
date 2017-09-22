@@ -1,5 +1,5 @@
 if [[ `pwd` != */interlinear ]]; then
-  echo "you must cd to directory interlinear before invoking this scripe"
+  echo "you must cd to directory interlinear before invoking this script"
   exit
 fi
 #
