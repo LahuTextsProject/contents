@@ -89,14 +89,19 @@ def parsetitle(title, inc_offscale_p):
 for text in texts:
 
     # extract title info, add this info to our list of texts
-    titles = text.iterfind(".//item")
-    title = next(titles)
-    lahutitle = next(titles)
-    
+    for item in text.findall(".//item"):
+        if item.attrib['type'] == 'title':
+            if item.attrib['lang'] == 'en':
+                title = item
+            elif item.attrib['lang'] == 'lhu':
+                lahutitle = item
+            else:
+                raise ValueError("Language of title is neither English or Lahu")
+
     (textnumber, titlestring, textnumber, titlestring) = parsetitle(title, True)
 
     # TODO: some Lahu titles are still missing.
-    if lahutitle.text is not None:
+    if lahutitle is not None and lahutitle.text is not None:
         (lahutextnumber, lahutitlestring, lahutextnumber, lahutitlestring) = parsetitle(lahutitle, False)
     else:
         lahutitlestring = "TODO"
