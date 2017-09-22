@@ -68,12 +68,10 @@ TofCinfo = getTofCinfo(sys.argv[2])
 # first, divide the monster files into texts.
 texts = tree.findall('.//interlinear-text')
 offscale = 999
-for text in texts:
 
-    # extract title info, add this info to our list of texts
-    title = text.find(".//item")
+def parsetitle(title):
+    global offscale
     textnumbermatch = numberpattern.search(title.text)
-    
     if textnumbermatch:
         textnumber  = textnumbermatch.group(1)
         titlestring =  textnumbermatch.group(2)
@@ -81,9 +79,28 @@ for text in texts:
         offscale += 1
         textnumber  = offscale
         titlestring = title.text
-
+            
     titlestring = titlestring.replace('&','\\&')
     titlestring = titlestring.replace('#','\\#')
+    return (textnumber, titlestring, offscale, textnumber, titlestring)
+
+
+for text in texts:
+
+    # extract title info, add this info to our list of texts
+    titles = text.iterfind(".//item")
+    title = next(titles)
+    lahutitle = next(titles)
+    
+    (textnumber, titlestring, offscale, textnumber, titlestring) = parsetitle(title)
+
+    # TODO: some Lahu titles are still missing.
+    print lahutitle.text
+    if lahutitle.text is not None:
+        (lahutextnumber, lahutitlestring, lahuoffscale, lahutextnumber, lahutitlestring) = parsetitle(lahutitle)
+    else:
+        lahutitlestring = "TODO"
+
     outputfilename = '%s.tex' % textnumber
     try:
         listoffiles[TofCinfo[textnumber][3]] = textnumber
@@ -95,6 +112,7 @@ for text in texts:
     # we create one output text for each input text
     OutLaTeX = codecs.open(outputfilename, 'w', 'utf-8')
     print >> OutLaTeX, '\section{%s}' % titlestring
+    print >> OutLaTeX, '\\addlahutoc{section}{%s}' % lahutitlestring
     phrases = text.findall('.//phrases')
     print >> OutLaTeX, '\\begin{examples}'
     sentences = []

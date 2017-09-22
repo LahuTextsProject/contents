@@ -2,6 +2,8 @@
 %!TEX encoding = UTF-8 Unicode
 \documentclass[10pt,twoside]{book}
 
+\include{bilingtoc}
+
 \usepackage{epigraph}
 \usepackage{etoolbox}
 \usepackage{titlesec}
@@ -38,14 +40,14 @@
 
 \usepackage{fancyhdr}
 
-\title{Window to a Vanished World:\\Lahu Texts from the 1960’s\\--DRAFT--}
+\title{Window onto a Vanished World:\\Lahu Texts from the 1960’s\\--DRAFT--}
 \author{James A. Matisoff}
 \date{2016}
 \usepackage[bookmarks]{hyperref}
 \hypersetup{%
         pdfborder={0 0 1},
         pdfborderstyle={/S/U/W 1}, % make links underlined (instead of surrounded by red boxes)
-        pdftitle = {Window to a Vanished World}, 
+        pdftitle = {Window onto a Vanished World}, 
         pdfauthor = {\textcopyright\ The Regents of the University of California}, 
 }
 
@@ -71,7 +73,7 @@
 \renewcommand*{\sectionmark}[1]{ \markright{#1} }
 \renewcommand*{\chaptermark}[1]{ \markboth{#1}{} }
 
-\fancyhead[RE]{Window to a Vanished World \vspace{0.9em}}
+\fancyhead[RE]{Window onto a Vanished World \vspace{0.9em}}
 \fancyhead[LO]{ \vspace{0.9em}}
 
 \fancyhead[RO]{\leftmark \vspace{0.9em}}
@@ -115,13 +117,14 @@
 
 \pdfbookmark[0]{Table of Contents}{TOC}
 \tableofcontents
+\lahutableofcontents
 
 \include{introduction}
 \thispagestyle{empty}
 \cleardoublepage
 
 \mainmatter
-\pdfbookmark[0]{Window to a Vanished World}{TOC}
+\pdfbookmark[0]{Window onto a Vanished World}{TOC}
 
 % insert includes here
 
