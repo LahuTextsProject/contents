@@ -13,9 +13,12 @@ cd tex
 rm *
 cp ../$1 .
 cp ../*.tex .
-cp ../../transTex/*.tex .
+cp ../../transTeX/*.tex .
 echo Generating LaTeX file "${texfile}.tex", timestamp: `date`
-python ../generateLaTeX.py $1 ../lahutextstoc.txt
+python2 ../generateLaTeX.py $1 ../lahutextstoc.txt
+echo Converting RTFs to LaTeX
+../texRTFs.sh
+
 # python ../combiner.py ../lahutextstoc.txt
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex
 #
