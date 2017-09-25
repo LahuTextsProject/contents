@@ -1,5 +1,6 @@
 import re
 import fileinput
+import csv
 
 footnoteson = False
 lineArray = []
@@ -7,8 +8,17 @@ footHash = {}
 
 footnote_number_pattern = re.compile(r'^\[(\d+)\] *(.*)')
 
+def makeLahuWords():
+    lahuWords = []
+    with open('triples.csv', 'rb') as triples:
+        reader = csv.reader(triples, delimiter = '\t')
+        for row in reader:
+            lahuWords.append(row[1])
+    return lahuWords
+
+lahuWords = makeLahuWords()
+
 def fixLine(line):
-    
     line = line.strip()
     line = re.sub(r'\\texttt\{"\}', r'``', line);
     line = re.sub(r'\\texttt\{\'\}', r'`', line);
@@ -64,10 +74,28 @@ for line in inputLines:
         footnote += ' ' + line
 
 addnote(footnote,footHash)
+
+englishLahuOverlap = ['to', 'a', 'the', 'The']
     
+def boldLahu(footnoteObj):
+    # bold the Lahu in a footnote - we punt when a word could be
+    # either English or Lahu
+    # TODO: Do we want to bold the colon or not?
+    footnoteContents = footnoteObj.group(0)
+    words = re.split(r' ', footnoteContents)
+    newstring = ''
+    for word in words:
+        wordstrip = word.replace(':', '')
+        if (wordstrip in lahuWords) and (wordstrip not in englishLahuOverlap):
+            newstring += ('\\textbf{%s} ' % word)
+        else:
+            newstring += word + ' '
+    return newstring[:-1]
+
 for line in lineArray:
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
     line = re.sub(r'(\[\d+\])\.', r'.\1', line)
     for fn in footHash:
         line = line.replace('[%s]' % fn, ("\\footnote{%s}" % footHash[fn]))
+    line = re.sub(r'(?<=\\footnote{)[^}]*}', boldLahu, line)
     print line
