@@ -69,35 +69,40 @@ TofCinfo = getTofCinfo(sys.argv[2])
 texts = tree.findall('.//interlinear-text')
 offscale = 999
 
-def parsetitle(title):
+def parsetitle(title, inc_offscale_p):
     global offscale
     textnumbermatch = numberpattern.search(title.text)
     if textnumbermatch:
         textnumber  = textnumbermatch.group(1)
         titlestring =  textnumbermatch.group(2)
     else:
-        offscale += 1
+        if inc_offscale_p:
+            offscale += 1
         textnumber  = offscale
         titlestring = title.text
             
     titlestring = titlestring.replace('&','\\&')
     titlestring = titlestring.replace('#','\\#')
-    return (textnumber, titlestring, offscale, textnumber, titlestring)
+    return (textnumber, titlestring, textnumber, titlestring)
 
 
 for text in texts:
 
     # extract title info, add this info to our list of texts
-    titles = text.iterfind(".//item")
-    title = next(titles)
-    lahutitle = next(titles)
-    
-    (textnumber, titlestring, offscale, textnumber, titlestring) = parsetitle(title)
+    for item in text.findall(".//item"):
+        if item.attrib['type'] == 'title':
+            if item.attrib['lang'] == 'en':
+                title = item
+            elif item.attrib['lang'] == 'lhu':
+                lahutitle = item
+            else:
+                raise ValueError("Language of title is neither English or Lahu")
+
+    (textnumber, titlestring, textnumber, titlestring) = parsetitle(title, True)
 
     # TODO: some Lahu titles are still missing.
-    print lahutitle.text
-    if lahutitle.text is not None:
-        (lahutextnumber, lahutitlestring, lahuoffscale, lahutextnumber, lahutitlestring) = parsetitle(lahutitle)
+    if lahutitle is not None and lahutitle.text is not None:
+        (lahutextnumber, lahutitlestring, lahutextnumber, lahutitlestring) = parsetitle(lahutitle, False)
     else:
         lahutitlestring = "TODO"
 
