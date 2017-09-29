@@ -129,6 +129,8 @@ for line in inputLines:
 addnote(footnote,footHash)
 
 for line in lineArray:
+    # normalize whitespace in footnote mark
+    line = re.sub(r'\[ *(\d+) *\]', r'[\1]', line)
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
     line = re.sub(r'(\[\d+\])\.', r'.\1', line)
     for fn in footHash:
