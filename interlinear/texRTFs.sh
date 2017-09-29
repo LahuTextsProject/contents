@@ -1,3 +1,7 @@
+# get the Lahu glosses updated
+echo Analyzing Lahu lexicon
+./analyze.sh
+
 rm -rf ../t2
 mkdir ../t2
 cp ../rtfs/*.rtf ../t2

@@ -1,7 +1,9 @@
 import re
 import fileinput
 import csv
-import string
+import unicodedata
+
+from string import punctuation
 
 footnoteson = False
 lineArray = []
@@ -10,11 +12,11 @@ footHash = {}
 footnote_number_pattern = re.compile(r'^\[(\d+)\] *(.*)')
 
 def makeLahuWords():
-    lahuWords = []
+    lahuWords = set()
     with open('elements.csv', 'rb') as triples:
         reader = csv.reader(triples, delimiter = '\t')
         for row in reader:
-            lahuWords.append(row[0])
+            lahuWords.add(unicodedata.normalize('NFC', unicode(row[0], 'utf-8')))
     return lahuWords
 
 lahuWords = makeLahuWords()
@@ -41,45 +43,60 @@ def test4skip(line):
 
     return False
 
-englishLahuOverlap = ['to', 'a', 'the', 'The', 'they', 'Black', 'some', 'do', 'go']
+englishLahuOverlap = ['to', 'a', 'the', 'The', 'they', 'Black',
+                      'some', 'do', 'go', 'A', 'much', 'To']
 
-punctuation_sans_hyphen = string.punctuation.replace('-', '')
+def isLahuWord(word):
+    # detect whether a word (sans formatting but with case) is Lahu
+    # some heuristics:
+    # a word is in the overlap? no
+    # a morpheme is in the gloss? yes
+    if word in englishLahuOverlap:
+        return False
+    # \xea is the double hyphen morpheme separater
+    for morpheme in re.split('-|\xea', unicodedata.normalize('NFC', unicode(word.lower(), 'utf-8'))):
+        if morpheme in lahuWords:
+            return True
+    return False
 
-def stripItalics(line):
-    line = re.sub(r'\\textit\{([^}]*)\}', r'\1', line)
-    line = re.sub(r'\\emph\{([^}]*)\}', r'\1', line)
-    return line
+def containsLahu(string):
+    for word in string.split():
+        if isLahuWord(word.strip(punctuation)):
+            return True
+    return False
 
-def boldLahu(line):
-    # bold the Lahu in a line - we punt when a word could be
-    # either English or Lahu
-    # TODO: Do we want to bold the punctuation or not? probably not
-    # some heuristics: if a word is in the gloss, then bold
-    # if a hyphenated component is in the gloss, then bold
-    # if a word is in the overlap, don't bold
-    # if a hyphenated component is in the overlap, do bold
-    words = line.split()
+def stripLahuFormatting(string):
+    def subfun(match):
+        contents = match.group(1)
+        # we strip 3 characters or less because some Lahu
+        # fragments are only partially formatted
+        if (containsLahu(match.group(1))) or (len(contents.decode('utf-8')) <= 3):
+            return match.group(1)
+        else:
+            return match.group(0)
+    return re.sub(r'\\(?:textit|emph|textbf)\{([^}]*)\}', subfun, string)
+
+def boldLahu(string):
+    # bold all Lahu words in a string
+    # preserve all punctuation elements
+    words = string.split()
     newstring = ''
     for word in words:
-        lahuMorpheme = False
-        wordstrip = word.translate(None, punctuation_sans_hyphen).lower()
-        for morpheme in wordstrip.split('-'):
-            if morpheme in lahuWords:
-                lahuMorpheme = True
-        if (lahuMorpheme is True) and (wordstrip not in englishLahuOverlap):
-            newstring += ('\\textbf{%s} ' % word)
+        wordstrip = word.strip(punctuation)
+        if isLahuWord(wordstrip):
+            newstring += word.replace(wordstrip, ('\\textbf{%s}' % wordstrip))
         else:
-            newstring += word + ' '
+            newstring += word
+        newstring += ' '
     return newstring[:-1]
 
 def addnote(footnote,footHash):
-    
     textnumbermatch = footnote_number_pattern.search(footnote)
     if textnumbermatch:
         footnote_number = textnumbermatch.group(1)
         rest_of_line = textnumbermatch.group(2).strip()
         # process footnote contents
-        footnote_contents = boldLahu(stripItalics(rest_of_line))
+        footnote_contents = boldLahu(stripLahuFormatting(rest_of_line))
         footHash[footnote_number] = footnote_contents
 
 inputLines = []
