@@ -7,18 +7,24 @@ import unicodedata
 
 from string import punctuation
 
+def normalize_unicode(string):
+    unicodedata.normalize('NFC', unicode(string, 'utf-8'))
+
 def makeLahuWords():
     lahuWords = set()
     with open('elements.csv', 'rb') as triples:
         reader = csv.reader(triples, delimiter = '\t')
         for row in reader:
-            lahuWords.add(unicodedata.normalize('NFC', unicode(row[0], 'utf-8')))
+            lahuWords.add(normalize_unicode(row[0]))
     return lahuWords
 
 lahuWords = makeLahuWords()
 # these are really just morphemes that appear in Lahu,
 # not necessarily words on their own
-lahuWords.add(u'ɔ̀')
+for morpheme in [u'ɔ̀',
+                 u'cɛ́ʔ' # Transcribed Burmese morpheme
+]:
+    lahuWords.add(normalize_unicode(morpheme))
 
 def fixLine(line):
     line = line.strip()
