@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import re
 import fileinput
 import csv
@@ -14,6 +16,9 @@ def makeLahuWords():
     return lahuWords
 
 lahuWords = makeLahuWords()
+# these are really just morphemes that appear in Lahu,
+# not necessarily words on their own
+lahuWords.add(u'ɔ̀')
 
 def fixLine(line):
     line = line.strip()
@@ -48,8 +53,8 @@ def isLahuWord(word):
     # a morpheme is in the gloss? yes
     if word in englishLahuOverlap:
         return False
-    # \xea is the double hyphen morpheme separater
-    for morpheme in re.split('-|\xea', unicodedata.normalize('NFC', unicode(word.lower(), 'utf-8'))):
+    # u+a78a is the double hypen morpheme separater
+    for morpheme in re.split(u'-|\ua78a', unicodedata.normalize('NFC', unicode(word.lower(), 'utf-8'))):
         if morpheme in lahuWords:
             return True
     return False
