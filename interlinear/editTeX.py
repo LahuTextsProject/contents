@@ -5,12 +5,6 @@ import unicodedata
 
 from string import punctuation
 
-footnoteson = False
-lineArray = []
-footHash = {}
-
-footnote_number_pattern = re.compile(r'^\[(\d+)\] *(.*)')
-
 def makeLahuWords():
     lahuWords = set()
     with open('elements.csv', 'rb') as triples:
@@ -91,6 +85,7 @@ def boldLahu(string):
         newstring += ' '
     return newstring[:-1]
 
+footnote_number_pattern = re.compile(r'^\[(\d+)\] *(.*)')
 def addnote(footnote,footHash):
     textnumbermatch = footnote_number_pattern.search(footnote)
     if textnumbermatch:
@@ -106,6 +101,8 @@ for line in fileinput.input():
     if test4skip(line): continue
     inputLines.append(line.strip())
 
+lineArray = []
+footnoteson = False
 for pointer, line in enumerate(inputLines):
     if 'Footnote' in line: footnoteson = True
     if re.match(r'^\[\d+\]',line): footnoteson = True
@@ -116,6 +113,7 @@ for pointer, line in enumerate(inputLines):
 inputLines = inputLines[pointer:]
 
 # process footnotes
+footHash = {}
 footnote = ''
 for line in inputLines:
 
