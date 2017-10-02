@@ -26,7 +26,7 @@ structure = [
 ]
 
 lahu_structure = [
-    ['Lahu Daily Life in the 1960\'s', [
+    ['1965-66 tê co thâ Lâhū-yâ ve tê ni tê ni ve a-šàʔ', [
         [1, 'ɔ̀-lɔn láy cə̀'],
         [2, 'mɨ̀-câ-vâ-câ lɛ a-šàʔ hu ve kán tê phā'],
         [3, 'šā bɔ̂ʔ ve'],
