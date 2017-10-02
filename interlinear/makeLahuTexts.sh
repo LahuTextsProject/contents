@@ -1,5 +1,5 @@
 if [[ `pwd` != */interlinear ]]; then
-  echo "you must cd to directory interlinear before invoking this scripe"
+  echo "you must cd to directory interlinear before invoking this script"
   exit
 fi
 #
@@ -9,13 +9,19 @@ texfile="WindowsForgottenWorld"
 echo
 echo "=============================================================================="
 echo Starting run `date`
+echo Making sym link
+rm lahutexts.xml
+ln -s $1 lahutexts.xml
+echo Converting RTFs to LaTeX
+./texRTFs.sh
 cd tex
 rm *
 cp ../$1 .
 cp ../*.tex .
-cp ../../transTex/*.tex .
+cp ../../transTeX/*.tex .
 echo Generating LaTeX file "${texfile}.tex", timestamp: `date`
-python ../generateLaTex.py $1 ../lahutextstoc.txt
+python2 ../generateLaTeX.py $1 ../lahutextstoc.txt
+
 # python ../combiner.py ../lahutextstoc.txt
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex
 #

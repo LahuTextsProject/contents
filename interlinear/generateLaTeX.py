@@ -9,7 +9,7 @@ import re
 import csv
 
 from Transducer import transduce,baptist,chinese,decompose
-from structure import structure
+from structure import structure, lahu_structure
 
 def getTofCinfo(filename):
     try:
@@ -68,22 +68,44 @@ TofCinfo = getTofCinfo(sys.argv[2])
 # first, divide the monster files into texts.
 texts = tree.findall('.//interlinear-text')
 offscale = 999
-for text in texts:
 
-    # extract title info, add this info to our list of texts
-    title = text.find(".//item")
+def parsetitle(title, inc_offscale_p):
+    global offscale
     textnumbermatch = numberpattern.search(title.text)
-    
     if textnumbermatch:
         textnumber  = textnumbermatch.group(1)
         titlestring =  textnumbermatch.group(2)
     else:
-        offscale += 1
+        if inc_offscale_p:
+            offscale += 1
         textnumber  = offscale
         titlestring = title.text
-
+            
     titlestring = titlestring.replace('&','\\&')
     titlestring = titlestring.replace('#','\\#')
+    return (textnumber, titlestring, textnumber, titlestring)
+
+
+for text in texts:
+
+    # extract title info, add this info to our list of texts
+    for item in text.findall(".//item"):
+        if item.attrib['type'] == 'title':
+            if item.attrib['lang'] == 'en':
+                title = item
+            elif item.attrib['lang'] == 'lhu':
+                lahutitle = item
+            else:
+                raise ValueError("Language of title is neither English or Lahu")
+
+    (textnumber, titlestring, textnumber, titlestring) = parsetitle(title, True)
+
+    # TODO: some Lahu titles are still missing.
+    if lahutitle is not None and lahutitle.text is not None:
+        (lahutextnumber, lahutitlestring, lahutextnumber, lahutitlestring) = parsetitle(lahutitle, False)
+    else:
+        lahutitlestring = "TODO"
+
     outputfilename = '%s.tex' % textnumber
     try:
         listoffiles[TofCinfo[textnumber][3]] = textnumber
@@ -95,6 +117,7 @@ for text in texts:
     # we create one output text for each input text
     OutLaTeX = codecs.open(outputfilename, 'w', 'utf-8')
     print >> OutLaTeX, '\section{%s}' % titlestring
+    print >> OutLaTeX, '\\addlahutoc{section}{%s}' % lahutitlestring
     phrases = text.findall('.//phrases')
     print >> OutLaTeX, '\\begin{examples}'
     sentences = []
@@ -158,16 +181,16 @@ for text in texts:
     OutLaTeX.close()
 
 # write out the texts in order so they can be sucked in by
-# LaTex in order
-for partno, part  in enumerate(structure):
-    print >> filestotex, '\part{%s}' % part[0]
+# LaTeX in order
+for ((partno, part), (lpartno, lpart))  in zip(enumerate(structure),
+                                               enumerate(lahu_structure)):
+    print >> filestotex, '\part{%s}\n\\addlahutoc{part}{%s}' % (part[0], lpart[0])
     print "part %s. %s" % (partno+1, part[0])
-    for chapterno, genre in enumerate(part[1]):
-        print >> filestotex, '\chapter{%s}' % genre[1]
+    for ((chapterno, genre), (lchapterno, lgenre)) in zip(enumerate(part[1]),
+                                                          enumerate(lpart[1])):
+        print >> filestotex, '\chapter{%s}\n\\addlahutoc{chapter}{%s}' % (genre[1], lgenre[1])
         print "  chapter %s %s" % (chapterno+1, genre[1])
         for textnumber in sorted(listoffiles.keys()):
             if int(textnumber) == genre[0]:
                 print >> filestotex, '\include{%s}' % listoffiles[textnumber]
                 print "    %s " % textnumber
-
-

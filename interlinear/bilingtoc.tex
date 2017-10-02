@@ -1,0 +1,25 @@
+\makeatletter
+\newcommand\lahutableofcontents{%
+  \if@twocolumn
+    \@restonecoltrue\onecolumn
+  \else
+    \@restonecolfalse
+  \fi
+  \begin{otherlanguage}{lahu}
+  \chapter*{%
+    \contentsname
+    \@mkboth{\MakeUppercase\contentsname}
+            {\MakeUppercase\contentsname}%
+  }%
+  \@starttoc{tec}%
+  \end{otherlanguage}
+  \if@restonecol\twocolumn\fi
+}
+\newcommand{\addlahutoc}[2]{%
+  \addcontentsline{tec}{#1}{\protect\numberline{\csname the#1\endcsname}#2}%
+}
+\makeatother
+
+%%% Local Variables:
+%%% mode: latex
+%%% End:

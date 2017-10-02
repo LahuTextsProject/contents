@@ -1,3 +1,9 @@
+# Compiled output
+interlinear/tex/
+
+# transTeX
+transTeX/
+
 # Mac stuff to ignore
 .DS_Store
 
