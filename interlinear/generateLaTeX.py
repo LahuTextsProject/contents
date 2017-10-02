@@ -9,7 +9,7 @@ import re
 import csv
 
 from Transducer import transduce,baptist,chinese,decompose
-from structure import structure
+from structure import structure, lahu_structure
 
 def getTofCinfo(filename):
     try:
@@ -181,16 +181,16 @@ for text in texts:
     OutLaTeX.close()
 
 # write out the texts in order so they can be sucked in by
-# LaTex in order
-for partno, part  in enumerate(structure):
-    print >> filestotex, '\part{%s}' % part[0]
+# LaTeX in order
+for ((partno, part), (lpartno, lpart))  in zip(enumerate(structure),
+                                               enumerate(lahu_structure)):
+    print >> filestotex, '\part{%s}\n\\addlahutoc{part}{%s}' % (part[0], lpart[0])
     print "part %s. %s" % (partno+1, part[0])
-    for chapterno, genre in enumerate(part[1]):
-        print >> filestotex, '\chapter{%s}' % genre[1]
+    for ((chapterno, genre), (lchapterno, lgenre)) in zip(enumerate(part[1]),
+                                                          enumerate(lpart[1])):
+        print >> filestotex, '\chapter{%s}\n\\addlahutoc{chapter}{%s}' % (genre[1], lgenre[1])
         print "  chapter %s %s" % (chapterno+1, genre[1])
         for textnumber in sorted(listoffiles.keys()):
             if int(textnumber) == genre[0]:
                 print >> filestotex, '\include{%s}' % listoffiles[textnumber]
                 print "    %s " % textnumber
-
-

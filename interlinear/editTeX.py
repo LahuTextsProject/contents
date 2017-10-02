@@ -43,8 +43,9 @@ def test4skip(line):
 
     return False
 
-englishLahuOverlap = ['to', 'a', 'the', 'The', 'they', 'Black',
-                      'some', 'do', 'go', 'A', 'much', 'To']
+englishLahuOverlap = set(['to', 'a', 'the', 'The', 'They', 'they',
+                          'Black', 'some', 'do', 'go', 'A', 'much',
+                          'To'])
 
 def isLahuWord(word):
     # detect whether a word (sans formatting but with case) is Lahu
