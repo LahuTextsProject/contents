@@ -51,7 +51,7 @@ def test4skip(line):
 
 englishLahuOverlap = set(['to', 'a', 'the', 'The', 'They', 'they',
                           'Black', 'some', 'do', 'go', 'A', 'much',
-                          'To'])
+                          'To', 'I'])
 
 def isLahuWord(word):
     # detect whether a word (sans formatting but with case) is Lahu
@@ -149,6 +149,12 @@ for (i, line) in enumerate(lineArray[:4]):
         break
 
 for line in lineArray:
+    # normalize speaker names
+    line = re.sub(r'(Cà-bo|Càbo|CB|Pastor|Teacher)\:', 'T:', line)
+    line = re.sub(r'(T-y|Thû-Yì|Thû-yì|Thúyì|TY)\:', 'Ty:', line)
+    line = line.replace('Headman:', 'H:')
+    line = re.sub(r' TY ', ' Ty: ', line) # maybe do this in RTF picking tea instead
+    line = re.sub(r'(Paul|Cà-lɔ|Tcalo)\:', 'P:', line)
     # normalize whitespace in footnote mark
     line = re.sub(r'\[ *(\d+) *\]', r'[\1]', line)
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
