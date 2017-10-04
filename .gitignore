@@ -1,8 +1,8 @@
-# Compiled output
-interlinear/tex/
-
 # transTeX
 transTeX/
+
+# Compiled output
+interlinear/tex/
 
 # Mac stuff to ignore
 .DS_Store
@@ -61,3 +61,5 @@ docs/_build/
 
 # PyBuilder
 target/
+/transTeX/
+transTeX/*

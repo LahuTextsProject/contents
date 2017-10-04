@@ -7,24 +7,25 @@ import unicodedata
 
 from string import punctuation
 
-def normalize_unicode(string):
-    unicodedata.normalize('NFC', unicode(string, 'utf-8'))
+def normalize_unicode(word):
+    return unicodedata.normalize('NFC', unicode(word, 'utf-8'))
 
 def makeLahuWords():
-    lahuWords = set()
+    words = set()
     with open('elements.csv', 'rb') as triples:
         reader = csv.reader(triples, delimiter = '\t')
         for row in reader:
-            lahuWords.add(normalize_unicode(row[0]))
-    return lahuWords
+            words.add(normalize_unicode(row[0]))
+    return words
 
 lahuWords = makeLahuWords()
 # these are really just morphemes that appear in Lahu,
 # not necessarily words on their own
-for morpheme in [u'ɔ̀',
-                 u'cɛ́ʔ' # Transcribed Burmese morpheme
+for morpheme in ['ɔ̀',
+                 'cɛ́ʔ' # Transcribed Burmese morpheme
+                 'Kɔ́lɔ'
 ]:
-    lahuWords.add(normalize_unicode(morpheme))
+    lahuWords.add(normalize_unicode(morpheme.lower()))
 
 def fixLine(line):
     line = line.strip()
@@ -137,6 +138,15 @@ for line in inputLines:
         footnote += ' ' + line
 
 addnote(footnote,footHash)
+
+# remove irrelevant numbering before the translation title
+for (i, line) in enumerate(lineArray[:4]):
+    if line.isspace():
+        continue
+    (newline, subs) = re.subn(r'\\#\d+\s*', r'', line)
+    if subs > 0:
+        lineArray[i] = newline
+        break
 
 for line in lineArray:
     # normalize whitespace in footnote mark
