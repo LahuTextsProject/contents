@@ -117,7 +117,11 @@ lineArray = []
 footnoteson = False
 for pointer, line in enumerate(inputLines):
     if 'Footnote' in line: footnoteson = True
-    if re.match(r'^\[\d+\]',line): footnoteson = True
+    # TODO: this sometimes catches footnotes that start on a
+    # line in the rtf2latex just by chance. Improve this so that
+    # '[2]. hello' in the body is not caught by this mechanism
+    # so far only the case where the footnote ends the line is caught
+    if re.match(r'^\[\d+\](?!$)', line): footnoteson = True
     if footnoteson:
         break
     lineArray.append(line)
