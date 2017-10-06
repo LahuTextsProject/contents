@@ -9,13 +9,12 @@ texfile="WindowsForgottenWorld"
 echo
 echo "=============================================================================="
 echo Starting run `date`
-echo Making sym link
-rm lahutexts.xml
-ln -s $1 lahutexts.xml
+echo Making symbolic link lahutexts.xml
+ln -sf $1 lahutexts.xml
 echo Converting RTFs to LaTeX
 ./texRTFs.sh
 cd tex
-rm *
+rm -r *
 cp ../$1 .
 cp ../*.tex .
 cp ../../transTeX/*.tex .
