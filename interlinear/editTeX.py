@@ -158,7 +158,7 @@ for line in lineArray:
     line = re.sub(r'(T-y|Thû-Yì|Thû-yì|Thúyì|TY)\:', 'Ty:', line)
     line = line.replace('Headman:', 'H:')
     line = re.sub(r' TY ', ' Ty: ', line) # maybe do this in RTF picking tea instead
-    line = re.sub(r'(Paul|Cà-lɔ|Tcalo)\:', 'P:', line)
+    line = re.sub(r'(Paul|Cà-lɔ|Cà-lɔ̂|Tcalo)\:', 'P:', line)
     # normalize whitespace in footnote mark
     line = re.sub(r'\[ *(\d+) *\]', r'[\1]', line)
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
