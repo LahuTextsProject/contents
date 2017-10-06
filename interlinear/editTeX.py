@@ -62,7 +62,10 @@ def isLahuWord(word):
     if word in englishLahuOverlap:
         return False
     # u+a78a is the double hypen morpheme separater
-    for morpheme in re.split(u'-|\ua78a', unicodedata.normalize('NFC', unicode(word, 'utf-8'))):
+    word = normalize_unicode(word)
+    if word in lahuWords:
+        return True
+    for morpheme in re.split(u'-|\ua78a', word):
         if morpheme in lahuWords:
             return True
     return False
