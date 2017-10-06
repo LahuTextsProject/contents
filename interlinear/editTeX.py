@@ -125,6 +125,8 @@ for pointer, line in enumerate(inputLines):
     # line in the rtf2latex just by chance. Improve this so that
     # '[2]. hello' in the body is not caught by this mechanism
     # so far only the case where the footnote ends the line is caught
+    # idea: match the footnote only when the line preceding it is not a newline
+    # as that means that this is the continuation of a sentence
     if re.match(r'^\[\d+\](?!$)', line): footnoteson = True
     if footnoteson:
         break
