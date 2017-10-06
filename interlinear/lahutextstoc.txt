@@ -36,14 +36,14 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 36	4	2	3_1	03:14	04:57	01:43	36	Blessing in the name of the spirits		034-048				Y		Defer	n	Incantatory style		34	48	14	194.0	297.0	x		103.0	0.14				
 37	4	2	3_1	04:58	06:23	01:25	37	The song of reconciliation of the brother and sister	folk tale	048-061	13	1	Y	Y	037_song_of_reconciliation_of_the_brother_and_sister.rtf 	Entered	y			48	61	13	298.0	383.0	x	37	85.0	0.15			y	y
 38	4	2	3_1	06:24	07:31	01:07	38	The Trickster and the Traders	story	061-070	10	3	Y	Y	038_the_trickster_and_the_traders.rtf 	Entered	y	There are no pauses between 38/39		61	70	9	384.0	451.0	x	38	67.0	0.13			y	y
-39	4	2	3_1	07:31	08:31	01:00	39	The Trickster's spear and the merchants	story	070-080	10	4	Y	Y	039_the_trickster_s_spear_and_the_merchants.rtf 	Entered	y	There are no pauses between 38/39		70	80	10	451.0	511.0	x	39	60.0	0.17			y	y
+39	4	2	3_1	07:31	08:31	01:00	39	The Trickster's spear and the merchants	story	070-080	10	4	Y	Y	039_the_trickster_s_spear_and_the_traders.rtf 	Entered	y	There are no pauses between 38/39		70	80	10	451.0	511.0	x	39	60.0	0.17			y	y
 40	4	2	3_1	08:32	15:25	06:53	40	The Trickster and the village women	story	081-143	10	7	Y	Y	040_the_trickster_and_the_village_women.rtf 	Entered	y	There are no pauses between 40/41; same story as nos. 44 and 76		81	143	62	512.0	925.0	x	40	413.0	0.15			y	y
 41	4	2	3_1	15:25	16:43	01:18	41	Two songs		143-156				Y		Defer	n	There are no pauses between 40/41		143	156	13	925.0	1003.0	x		78.0	0.17				
 42	4	2	3_1	16:45	18:17	01:32	42	Traditional love-song		157-171				Y		Defer	n	There are no pauses between 42/43		157	171	14	1005.0	1097.0	x		92.0	0.15				
 43	4	2	3_1	18:17	18:45	00:28	43	Song: Getting older		171-175	14	5		Y	043_song_getting_older.rtf	Entered	y	There are no pauses between 42/43		171	175	4	1097.0	1125.0	x		28.0	0.14			y	y
 44	4	2	3_2	00:00	03:34	03:34	44	The Trickster and the village women	story	176-211				Y		Defer	n	In BLS; in Yellow Lahu, but the same story as nos. 40 and 76		176	211	35	0.0	214.0	x		214.0	0.16				
 45	4	2	3_2	03:35	05:20	01:45	45	Edifying text		212-229				Y		Defer	n	Yellow Lahu		212	229	17	215.0	320.0	x		105.0	0.16				
-46	4	2	3_2	05:24	08:10	02:46	46	God bless this meeting!		230-259	16	1		Y	046_edifying_text.rtf	Entered	y	In Black Lahu, but with a Yellow accent		230	259	29	324.0	490.0	x		166.0	0.17			y	y
+46	4	2	3_2	05:24	08:10	02:46	46	God bless this meeting!		230-259	16	1		Y	046_god_bless_this_meeting.rtf	Entered	y	In Black Lahu, but with a Yellow accent		230	259	29	324.0	490.0	x		166.0	0.17			y	y
 48	4	1	3_3	00:43	04:18	03:35	47	Another antiphonal love-song		274-311	13	2		Y	047_another_antiphonal_love_poem.rtf	Entered	y	two songs, close together (partially transcribed)	x	274	311	37	43.0	258.0	x	47	215.0	0.17				
 52	4	1	3_3	07:53	09:11	01:18	48	Edifying thoughts on God, parents, and village		353-368	16	2		Y	048_edifying_thoughts_on_god_parents_and_village.rtf	Entered	y			353	368	15	473.0	551.0	x	48	78.0	0.19			y	y
 53	4	1	3_3	09:13	10:32	01:19	49	Modern song:  "Granny falls into the mud"		368-383	14	4		Y	049_granny_gets_smeared_with_mud.rtf 	Entered	y			368	383	15	553.0	632.0	x		79.0	0.19			y	y
@@ -54,14 +54,14 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 58	4	1	3_3	17:05	18:38	01:33	54	Traditional love-song		466-485				Y		Defer	n			466	485	19	1025.0	1118.0	x		93.0	0.20				
 59	4	1	3_4	00:00	03:56	03:56	55	The dhole and the tiger	story	486-540	7	4	Y	Y	055_the_dhole_and_the_tiger.rtf 	Entered	y			486	540	54	0.0	236.0	x	55	236.0	0.23			y	y
 60	4	1	3_4	04:00	05:16	01:16	56	Antiphonal love-poem		541-559	13	3		Y	056_antiphonal_love_poem.rtf	Entered	y			541	559	18	240.0	316.0	x	56	76.0	0.24				
-61	4	1	3_4	05:18	06:50	01:32	57	About the general conference of Christian Lahu at Shatodu		560-587	16	3		Y	057_the_general_conference_of_christian_lahu.rtf 	Entered	y			560	587	27	318.0	410.0	x	57	92.0	0.29			y	y
+61	4	1	3_4	05:18	06:50	01:32	57	About the general conference of Christian Lahu at Shatodu		560-587	16	3		Y	057_conference_of_lahu_christians_at_shatodu.rtf 	Entered	y			560	587	27	318.0	410.0	x	57	92.0	0.29			y	y
 62	4	1	3_4	06:53	08:10	01:17	58	Two hymns		588-603				Y		Entered	n			588	603	15	413.0	490.0	x	58	77.0	0.19				
 63	4	1	3_4	08:11	09:20	01:09	59	Lecture for Lahu Christian youth		604-620	16	9		Y	059_lecture_for_lahu_christian_youth.rtf 	Entered	y			604	620	16	491.0	560.0	x	59	69.0	0.23			y	y
 64	4	1	3_4	09:27	11:19	01:52	60	The six stupid men and the gophers	story	622-652	9	2		Y	060_the_six_stupid_men_and_the_gophers.rtf 	Entered	y			622	652	30	567.0	679.0	x	60	112.0	0.27			y	y
 65	4	1	3_4	11:20	14:40	03:20	61	The orphan and the tigers	story	654-716	8	7		Y	061_the_orphan_and_the_tigers.rtf 	Entered	y			654	716	62	680.0	880.0	x	61	200.0	0.31			y	y
 66	4	2	4_1	00:00	07:33	07:33	62	News broadcast in Lahu from Burmese radio		004-096				Y		not using	n	Poor quality	x	4	96	92	0.0	453.0	x		453.0	0.20				
 67	4	2	4_1	07:33	10:32	02:59	63	Two songs		004-096				Y	(missing)	Defer	n			4	96	92	453.0	632.0	x		179.0	0.51				
-68	4	2	4_1	10:35	12:11	01:36	64	God's doors are still open		101-116	15	3		Y	064_welcome_to_the_village.rtf 	Entered	y			101	116	15	635.0	731.0	x	64	96.0	0.16			y	y
+68	4	2	4_1	10:35	12:11	01:36	64	God's doors are still open		101-116	15	3		Y	064_gods_doors_are_still_open.rtf 	Entered	y			101	116	15	635.0	731.0	x	64	96.0	0.16			y	y
 69	4	2	4_1	12:13	17:59	05:46	65	Visiting the village's fields	monologue	116-184	2	3		Y	065_visiting_the_village_s_fields.rtf 	Entered	y			116	184	68	733.0	1079.0	x	65	346.0	0.20			y	y
 70	4	2	4_1	17:59	28:27	10:28	66	Candid conversation before A day hunting and talking		184-275	6	3		Y	066_candid_conversation__working_up_to_being_recorded.rtf 	Entered	y			184	275	91	1079.0	1707.0	x	66	628.0	0.14			y	y
 71	4	2	4_2	00:00	10:44	10:44	67	A day hunting and talking	dialogue	284-407	3	8	Y	Y	067_a_day_hunting_and_talking.rtf 	Entered	y			284	407	123	0.0	644.0	x	67	644.0	0.19			y	y
@@ -78,9 +78,9 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 83	7	2	5_2	03:45	18:15	14:30	78	Political discussion:  The government offers us new land		185-330	6	6	Y	Y	078_the_government_offers_us_new_lands.rtf 	Entered	y			185	330	145	225.0	1095.0	x	78	870.0	0.17			y	y
 84	7	2	5_3	00:00	02:47	02:47	79	Sermon fragment		409-442				Y	(missing)	Defer	n		x	409	442	33	0.0	167.0	x		167.0	0.20				
 85	7	2	5_3	02:49	14:31	11:42	80	Christmas time and the New Rice Festival	discussion	443-596	5	17		Y	080_christmas__new_year___s__and_the_new_rice_festival.rtf 	Entered	y			443	596	153	169.0	871.0	x	80	702.0	0.22			y	y
-86	7	2	5_3	14:33	15:53	01:20	81	The buffalo bugger and the rabbit-hunters	story	597-616	9	5	Y	Y	084_the_buffalo_bugger_and_the_rabbit_hunters.rtf	Entered	y	No pauses from 81-83		597	616	19	873.0	953.0	x	81	80.0	0.24			y	y
+86	7	2	5_3	14:33	15:53	01:20	81	The buffalo bugger and the rabbit-hunters	story	597-616	9	5	Y	Y	081_the_buffalo_bugger_and_the_rabbit_hunters.rtf	Entered	y	No pauses from 81-83		597	616	19	873.0	953.0	x	81	80.0	0.24			y	y
 							82	The smoker and the non-smoker dispute a pipe			7	9																			y	
-89	7	2	5_3	22:15	25:12	02:57	83	The three lazy men and the princess	story	718-769	4	14	Y	Y	086_the_three_lazy_men_and_the_princess.rtf 	Entered	y	Continued in no. 120		718	769	51	1335.0	1512.0	x	83	177.0	0.29				
+89	7	2	5_3	22:15	25:12	02:57	83	The three lazy men and the princess	story	718-769	4	14	Y	Y	083_the_three_lazy_men_and_the_princess.rtf 	Entered	y	Continued in no. 120		718	769	51	1335.0	1512.0	x	83	177.0	0.29				
 90	3	2	6_1	00:00	02:10	02:10	84	Hymn		008-026				Y	(missing)	Defer	n			8	26	18	0.0	130.0	x		130.0	0.14				
 87	7	2	5_3	16:00	20:01	04:01	85	Courting badinage	discussion	619-679	5	10	Y	Y	085_courting_badinage.rtf	Entered	y	No pauses from 81-83		619	679	60	960.0	1201.0	x	85	241.0	0.25			y	y
 92	3	2	6_1	11:12	13:22	02:10	86	Headman's communication		103-122	16	4	Y	Y	086_headman_s_communication.rtf	Entered	y			103	122	19	672.0	802.0	x	86	130.0	0.15			y	y
@@ -88,7 +88,7 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 96	3	2	6_2	01:30	22:30	21:00	88	Building an airstrip	discussion	248-475	6	5	Y	Y	088_building_an_airstrip.rtf 	Entered	y			248	475	227	90.0	1350.0	x	88	1260.0	0.18			y	y
 97	3	2	6_3	00:21	02:44	02:23	89	We sinners are like pigs		487-516	16	7	Y	Y	089_we_sinners_are_like_pigs.rtf 	Entered	y			487	516	29	21.0	164.0	x	89	143.0	0.20			y	y
 98	3	2	6_3	02:45	03:44	00:59	90	Proverbs		517-529	7	5	Y	Y	090_proverbs.rtf 	Entered	y			517	529	12	165.0	224.0	x	90	59.0	0.20			y	y
-99	3	2	6_3	03:45	06:24	02:39	91	Laying up riches in heaven	story	530-566	16	8	Y	Y	090_laying_up_riches_in_heaven.rtf 	Entered	y			530	566	36	225.0	384.0	x	91	159.0	0.23			y	y
+99	3	2	6_3	03:45	06:24	02:39	91	Laying up riches in heaven	story	530-566	16	8	Y	Y	091_laying_up_riches_in_heaven.rtf 	Entered	y			530	566	36	225.0	384.0	x	91	159.0	0.23			y	y
 100	3	2	6_3	06:26	09:16	02:50	92	The Trickster and the old bonze	story	567-607	10	5	Y	Y	092_the_trickster_and_the_old_bonze.rtf 	Entered	y			567	607	40	386.0	556.0	x	92	170.0	0.24			y	y
 101	3	2	6_3	09:28	10:22	00:54	93	Hymn: "Changeless Jesus"		611-623	15	4	Y	Y	093_changeless_jesus.rtf 	Entered	y			611	623	12	568.0	622.0	x		54.0	0.22			y	y
 102	3	2	6_3	10:25	12:49	02:24	94	The fingerless lord	story	624-661	7	12	Y	Y	094_the_fingerless_lord.rtf 	Entered	y			624	661	37	625.0	769.0			144.0	0.26			y	y
@@ -98,11 +98,11 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 106	4	1	7_1	00:03	02:07	02:04	98	Resurrection of a Barking Deer and Fulfilment of a Prophecy		007-023	9	6	Y	Y	098_resurrection_of_a_barking_deer_and_fulfillment_of_a_prophecy.rtf 	Entered	y	Cf. no. 73		7	23	16	3.0	127.0	x	98	124.0	0.13			y	y
 107	4	1	7_1	02:13	03:09	00:56	99	The tiger in the tobacco pouch	anecdote	024-030	11	2		Y	099_the_tiger_in_the_tobacco-pouch.rtf	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia		24	30	6	133.0	189.0	x		56.0	0.11			y	y
 108	4	1	7_1	03:09	03:37	00:28	100	Shan-Lahu anecdote		031-035				Y		Defer	n	Unfinished because of laughter; published in "Lahu bilingual humor" in Acta Linguistica Hafniensia		31	35	4	189.0	217.0	x		28.0	0.14				
-109	4	1	7_1	03:38	04:39	01:01	101	Thanks for the non-curry		035-043	11	4	Y	Y	101_a_lahu_thanks_a_shan_lady_for_rice_without_curry.rtf 	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia		35	43	8	218.0	279.0	x		61.0	0.13			y	y
+109	4	1	7_1	03:38	04:39	01:01	101	Thanks for the non-curry		035-043	11	4	Y	Y	101_thanks_for_the_non-curry.rtf 	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia		35	43	8	218.0	279.0	x		61.0	0.13			y	y
 110	4	1	7_1	04:41	05:54	01:13	102	The Stupid Son-in-law and the Bonze		044-054	9	3	Y	Y	102_the_stupid_son_in_law_beats_a_benevolent_bonze.rtf 	Entered	y			44	54	10	281.0	354.0	x		73.0	0.14			y	y
 111	4	1	7_1	05:55	06:53	00:58	103	The ferocious elephant		054-061	11	1	Y	Y	103_the_ferocious_elephant.rtf 	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia		54	61	7	355.0	413.0	x		58.0	0.12			y	y
 112	4	1	7_1	06:53	08:11	01:18	104	The son-in-law eats his father-in-law's shit		062-073				Y		Defer	n	Poorly told joke		62	73	11	413.0	491.0	x		78.0	0.14				
-113	4	1	7_1	08:15	09:17	01:02	105	Meat live in tree (Shan-Lahu anecdote)		073-081	11	5	Y	Y	105_monkey_meat_in_broken_shan.rtf 	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia		73	81	8	495.0	557.0	x		62.0	0.13			y	y
+113	4	1	7_1	08:15	09:17	01:02	105	Meat live in tree (Shan-Lahu anecdote)		073-081	11	5	Y	Y	105_meat_live_in_tree.rtf 	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia		73	81	8	495.0	557.0	x		62.0	0.13			y	y
 114	4	1	7_1	09:17	10:27	01:10	106	Song:  "Dawn breaks over the weary travellers"		082-091				Y	(missing)	Defer	n			82	91	9	557.0	627.0	x		70.0	0.13				
 115	4	1	7_1	10:29	15:00	04:31	107a	Those Peppers are Really Hot!	anecdote	092-204	11	8	Y	Y	107a_those_peppers_are_really_hot.rtf	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia; Yellow Lahu		92	204	112	629.0	900.0	x		271.0	0.41			y	y
 116	4	1	7_1	15:01	16:29	01:28	108	The son-in-law, the red ants, and the rice packet	story	131-144	9	4	Y	Y	108_stupid_son_in_law_the_red_ants_and_the_rice_packet.rtf 	Entered	y			131	144	13	901.0	989.0	x	108	88.0	0.15			y	y
@@ -117,7 +117,7 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 125	4	1	7_2	18:58	20:02	01:05	117	Trapping a deer in a tree		390-401	9	7	Y	Y	117_trapping_a_deer_in_a_tree.rtf 	Entered	y		x	390	401	11	1138.0	1202.0	x	117	65.0	0.17			y	y
 126	4	1	7_2	20:03	21:06	01:03	118	A Lahu sells wasp larvae to a Shan	anecdote	402-413	7	12	Y	Y	118_a_lahu_sells_wasp_larvae_to_a_shan.rtf 	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia (Ginny: pretty sure it's not...)		402	413	11	1203.0	1266.0	x		63.0	0.17				
 127	4	1	7_2	21:07	22:36	01:29	119	A Lahu gives a Shan a good cursing	anecdote	413-428	11	6	Y	Y	119_a_lahu_gives_a_shan_a_good_cursing.rtf 	Entered	y	Published in "Lahu bilingual humor" in Acta Linguistica Hafniensia		413	428	15	1267.0	1356.0	x		89.0	0.17			y	y
-128	4	1	7_3	00:00	02:49	02:49	120	The three lazy men and the princess	story	438-470	8	6	Y	Y	120_the_lazy_men_and_the_princess.rtf	Entered	y	Same speaker, same story as no. 83		438	470	32	0.0	169.0	x	120	169.0	0.19			y	y
+128	4	1	7_3	00:00	02:49	02:49	120	The three lazy men and the princess	story	438-470	8	6	Y	Y	120_the_three_lazy_men_and_the_princess.rtf	Entered	y	Same speaker, same story as no. 83		438	470	32	0.0	169.0	x	120	169.0	0.19			y	y
 129	4	1	7_3	02:50	04:30	01:40	121	The smoker and the non-smoker dispute a pipe		471-490	7	10	Y	Y	121_a_smoker_and_a_non_smoker_dispute_a_pipe.rtf 	Entered	y	Cf. no. 82a		471	490	19	170.0	270.0	x	121	100.0	0.19			y	y
 130	4	1	7_3	04:31	15:41	11:10	122	Church service		491-636	16	6		Y	122_church_service.rtf	Entered	y			491	636	145	271.0	941.0	x	122	670.0	0.22				
 131	4	1	8_1	00:00	14:17	14:17	123	The institution of the village headman	discussion	638-903	5	3	Y	Y	123_the_institution_of_the_village_headman.rtf 	Entered	y	Badly recorded from 835 to end; re-recorded by collector and chief informant (835-890)	x	638	903	265	0.0	857.0	x		857.0	0.31			y	y
@@ -132,7 +132,7 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 140	4	2	9_1	00:00	01:55	01:55	132	The widow with a snake for a son-in-law	story	526-550	8	14	Y	Y	132_the_widow_with_a_snake_for_a_son-in-law.rtf	Entered	y	See nos. 133 and 141a		526	550	24	0.0	115.0		132	115.0	0.21				
 141	4	2	9_1	01:56	05:04	03:08	133	The Snake and the Widow's Daughters		551-592	4	18		Y	133_the_snake_and_the_widow_s_daughters.rtf 	Entered	y	Retold by Paul with Lahu fair copy; also cf. 141a		551	592	41	116.0	304.0	x		188.0	0.22			y	y
 142	4	1	9_2	00:00	02:57	02:57	134	Song:  "I remember thee, Jerusalem"		008-031	15	8	Y	Y	134_i_long_for_thee__jerusalem.rtf 	Entered	y			8	31	23	0.0	177.0	x		177.0	0.13			y	y
-143	4	1	9_2	02:58	09:42	06:44	135	Sermon: "I am the Way"		032-090	16	3	Y	Y	135_sermon_ca_bo.rtf 	Entered	y			32	90	58	178.0	582.0	x	135	404.0	0.14			y	y
+143	4	1	9_2	02:58	09:42	06:44	135	Sermon: "I am the Way"		032-090	16	3	Y	Y	135_sermon_i_am_the_way.rtf 	Entered	y			32	90	58	178.0	582.0	x	135	404.0	0.14			y	y
 144	4	1	9_2	09:44	13:37	03:53	137	Man escapes from the primeval gourd	myth	091-125	12	3	Y	Y	137_mans_primeval_gourd_goes_missing_and_god_looks_for_it.rtf 	Entered	y	Cf. no. 74		91	125	34	584.0	817.0	x	137	233.0	0.15			y	y
 145	4	1	9_2	13:40	16:20	02:40	138	Hymn: There the flowers do not wither		126-151	15	9		Y	138_hymn_there_the_flowers_do_not_wither.rtf	Entered	y			126	151	25	820.0	980.0	x		160.0	0.16			y	y
 146	4	1	9_2	16:22	22:46	06:24	139	God struggles with the titan	myth	151-213	12	1	Y	Y	139_god_struggles_with_the_titan.rtf 	Entered	y			151	213	62	982.0	1366.0	x	139	384.0	0.16			y	y
@@ -152,7 +152,7 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 161	4	1	10_1	14:05	15:49	01:44	153	Courtship songs		740-772				Y	(missing)	Defer	n	Red Lahu		740	772	32	845.0	949.0	x		104.0	0.31				
 162	4	1	10_1	15:50	16:32	00:42	154	Courting a girl	monologue	773-788				Y		Defer	n	Red Lahu		773	788	15	950.0	992.0	x		42.0	0.36				
 163	4	1	10_1	16:33	18:27	01:54	155	Love-songs		789-827				Y	(missing)	Defer	n	Red Lahu		789	827	38	993.0	1107.0	x		114.0	0.33				
-164	4	1	10_1	18:30	20:32	02:02	156	Simple conversation		828-876	6	1		Y	156_simple_dialogue.rtf	Entered	y	Red Lahu		828	876	48	1110.0	1232.0	x		122.0	0.39			y	y
+164	4	1	10_1	18:30	20:32	02:02	156	Simple conversation		828-876	6	1		Y	156_simple_conversation.rtf	Entered	y	Red Lahu		828	876	48	1110.0	1232.0	x		122.0	0.39			y	y
 166	5	2	10_2	01:41	46	00:49	157	I'm feeling sad	monologue	011-017	5	12	Y	Y	157_im_feeling_sad.rtf 	Entered	y	Red Lahu; chanting style		11	17	6	101.0	0.0	x		49.0	0.12			y	y
 167	5	2	10_2	02:31	15:17	12:46	158	Conversation: Problems of slash-and-burn agriculture in modern Thailand		037-153	2	5	Y	Y	158_problems_of_slash_and_burn_agriculture.rtf 	Entered	y	From 128-148 singing is audible in the background		37	153	116	151.0	917.0	x	158	766.0	0.15			y	y
 168	5	2	10_2	15:17	24:51	09:34	159	The Lahu agricultural cycle	discussion	154-240	2	1		Y	159_lahu_agricultural_cycle.rtf	Entered	y			154	240	86	917.0	1491.0	x		574.0	0.15			y	y
@@ -169,13 +169,13 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 179	5	2	11_3	14:22	15:06	00:44	170	Jews harp music		813-827				Y		Defer	n			813	827	14	862.0	906.0	x		44.0	0.32				
 180							200	Marriage prayers			12	10			200_marriage_prayers.rtf	Entered	y														y	y
 181							201	Eating the new rice			12	9			201_eating_the_new_rice.rtf	Entered	y														y	y
-182							202	Wandering soul			12	6			202_wandering_soul.rtf	Entered	y														y	y
+182							202	Wandering soul			12	6			202_recalling_a_wandering_soul.rtf	Entered	y														y	y
 183							203	Spirit exorcism			12	7			203_spirit_exorcism.rtf	Entered	y														y	y
 184							204	Rite of divorce			12	11			204_rite_of_divorce.rtf	Entered	y														y	y
 185							205	Funerary chants I			12	12			205_funerary_chants_i.rtf	Entered	y														y	y
 186							206	Funerary chants II			12	13			206_funerary_chants_ii.rtf	Entered	y														y	y
 187							207	Prayer for game			12	8			207_prayer_for_game.rtf	Entered	y														y	y
-91	3	2	6_1	02:00	11:20	09:20	208	Sermon:  The recent disharmony in our village		026-102	16	10	Y	Y	085_gods_word_and_the_recent_disharmony_in_our_village.rtf 	Entered	y	A hymn is sung first		26	102	76	120.0	680.0	x		560.0	0.14			y	y
+91	3	2	6_1	02:00	11:20	09:20	208	Sermon:  The recent disharmony in our village		026-102	16	10	Y	Y	208_gods_word_and_the_recent_disharmony_in_our_village.rtf 	Entered	y	A hymn is sung first		26	102	76	120.0	680.0	x		560.0	0.14			y	y
 94	3	2	6_1	18:01	24:27	06:26	208	Sermon (cont'd)		164-224	16	11		Y	85b_continued_from_85a_Sermon_the_recent_disharmony_in_our_village.rtf	Entered	y			164	224	60	1081.0	1467.0	x		386.0	0.16			y	y
 189							209	Frere Jacques: a-vi-pa o			14	6	Y																		y	y
 188							107b	The Tiger is Getting Ripe			11	7			107b_the_tiger_is_getting_ripe.rtf	Entered	y														y	y
