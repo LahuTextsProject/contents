@@ -25,7 +25,7 @@ for morpheme in ['ɔ̀',
                  'cɛ́ʔ' # Transcribed Burmese morpheme
                  'Kɔ́lɔ'
 ]:
-    lahuWords.add(normalize_unicode(morpheme.lower()))
+    lahuWords.add(normalize_unicode(morpheme))
 
 def fixLine(line):
     line = line.strip()
@@ -51,7 +51,7 @@ def test4skip(line):
 
 englishLahuOverlap = set(['to', 'a', 'the', 'The', 'They', 'they',
                           'Black', 'some', 'do', 'go', 'A', 'much',
-                          'To', 'I'])
+                          'To', 'I', 'Paul'])
 
 def isLahuWord(word):
     # detect whether a word (sans formatting but with case) is Lahu
@@ -61,7 +61,7 @@ def isLahuWord(word):
     if word in englishLahuOverlap:
         return False
     # u+a78a is the double hypen morpheme separater
-    for morpheme in re.split(u'-|\ua78a', unicodedata.normalize('NFC', unicode(word.lower(), 'utf-8'))):
+    for morpheme in re.split(u'-|\ua78a', unicodedata.normalize('NFC', unicode(word, 'utf-8'))):
         if morpheme in lahuWords:
             return True
     return False
