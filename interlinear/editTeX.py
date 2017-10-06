@@ -22,8 +22,9 @@ lahuWords = makeLahuWords()
 # these are really just morphemes that appear in Lahu,
 # not necessarily words on their own
 for morpheme in ['ɔ̀',
-                 'cɛ́ʔ' # Transcribed Burmese morpheme
-                 'Kɔ́lɔ'
+                 'cɛ́ʔ', # Transcribed Burmese morpheme
+                 'Kɔ́lɔ',
+                 'nîʔkho'
 ]:
     lahuWords.add(normalize_unicode(morpheme))
 
