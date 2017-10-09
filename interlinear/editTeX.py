@@ -19,12 +19,15 @@ def makeLahuWords():
     return words
 
 lahuWords = makeLahuWords()
-# these are really just morphemes that appear in Lahu,
-# not necessarily words on their own
+# these are either morphemes that appear in Lahu,
+# or otherwise words that can't be reanalyzed into
+# smaller pieces and not in the dictionary
 for morpheme in ['ɔ̀',
                  'cɛ́ʔ', # Transcribed Burmese morpheme
                  'Kɔ́lɔ',
-                 'nîʔkho'
+                 'nîʔkho',
+                 'lɔ̂kì',
+                 'rê'
 ]:
     lahuWords.add(normalize_unicode(morpheme))
 
@@ -52,7 +55,8 @@ def test4skip(line):
 
 englishLahuOverlap = set(['to', 'a', 'the', 'The', 'They', 'they',
                           'Black', 'some', 'do', 'go', 'A', 'much',
-                          'To', 'I', 'Paul'])
+                          'To', 'I', 'Paul', 'Pastor', 'Teacher',
+                          'Tcalo', 'selection', 're-recorded'])
 
 def isLahuWord(word):
     # detect whether a word (sans formatting but with case) is Lahu
