@@ -158,7 +158,7 @@ addnote(footnote,footHash)
 for (i, line) in enumerate(lineArray[:4]):
     if line.isspace():
         continue
-    (newline, subs) = re.subn(r'\\#?\d+\.?\s*', r'', line)
+    (newline, subs) = re.subn(r'\\?\#?\d+\.?\s*', r'', line)
     if subs > 0:
         lineArray[i] = newline
         break
