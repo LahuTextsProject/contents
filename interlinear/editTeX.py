@@ -27,7 +27,8 @@ for morpheme in ['ɔ̀',
                  'Kɔ́lɔ',
                  'nîʔkho',
                  'lɔ̂kì',
-                 'rê'
+                 'rê',
+                 'šo' # Iron
 ]:
     lahuWords.add(normalize_unicode(morpheme))
 
