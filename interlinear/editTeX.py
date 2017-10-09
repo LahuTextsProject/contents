@@ -124,17 +124,21 @@ for line in fileinput.input():
 
 lineArray = []
 footnoteson = False
+line_continuation = False
+# Collect all non footnote lines from input
 for pointer, line in enumerate(inputLines):
-    if 'Footnote' in line: footnoteson = True
-    # TODO: this sometimes catches footnotes that start on a
-    # line in the rtf2latex just by chance. Improve this so that
-    # '[2]. hello' in the body is not caught by this mechanism
-    # so far only the case where the footnote ends the line is caught
-    # idea: match the footnote only when the line preceding it is not a newline
+    if 'Footnote' in line: break
+    # match the footnote only when the line preceding it is not a newline
     # as that means that this is the continuation of a sentence
-    if re.match(r'^\[\d+\](?!$)', line): footnoteson = True
-    if footnoteson:
-        break
+    if re.match(r'^\[\d+\]', line):
+        if line_continuation == True:
+            None
+        else:
+            break
+    if line.isspace():
+        line_continuation = False
+    else:
+        line_continuation = True
     lineArray.append(line)
 
 inputLines = inputLines[pointer:]
