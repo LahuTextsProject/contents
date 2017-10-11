@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import re
 import fileinput
 import csv
@@ -5,15 +7,30 @@ import unicodedata
 
 from string import punctuation
 
+def normalize_unicode(word):
+    return unicodedata.normalize('NFC', unicode(word, 'utf-8'))
+
 def makeLahuWords():
-    lahuWords = set()
+    words = set()
     with open('elements.csv', 'rb') as triples:
         reader = csv.reader(triples, delimiter = '\t')
         for row in reader:
-            lahuWords.add(unicodedata.normalize('NFC', unicode(row[0], 'utf-8')))
-    return lahuWords
+            words.add(normalize_unicode(row[0]))
+    return words
 
 lahuWords = makeLahuWords()
+# these are either morphemes that appear in Lahu,
+# or otherwise words that can't be reanalyzed into
+# smaller pieces and not in the dictionary
+for morpheme in ['ɔ̀',
+                 'cɛ́ʔ', # Transcribed Burmese morpheme
+                 'Kɔ́lɔ',
+                 'nîʔkho',
+                 'lɔ̂kì',
+                 'rê',
+                 'šo' # Iron
+]:
+    lahuWords.add(normalize_unicode(morpheme))
 
 def fixLine(line):
     line = line.strip()
@@ -39,7 +56,8 @@ def test4skip(line):
 
 englishLahuOverlap = set(['to', 'a', 'the', 'The', 'They', 'they',
                           'Black', 'some', 'do', 'go', 'A', 'much',
-                          'To'])
+                          'To', 'I', 'Paul', 'Pastor', 'Teacher',
+                          'Tcalo', 'selection', 're-recorded'])
 
 def isLahuWord(word):
     # detect whether a word (sans formatting but with case) is Lahu
@@ -48,8 +66,11 @@ def isLahuWord(word):
     # a morpheme is in the gloss? yes
     if word in englishLahuOverlap:
         return False
-    # \xea is the double hyphen morpheme separater
-    for morpheme in re.split('-|\xea', unicodedata.normalize('NFC', unicode(word.lower(), 'utf-8'))):
+    # u+a78a is the double hypen morpheme separater
+    word = normalize_unicode(word)
+    if word in lahuWords:
+        return True
+    for morpheme in re.split(u'-|\ua78a', word):
         if morpheme in lahuWords:
             return True
     return False
@@ -103,11 +124,21 @@ for line in fileinput.input():
 
 lineArray = []
 footnoteson = False
+line_continuation = False
+# Collect all non footnote lines from input
 for pointer, line in enumerate(inputLines):
-    if 'Footnote' in line: footnoteson = True
-    if re.match(r'^\[\d+\]',line): footnoteson = True
-    if footnoteson:
-        break
+    if 'Footnote' in line: break
+    # match the footnote only when the line preceding it is not a newline
+    # as that means that this is the continuation of a sentence
+    if re.match(r'^\[\d+\]', line):
+        if line_continuation == True:
+            None
+        else:
+            break
+    if line.isspace():
+        line_continuation = False
+    else:
+        line_continuation = True
     lineArray.append(line)
 
 inputLines = inputLines[pointer:]
@@ -127,7 +158,22 @@ for line in inputLines:
 
 addnote(footnote,footHash)
 
+# remove irrelevant numbering before the translation title
+for (i, line) in enumerate(lineArray[:4]):
+    if line.isspace():
+        continue
+    (newline, subs) = re.subn(r'\\?\#?\d+\.?\s*', r'', line)
+    if subs > 0:
+        lineArray[i] = newline
+        break
+
 for line in lineArray:
+    # normalize speaker names
+    line = re.sub(r'(Cà-bo|Càbo|CB|Pastor|Teacher)\:', 'T:', line)
+    line = re.sub(r'(T-y|Thû-Yì|Thû-yì|Thúyì|TY)\:', 'Ty:', line)
+    line = line.replace('Headman:', 'H:')
+    line = re.sub(r' TY ', ' Ty: ', line) # maybe do this in RTF picking tea instead
+    line = re.sub(r'(Paul|Cà-lɔ|Cà-lɔ̂|Tcalo)\:', 'P:', line)
     # normalize whitespace in footnote mark
     line = re.sub(r'\[ *(\d+) *\]', r'[\1]', line)
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
