@@ -182,10 +182,10 @@ for line in lineArray[dialogue_start:]:
     # strip RTF line numbers
     line = line_number_pattern.sub(r'', line)
     # normalize speaker names
-    line = re.sub(r'^(Cà-bo|Càbo|CB|Pastor|Teacher)\:', 'T:', line)
-    line = re.sub(r'^(T-y|Thû-Yì|Thû-yì|Thúyì|TY)\:', 'Ty:', line)
-    line = line.replace('^Headman:', 'H:')
-    line = re.sub(r'^(Paul|Cà-lɔ|Cà-lɔ̂|Tcalo)\:', 'P:', line)
+    line = re.sub(r'(Cà-bo|Càbo|CB|Pastor|Teacher)\:', 'T:', line)
+    line = re.sub(r'(T-y|Thû-Yì|Thû-yì|Thúyì|TY)\:', 'Ty:', line)
+    line = line.replace('Headman:', 'H:')
+    line = re.sub(r'(Paul|Cà-lɔ|Cà-lɔ̂|Tcalo)\:', 'P:', line)
     # add proper dialogue formatting
     # format the speakers of a line: assume a speaker-name is at most 20 characters long
     line = re.sub(r'^([^:]{1,20}):', r'\\speak{\1}', line)
