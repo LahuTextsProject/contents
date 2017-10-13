@@ -99,12 +99,7 @@ for text in texts:
                 raise ValueError("Language of title is neither English or Lahu")
 
     (textnumber, titlestring, textnumber, titlestring) = parsetitle(title, True)
-
-    # TODO: some Lahu titles are still missing.
-    if lahutitle is not None and lahutitle.text is not None:
-        (lahutextnumber, lahutitlestring, lahutextnumber, lahutitlestring) = parsetitle(lahutitle, False)
-    else:
-        lahutitlestring = "TODO"
+    (lahutextnumber, lahutitlestring, lahutextnumber, lahutitlestring) = parsetitle(lahutitle, False)
 
     outputfilename = '%s.tex' % textnumber
     try:
