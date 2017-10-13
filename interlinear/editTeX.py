@@ -169,7 +169,7 @@ for (i, line) in enumerate(lineArray[:4]):
         break
 
 print r'\setcounter{footnote}{0}'
-line_number_pattern = re.compile('^\d+[A-Za-z]?(\.|\:)? ')
+line_number_pattern = re.compile(r'^\d+[A-Za-z]?(\.|\:)?\s*')
 for (dialogue_start, line) in enumerate(lineArray):
     if line_number_pattern.match(line):
         break
