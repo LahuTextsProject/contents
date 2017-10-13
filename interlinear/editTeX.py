@@ -168,13 +168,30 @@ for (i, line) in enumerate(lineArray[:4]):
         lineArray[i] = newline
         break
 
-for line in lineArray:
+print r'\setcounter{footnote}{0}'
+line_number_pattern = re.compile('^\d+[A-Za-z]?(\.|\:)? ')
+for (dialogue_start, line) in enumerate(lineArray):
+    if line_number_pattern.match(line):
+        break
+    else:
+        print line
+
+print r'\begin{linenumbers*}'
+print r'\begin{dialogue}'
+for line in lineArray[dialogue_start:]:
+    # strip RTF line numbers
+    line = line_number_pattern.sub(r'', line)
     # normalize speaker names
-    line = re.sub(r'(Cà-bo|Càbo|CB|Pastor|Teacher)\:', 'T:', line)
-    line = re.sub(r'(T-y|Thû-Yì|Thû-yì|Thúyì|TY)\:', 'Ty:', line)
-    line = line.replace('Headman:', 'H:')
-    line = re.sub(r' TY ', ' Ty: ', line) # maybe do this in RTF picking tea instead
-    line = re.sub(r'(Paul|Cà-lɔ|Cà-lɔ̂|Tcalo)\:', 'P:', line)
+    line = re.sub(r'^(Cà-bo|Càbo|CB|Pastor|Teacher)\:', 'T:', line)
+    line = re.sub(r'^(T-y|Thû-Yì|Thû-yì|Thúyì|TY)\:', 'Ty:', line)
+    line = line.replace('^Headman:', 'H:')
+    line = re.sub(r'^(Paul|Cà-lɔ|Cà-lɔ̂|Tcalo)\:', 'P:', line)
+    # add proper dialogue formatting
+    # format the speakers of a line: assume a speaker-name is at most 20 characters long
+    line = re.sub(r'^([^:]{1,20}):', r'\\speak{\1}', line)
+    line = re.sub(r'^\(([^\)]{1,20})\)', r'\\speak{\1}', line)
+    # format stage directoins
+    line = re.sub(r'<([^\>]+)>', r'\direct{\1}', line)
     # normalize whitespace in footnote mark
     line = re.sub(r'\[ *(\d+) *\]', r'[\1]', line)
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
@@ -182,3 +199,5 @@ for line in lineArray:
     for fn in footHash:
         line = line.replace('[%s]' % fn, ("\\footnote{%s}" % footHash[fn]))
     print line
+print r'\end{dialogue}'
+print r'\end{linenumbers*}'
