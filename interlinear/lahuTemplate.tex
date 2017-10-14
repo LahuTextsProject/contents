@@ -10,8 +10,6 @@
 \usepackage[left]{lineno}
 \renewcommand\linenumberfont{\normalfont\bfseries\small}
 
-\usepackage{dialogue}
-
 \usepackage{makeidx}
 \makeindex
 
@@ -22,6 +20,9 @@
 \setmainfont[Renderer=ICU,Mapping=tex-text]{Charis SIL}
 \newcommand{\TC}[1]{{\tradchinesefont #1}}
 \newcommand{\SC}[1]{{\simpchinesefont #1}}
+
+\newcommand\direct[1] {[{\DirectStyle #1}]}
+\newcommand\DirectStyle {\slshape}
 
 \usepackage{fullpage}
 \usepackage{parskip}
