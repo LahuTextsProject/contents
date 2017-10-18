@@ -20,7 +20,7 @@ structure = [
         [12, 'Traditional "theo - animism"'],
         [13, 'Traditional songs'],
         [14, 'Modern secular songs'],
-        [15, 'Christian hymns'],
+        [15, 'Christian hymns and Bible readings'],
         [16, 'Sermons and announcements in church']
     ]]
 ]
@@ -45,7 +45,7 @@ lahu_structure = [
         [12, 'Lâhū-yâ hɨ ve ó-qō pɨ ve ɔ̀-lî, pɛ̂ tú ve ɔ̀-lî'],
         [13, 'à-šwè Lâhū qa-mɨ̀-khɔ̂'],
         [14, 'yàʔ-ni cwe ve lìʔ-khɔ̂'],
-        [15, 'Hkrìʔ-yâ hɨ ve qa-mɨ̀-khɔ̂'],
+        [15, 'lìʔ-phu lɛ Khrìʔ-yâ hɨ ve qa-mɨ̀-khɔ̂'],
         [16, 'bon-yɛ̀ qhɔ lo ve bon-mā-khɔ̂ lɛ tɔ-páw'],
     ]]
 ]
