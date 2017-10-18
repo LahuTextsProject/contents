@@ -8,7 +8,7 @@ import os
 import re
 import csv
 
-from Transducer import transduce,baptist,chinese,decompose
+from Transducer import transduce, baptist, chinese, decompose
 from structure import structure, lahu_structure
 
 def getTofCinfo(filename):
