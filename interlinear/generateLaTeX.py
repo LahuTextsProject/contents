@@ -11,39 +11,31 @@ import unicodecsv as csv
 from Transducer import transduce, baptist, chinese, decompose
 from structure import structure, lahu_structure
 
-def getTofCinfo(filename):
+def parse_catalog_file(filename):
     try:
-        TofCfile = open(filename, 'rb')
-        csvfile = csv.reader(TofCfile, delimiter="\t", encoding='utf-8')
+        catalog_file = open(filename, 'rb')
     except IOError:
         message = 'Expected to be able to read %s, but it was not found or unreadable' % filename
         exit()
-    except:
-        raise
 
-    try:
-        TofCinfo = {}
-        for row, values in enumerate(csvfile):
-            # skip header line
-            if row == 0:
-                continue
-            # are we using this text?
-            if values[17] != 'y':
-                continue
-            try:
-                TofCinfo[values[7]] = ["%s.%02d" % (values[11], int('0'+values[12])), values[15].replace('.rtf','').replace('.tex','').strip(), values[11]]
-                TofCinfo[values[7]].append(float(TofCinfo[values[7]][0]))
-            except:
-                # raise
-                print values
+    csvfile = csv.reader(catalog_file, delimiter="\t", encoding='utf-8')
+    catalog = {}
+    # skip header row
+    csvfile.next()
+    for row, info in enumerate(csvfile):
+        # are we using this text?
+        if info[17] != 'y':
+            continue
+        id_number = str(info[7])
+        english_title = info[8]
+        genre = info[11]
+        section = info[12]
+        index = "%s.%02d" % (genre, int('0' + section))
+        translation_filename = info[15].replace('.rtf','').replace('.text','').strip()
+        catalog[id_number] = [index, translation_filename, genre, float(index), english_title]
 
-    except:
-        raise
-        print 'problem processing ToC csv file'
-        exit()
-
-    TofCfile.close()
-    return TofCinfo
+    catalog_file.close()
+    return catalog
 
 def escape(str):
     str = str.replace('&','\\&')
@@ -52,42 +44,33 @@ def escape(str):
     #str = str.replace('-','\\-')
     return str
 
-numberpattern = re.compile('\((\d+)\) *(.*)')
-
-f = open(sys.argv[1], 'rt')
-tree = ET.parse(f)
-f.close()
+with open(sys.argv[1], 'rt') as f:
+    tree = ET.parse(f)
 
 # we'll be reorganizing (reordering) the files as they come in.
 # (they don't come in in any useful order)
 filestotex = codecs.open('includes.tex', 'w', 'utf-8')
 listoffiles = {}
 
-TofCinfo = getTofCinfo(sys.argv[2])
+catalog = parse_catalog_file(sys.argv[2])
 
 # first, divide the monster files into texts.
 texts = tree.findall('.//interlinear-text')
-offscale = 999
 
-def parsetitle(title, inc_offscale_p):
-    global offscale
-    textnumbermatch = numberpattern.search(title.text)
+textnumberpattern = re.compile('\((\d+[a-z]?)\) *(.*)')
+def parsetitle(title):
+    textnumbermatch = textnumberpattern.search(title.text)
     if textnumbermatch:
         textnumber  = textnumbermatch.group(1)
         titlestring =  textnumbermatch.group(2)
     else:
-        if inc_offscale_p:
-            offscale += 1
-        textnumber  = offscale
-        titlestring = title.text
+        raise ValueError("No text number found for", title.text) 
             
     titlestring = titlestring.replace('&','\\&')
     titlestring = titlestring.replace('#','\\#')
-    return (textnumber, titlestring, textnumber)
-
+    return (textnumber, titlestring)
 
 for text in texts:
-
     # extract title info, add this info to our list of texts
     for item in text.findall(".//item"):
         if item.attrib['type'] == 'title':
@@ -98,12 +81,23 @@ for text in texts:
             else:
                 raise ValueError("Language of title is neither English or Lahu")
 
-    (textnumber, titlestring, textnumber) = parsetitle(title, True)
-    (lahutextnumber, lahutitlestring, lahutextnumber) = parsetitle(lahutitle, False)
+    (textnumber, titlestring) = parsetitle(title)
+    (lahutextnumber, lahutitlestring) = parsetitle(lahutitle)
+
+    # if the text is not in the catalog, it is unused
+    if textnumber not in catalog:
+        continue
+
+    if textnumber != lahutextnumber:
+        raise ValueError("Lahu textnumber doesn't match English", textnumber, lahutextnumber)
+
+    # instead of using the English title from the xml file,
+    # we use the title from the catalog
+    titlestring = catalog[textnumber][4]
 
     outputfilename = '%s.tex' % textnumber
     try:
-        listoffiles[TofCinfo[textnumber][3]] = textnumber
+        listoffiles[catalog[textnumber][3]] = textnumber
     except:
         # skip anything that is not sequenced
         pass
@@ -163,15 +157,15 @@ for text in texts:
     for i,sentence in enumerate(sentences):
         print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[0].replace(' ,',',').replace(' .','.'))
 
-    if textnumber in TofCinfo:
-        if TofCinfo[textnumber][1] != '':
-            if os.path.isfile(TofCinfo[textnumber][1] + '.tex'):
+    if textnumber in catalog:
+        if catalog[textnumber][1] != '':
+            if os.path.isfile(catalog[textnumber][1] + '.tex'):
                 print >> OutLaTeX, '\subsection*{%s}' % 'Translation'
-                print >> OutLaTeX, '\input{%s}' % TofCinfo[textnumber][1]
+                print >> OutLaTeX, '\input{%s}' % catalog[textnumber][1]
             else:
-                print '>>> translation file not found for #%s : %s.tex' % (textnumber, TofCinfo[textnumber][1])
+                print '>>> translation file not found for #%s : %s.tex' % (textnumber, catalog[textnumber][1])
         else:
-            print '>>>  no translation file listed for #%s : %s' % (textnumber, TofCinfo[textnumber][0])
+            print '>>>  no translation file listed for #%s : %s' % (textnumber, catalog[textnumber][0])
 
     OutLaTeX.close()
 
