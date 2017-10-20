@@ -12,7 +12,7 @@ structure = [
     ['The Lahu imagination', [
         [7, 'Fables and edifying stories'],
         [8, 'Myths and fairy tales'],
-        [8, 'Human frailty: silliness, stupidity, cowardice'],
+        [9, 'Human frailty: silliness, stupidity, cowardice'],
         [10, 'Lovable rascals'],
         [11, 'Bilingual humor']
     ]],
@@ -37,7 +37,7 @@ lahu_structure = [
     ['Lâhū-yâ hɨ ve dɔ̂-qhâ', [
         [7, 'kâ-law lɛ na ša ve a-pòn ɛ́ tê phā'],
         [8, 'kâ-phɨ̂-kâ-law lɛ na ša ve a-pòn ɛ́ tê phā'],
-        [8, 'chɔ-yâ ve yàʔ-kɨ̀: chɔ-qā-pā, chɔ-kɔ̂ʔ'],
+        [9, 'chɔ-yâ ve yàʔ-kɨ̀: chɔ-qā-pā, chɔ-kɔ̂ʔ'],
         [10, 'ɛ̀-qhɛ̀-pā'],
         [11, 'šu-khɔ̂ mâ šī lɛ g̈ɨ̀-yɔ̀ tù phɛ̀ʔ ve'],
     ]],
