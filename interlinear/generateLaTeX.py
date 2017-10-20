@@ -83,7 +83,7 @@ def parsetitle(title, inc_offscale_p):
             
     titlestring = titlestring.replace('&','\\&')
     titlestring = titlestring.replace('#','\\#')
-    return (textnumber, titlestring, textnumber, titlestring)
+    return (textnumber, titlestring, textnumber)
 
 
 for text in texts:
@@ -98,8 +98,8 @@ for text in texts:
             else:
                 raise ValueError("Language of title is neither English or Lahu")
 
-    (textnumber, titlestring, textnumber, titlestring) = parsetitle(title, True)
-    (lahutextnumber, lahutitlestring, lahutextnumber, lahutitlestring) = parsetitle(lahutitle, False)
+    (textnumber, titlestring, textnumber) = parsetitle(title, True)
+    (lahutextnumber, lahutitlestring, lahutextnumber) = parsetitle(lahutitle, False)
 
     outputfilename = '%s.tex' % textnumber
     try:
