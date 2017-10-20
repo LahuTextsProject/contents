@@ -6,15 +6,15 @@ import codecs
 import sys
 import os
 import re
-import csv
+import unicodecsv as csv
 
 from Transducer import transduce, baptist, chinese, decompose
 from structure import structure, lahu_structure
 
 def getTofCinfo(filename):
     try:
-        TofCfile = codecs.open(filename, 'r', 'utf-8')
-        csvfile = csv.reader(TofCfile, delimiter="\t")
+        TofCfile = open(filename, 'rb')
+        csvfile = csv.reader(TofCfile, delimiter="\t", encoding='utf-8')
     except IOError:
         message = 'Expected to be able to read %s, but it was not found or unreadable' % filename
         exit()
@@ -42,7 +42,7 @@ def getTofCinfo(filename):
         print 'problem processing ToC csv file'
         exit()
 
-    f.close()
+    TofCfile.close()
     return TofCinfo
 
 def escape(str):
