@@ -28,10 +28,10 @@ def parse_catalog_file(filename):
             continue
         id_number = str(info[7])
         english_title = info[8]
-        genre = info[11]
-        section = info[12]
+        genre = str(info[11])
+        section = str(info[12])
         index = "%s.%02d" % (genre, int('0' + section))
-        translation_filename = info[15].replace('.rtf','').replace('.text','').strip()
+        translation_filename = str(info[15]).replace('.rtf','').replace('.text','').strip()
         catalog[id_number] = [index, translation_filename, genre, float(index), english_title]
 
     catalog_file.close()
