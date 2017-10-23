@@ -159,18 +159,17 @@ for line in inputLines:
 
 addnote(footnote,footHash)
 
-# remove irrelevant numbering before the translation title
-for (i, line) in enumerate(lineArray[:4]):
-    if line.isspace():
+# skip the first non-empty line, which is the title
+for (i, line) in enumerate(lineArray):
+    if not line.strip():
         continue
-    (newline, subs) = re.subn(r'\\?\#?\d+\.?\s*', r'', line)
-    if subs > 0:
-        lineArray[i] = newline
+    else:
+        text_start = i + 1
         break
 
 print r'\setcounter{footnote}{0}'
 line_number_pattern = re.compile(r'^\d+[A-Za-z]?(\.|\:)?\s*')
-for (dialogue_start, line) in enumerate(lineArray):
+for (dialogue_start, line) in enumerate(lineArray[text_start:]):
     if line_number_pattern.match(line):
         break
     else:
@@ -179,7 +178,7 @@ for (dialogue_start, line) in enumerate(lineArray):
 ## dialogue_pattern_1 = re.compile(r'^([^:]{1,20}):')
 ## dialogue_pattern_2 = re.compile(r'^\(([^\)]{1,20})\)')
 print r'\begin{linenumbers*}'
-for line in lineArray[dialogue_start:]:
+for line in lineArray[dialogue_start + text_start:]:
     # strip RTF line numbers
     line = line_number_pattern.sub(r'', line)
     # normalize speaker names
