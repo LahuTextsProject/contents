@@ -22,7 +22,7 @@ def parse_catalog_file(filename):
     catalog = {}
     # skip header row
     csvfile.next()
-    for row, info in enumerate(csvfile):
+    for info in csvfile:
         # are we using this text?
         if info[17] != 'y':
             continue
