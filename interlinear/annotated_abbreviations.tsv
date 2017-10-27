@@ -1,0 +1,86 @@
+Adv	adverb
+Adv.interrog	interrogative adverb
+Adv.onomat 	onomatopoetic
+Adv+V 	adverb + verb
+AE	adverbial expression
+AEext 	extentive adverbial	AE\textsubscript{ext}
+AE.stat	stative adverbial
+B.n	bound nominal morpheme
+B.v 	bound verbal morpheme
+Cl.ext 	extentive clause
+Clf 	final clause
+Cl.nf	non-final clause
+Conj	conjunction
+C.r	resultative complement
+Dem	demonstrative
+Det	determiner
+Elab 	elaborate expression (4 syllables; 1st and 3rd, or 2nd and 4th are the same)
+Elab.adv	adverbial elaborate expression
+Elab.adv + V	adverbial elaborate expression + verb	Elab\textsubscript{adv}+V
+Elab.n	nominal elaborate expression
+Elab.v	verbal elaborate expression
+Elab.v + V	verbal elaborate expression + verb	Elab\textsubscript{v}+V
+Eth	ethnonym
+Extd.Elab	extended elaborate expression (more than 4 syllable)
+Interj	interjection
+M.pfx	prefixable morpheme (may be preceded by ɔ̀-)
+N	noun
+N.dvb	deverbal noun (derived from a clause containing only a VP)
+N.ext	extentive noun
+N.intg	interrogative noun
+N.lim	limited noun
+N.loc	locative noun
+NP	noun phrase
+N.pers	personal names
+NP.ext	extentive noun phrase
+NPext	extentive noun phrase	N\textsubscript{ext}
+NP.intg	interrogative noun phrase
+N.place	name of a place
+NPLoc	locative noun phrase	NP\textsubscript{Loc}
+N+Pn	noun + noun-particle	N + P\textsubscript{n}
+N.poss + ve	genitive modifier	N\textsubscript{poss}+\textbf{ve}
+NPq	quantified noun phrase	NP\textsubscript{q}
+Nprop	proper noun	N\textsubscript{prop}
+NP.time	temporal noun phrase
+N.sd	special demonstrative noun
+Nsd + Pn	special demonstrative noun + noun particle	N\textsubscript{sd}+P\textsubscript{n}
+N.spec + V	specifying noun + verb	N\textsubscript{spec}+V
+Nspec+V	specifying noun + verb	N\textsubscript{spec}+V
+N.time	temporal noun
+Num	numeral
+Num+Clf+Num	numeral plus classifier; quantity expression (equivalent to ``Q``)	Num+Clf+Num
+Onomat	onomatopoeia
+OV	object plus verb; object-verb construction
+P.adv	adverbial particle
+P.n	nominal particle
+Pron	pronoun
+Pron.intg	interrogative pronoun
+Prt	particle
+P.uf	final unrestricted particle
+P.unf	non-final unrestricted particle
+P.univ	universal unrestricted particle
+P.univ+P.univ	universal unrestricted particle + universal unrestricted particle	P\textsubscript{univ}+P\textsubscript{univ}
+P.v	verb particle
+P.v-nom	nominalizing verb particle
+P.v+P.quot	verb particle + quotative particle	P\textsubscript{v}+P\textsubscript{quot}
+Pv+Pv	verb particle + verb particle	P\textsubscript{v}+P\textsubscript{v}
+P.v + V.v	verb particle + post-head versatile verb	P\textsubscript{v}+V\textsubscript{v}
+Q	numeral plus classifier; quantity expression (eqiuvalent to ``Num + Clf``)
+Q.time	temporal quantity expression
+Quasi-Elab.n	quasi-elaborate expression (4 syllables but none repeated)
+QUOT	quotative
+RC	relative clause
+SV	subject plus verb; subject-verb construction
+S+VP	sentence + verb phrase
+Temp Nom	temporal nominal
+V	verb
+V.adj	adjectival verb; adjective
+Vimp	imperative verb	V\textsubscript{imp}
+VP	verb phrase
+V+P.v	verb + verb particle	V+P\textsubscript{v}
+V.Pv-nom	nominalizing verb particle
+V.redup	reduplicated verb
+v.V	prehead versatile verb	\textsubscript{v}V
+V.v	post-head versatile verb
+V+Vv	verb + post-head versatile verb	V+V\textsubscript{v}
+vV + Vh	pre-head versatile verb + main verb (pre-head concatenation)	\textsubscript{v}V+V\textsubscript{h}

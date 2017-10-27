@@ -103,6 +103,10 @@
 % package for enhancing lists
 \usepackage[shortlabels]{enumitem}
 
+\usepackage[acronym,toc,nonumberlist,nomain,glossaries]{glossaries}
+\include{abbreviations}
+
+\makeglossaries
 \begin{document}
 
 %\layout
@@ -127,6 +131,9 @@
 \include{introduction}
 \thispagestyle{empty}
 \cleardoublepage
+
+\printglossary[type=\acronymtype,title=Form Class Abbreviations]
+\glsunsetall
 
 \mainmatter
 \pdfbookmark[0]{Window onto a Vanished World}{TOC}
