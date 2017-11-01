@@ -100,9 +100,15 @@
 \usepackage{tikz}
 \usepackage{tikz-qtree}
 
+% properly format quotations
+\usepackage [autostyle, strict=true]{csquotes}
+\MakeOuterQuote{"}
+
 % package for enhancing lists
 \usepackage[shortlabels]{enumitem}
 
+% makes compilation really slow as we have many acronym references.
+% oh well.
 \usepackage[acronym,toc,nonumberlist,nomain,glossaries]{glossaries}
 \include{abbreviations}
 
