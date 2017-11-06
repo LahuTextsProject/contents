@@ -64,6 +64,8 @@
 \usepackage{covington}
 \usepackage{acronym}
 \usepackage{natbib}
+% references in toc
+\usepackage[nottoc]{tocbibind}
 \usepackage{fix-cm}
 \usepackage{lettrine}
 
@@ -101,7 +103,7 @@
 \usepackage{tikz-qtree}
 
 % properly format quotations
-\usepackage [autostyle, strict=true]{csquotes}
+\usepackage[autostyle, strict=true]{csquotes}
 \MakeOuterQuote{"}
 
 % package for enhancing lists
@@ -153,7 +155,7 @@
 \fancyhead[RO]{\large{References} \vspace{0.5em}}
 \bibliographystyle{authordate1}
 \renewcommand{\bibname}{References}
+\nocite{*}
 \bibliography{stedtreferences}
-\addcontentsline{toc}{part}{References}
 
 \end{document}

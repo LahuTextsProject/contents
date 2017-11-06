@@ -18,6 +18,7 @@ rm -r *
 cp ../$1 .
 cp ../*.tex .
 cp ../../transTeX/*.tex .
+cp ../*.bib .
 echo Generating LaTeX file "${texfile}.tex", timestamp: `date`
 python2 ../generateLaTeX.py $1 ../lahucatalog.tsv ../annotated_abbreviations.tsv
 
@@ -27,7 +28,9 @@ sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.t
 echo Compiling LaTeX file "${texfile}.tex", step 1 of 3, timestamp: `date`
 xelatex -interaction nonstopmode ${texfile} > ${texfile}.stdout.log
 echo Generating glossaries
-makeglossaries ${texfile} > ${textfile}.glossaries.stdout.log
+makeglossaries ${texfile} > ${texfile}.glossaries.stdout.log
+echo Generating bibliography
+bibtex ${texfile} > ${texfile}.bibtex.stdout.log
 echo Compiling LaTeX file "${texfile}.tex", step 2 of 3, timestamp: `date`
 xelatex -interaction nonstopmode ${texfile} >> ${texfile}.stdout.log
 echo Compiling LaTeX file "${texfile}.tex", step 3 of 3, timestamp: `date`
