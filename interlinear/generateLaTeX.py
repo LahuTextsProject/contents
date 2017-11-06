@@ -22,7 +22,7 @@ def parse_catalog_file(filename):
     catalog = {}
     # skip header row
     csvfile.next()
-    for row, info in enumerate(csvfile):
+    for info in csvfile:
         # are we using this text?
         if info[17] != 'y':
             continue
@@ -141,6 +141,9 @@ for text in texts:
                             form = str(i.text)
                             form = re.sub(r'/.*$','',form)
                         form = escape(form)
+                        ## this is hacky
+                        if i.attrib['type'] == 'msa' and level == 'msa':
+                            form = '\gls{%s}' % form.strip()
                         itemToOutput = ' {%s}' % form
                     print >> OutLaTeX, itemToOutput,
                 print >> OutLaTeX
@@ -161,6 +164,8 @@ for text in texts:
         if catalog[textnumber][1] != '':
             if os.path.isfile(catalog[textnumber][1] + '.tex'):
                 print >> OutLaTeX, '\subsection*{%s}' % 'Translation'
+                # make sure our English titles are consistent
+                print >> OutLaTeX, r'\textbf{%s}'% titlestring
                 print >> OutLaTeX, '\input{%s}' % catalog[textnumber][1]
             else:
                 print '>>> translation file not found for #%s : %s.tex' % (textnumber, catalog[textnumber][1])
@@ -183,3 +188,22 @@ for ((partno, part), (lpartno, lpart))  in zip(enumerate(structure),
             if int(textnumber) == genre[0]:
                 print >> filestotex, '\include{%s}' % listoffiles[textnumber]
                 print "    %s " % textnumber
+
+def parse_form_class_file(filename):
+    with open(filename, 'rt') as f:
+        csvfile = csv.reader(f, delimiter='\t', encoding='utf-8')
+        forms = {}
+        for info in csvfile:
+            key = str(info[0]).strip()
+            annotation = info[1].strip()
+            if len(info) == 3:
+                output = str(info[2]).strip()
+            else:
+                output = re.sub(r'\.(.*)', r'\\textsubscript{\1}', info[0])
+            forms[key] = [annotation, output]
+        return forms
+
+form_class_info = parse_form_class_file(sys.argv[3])
+abbreviation_file = codecs.open('abbreviations.tex', 'w', 'utf-8')
+for key, value in form_class_info.iteritems():
+    print >> abbreviation_file, '\\newacronym{%s}{%s}{%s}' % (key, value[1], value[0])
