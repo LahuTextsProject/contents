@@ -196,6 +196,7 @@ for line in lineArray[dialogue_start + text_start:]:
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
     line = re.sub(r'(\[\d+\])\.', r'.\1', line)
     for fn in footHash:
+        line = line.replace(' [%s]' % fn, ("\\footnote{%s}" % footHash[fn]))
         line = line.replace('[%s]' % fn, ("\\footnote{%s}" % footHash[fn]))
     print line
 print r'\end{linenumbers*}'
