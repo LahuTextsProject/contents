@@ -36,10 +36,7 @@ for morpheme in ['ɔ̀',
 def fixLine(line):
     line = line.strip()
     line = line.replace(r'\\texttt\{"\}', r'"')
-    line = line.replace(r'``', r'"')
-    line = line.replace(r"''", r'"')
     line = line.replace(r'\\texttt\{\'\}', r"'")
-    line = line.replace(r'`', r"'")
     line = re.sub(r'\\texttt\{(.*?)\}', r'\1', line)
     line = re.sub(r'([A-Z])\@(.*?)\@', r'$\1_\2$', line)
     line = re.sub(r'\@([a-z])\@(.*?)', r'$_{\1}\2$', line)
