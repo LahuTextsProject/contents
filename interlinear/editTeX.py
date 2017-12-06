@@ -182,6 +182,8 @@ line_number_pattern = re.compile(r'^\d+[A-Za-z]?(\.|\:)?\s*')
 for (prologue, line) in enumerate(lineArray[text_start:]):
     if line_number_pattern.match(line):
         break
+    elif '[Tape ' in line:
+        continue
     else:
         print fixup_footnotes(line)
 
