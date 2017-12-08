@@ -205,6 +205,6 @@ for line in lineArray[dialogue_start:]:
     # normalize whitespace in footnote mark
     line = re.sub(r'\[ *(\d+) *\]', r'[\1]', line)
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
-    line = re.sub(r'(\[\d+\])\.', r'.\1', line)
+    line = re.sub(r'\s?(\[\d+\])\.', r'.\1', line)
     print fixup_footnotes(line)
 print r'\end{linenumbers*}'
