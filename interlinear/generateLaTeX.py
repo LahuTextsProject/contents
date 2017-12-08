@@ -106,6 +106,7 @@ for text in texts:
     # we create one output text for each input text
     OutLaTeX = codecs.open(outputfilename, 'w', 'utf-8')
     print >> OutLaTeX, '\section{%s}' % titlestring
+    print >> OutLaTeX, '\label{sec:%s}' % textnumber
     print >> OutLaTeX, '\\addlahutoc{section}{%s}' % lahutitlestring
     phrases = text.findall('.//phrases')
     print >> OutLaTeX, '\\begin{examples}'
@@ -178,12 +179,18 @@ for text in texts:
 # LaTeX in order
 for ((partno, part), (lpartno, lpart))  in zip(enumerate(structure),
                                                enumerate(lahu_structure)):
-    print >> filestotex, '\part{%s}\n\\addlahutoc{part}{%s}' % (part[0], lpart[0])
-    print "part %s. %s" % (partno+1, part[0])
+    partname = part[0]
+    print >> filestotex, '\part{%s}' % partname
+    print >> filestotex, '\label{part:%s}' % partname
+    print >> filestotex, '\\addlahutoc{part}{%s}' % lpart[0]
+    print "part %s. %s" % (partno+1, partname)
     for ((chapterno, genre), (lchapterno, lgenre)) in zip(enumerate(part[1]),
                                                           enumerate(lpart[1])):
-        print >> filestotex, '\chapter{%s}\n\\addlahutoc{chapter}{%s}' % (genre[1], lgenre[1])
-        print "  chapter %s %s" % (chapterno+1, genre[1])
+        chaptername = genre[1]
+        print >> filestotex, '\chapter{%s}' % chaptername
+        print >> filestotex, '\label{chapter:%s}' % chaptername.replace('"', '')
+        print >> filestotex, '\\addlahutoc{chapter}{%s}' % lgenre[1]
+        print "  chapter %s %s" % (chapterno+1, chaptername)
         for textnumber in sorted(listoffiles.keys()):
             if int(textnumber) == genre[0]:
                 print >> filestotex, '\include{%s}' % listoffiles[textnumber]

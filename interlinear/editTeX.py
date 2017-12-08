@@ -36,10 +36,7 @@ for morpheme in ['ɔ̀',
 def fixLine(line):
     line = line.strip()
     line = line.replace(r'\\texttt\{"\}', r'"')
-    line = line.replace(r'``', r'"')
-    line = line.replace(r"''", r'"')
     line = line.replace(r'\\texttt\{\'\}', r"'")
-    line = line.replace(r'`', r"'")
     line = re.sub(r'\\texttt\{(.*?)\}', r'\1', line)
     line = re.sub(r'([A-Z])\@(.*?)\@', r'$\1_\2$', line)
     line = re.sub(r'\@([a-z])\@(.*?)', r'$_{\1}\2$', line)
@@ -162,7 +159,17 @@ for line in inputLines:
 
 addnote(footnote,footHash)
 
+# an alternative algorithm would be to scan the line and extract the
+# footnote number, and then do a lookup.
+def fixup_footnotes(line):
+    for number, footnote_text in footHash.iteritems():
+        footnote = '\\footnote{%s}' % footnote_text
+        line = line.replace(' [%s]' % number, footnote)
+        line = line.replace('[%s]' % number, footnote)
+    return line
+
 # skip the first non-empty line, which is the title
+# we emit the real title from the catalog file
 for (i, line) in enumerate(lineArray):
     if not line.strip():
         continue
@@ -172,16 +179,20 @@ for (i, line) in enumerate(lineArray):
 
 print r'\setcounter{footnote}{0}'
 line_number_pattern = re.compile(r'^\d+[A-Za-z]?(\.|\:)?\s*')
-for (dialogue_start, line) in enumerate(lineArray[text_start:]):
+for (prologue, line) in enumerate(lineArray[text_start:]):
     if line_number_pattern.match(line):
         break
+    elif '[Tape ' in line:
+        continue
     else:
-        print line
+        print fixup_footnotes(line)
+
+dialogue_start = prologue + text_start
 
 ## dialogue_pattern_1 = re.compile(r'^([^:]{1,20}):')
 ## dialogue_pattern_2 = re.compile(r'^\(([^\)]{1,20})\)')
 print r'\begin{linenumbers*}'
-for line in lineArray[dialogue_start + text_start:]:
+for line in lineArray[dialogue_start:]:
     # strip RTF line numbers
     line = line_number_pattern.sub(r'', line)
     # normalize speaker names
@@ -195,7 +206,5 @@ for line in lineArray[dialogue_start + text_start:]:
     line = re.sub(r'\[ *(\d+) *\]', r'[\1]', line)
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
     line = re.sub(r'(\[\d+\])\.', r'.\1', line)
-    for fn in footHash:
-        line = line.replace('[%s]' % fn, ("\\footnote{%s}" % footHash[fn]))
-    print line
+    print fixup_footnotes(line)
 print r'\end{linenumbers*}'
