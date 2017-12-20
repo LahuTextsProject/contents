@@ -12,9 +12,10 @@ Comments and suggestions are of course most welcome!
 
 # Dependencies
 The following applications/packages are needed to make a final pdf with makeLahuTexts.sh:
-Lilypond (for a music score)
+
+`lilypond` (for a music score)
 ## LaTeX packages
 `glossaries`
 
 ## Python packages
-`unicodecsv`
+`unicodecsv`, available in pip
