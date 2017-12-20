@@ -13,8 +13,13 @@ echo Making symbolic link lahutexts.xml
 ln -sf $1 lahutexts.xml
 echo Converting RTFs to LaTeX
 ./texRTFs.sh
+echo Making music scores
+lilypond --ps Lahu_tune.ly
+echo Performing fixups
+./fixups.sh
 cd tex
 rm -r *
+cp ../*.eps .
 cp ../$1 .
 cp ../*.tex .
 cp ../../transTeX/*.tex .
