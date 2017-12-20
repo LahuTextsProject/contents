@@ -9,3 +9,12 @@ discretion it deserves and allow us to work quietly on it for the next
 few months until it is ready for publication.
 
 Comments and suggestions are of course most welcome!
+
+# Dependencies
+The following applications/packages are needed to make a final pdf with makeLahuTexts.sh:
+Lilypond (for a music score)
+## LaTeX packages
+`glossaries`
+
+## Python packages
+`unicodecsv`
