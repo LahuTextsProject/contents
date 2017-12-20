@@ -146,10 +146,11 @@ inputLines = inputLines[pointer:]
 
 # process footnotes
 footHash = {}
+seenfootnotes = set([])
 footnote = ''
 for line in inputLines:
 
-    if re.match(r'^\[\d+\]',line):
+    if re.match(r'^\[\s*\d+\s*\]',line):
 
         addnote(footnote,footHash)
         footnote = line
@@ -160,10 +161,13 @@ for line in inputLines:
 addnote(footnote,footHash)
 
 # an alternative algorithm would be to scan the line and extract the
-# footnote number, and then do a lookup.
+# footnote number, and then do a lookup. This is a good approach
+# because we can detect uses without definitions
 def fixup_footnotes(line):
     for number, footnote_text in footHash.iteritems():
         footnote = '\\footnote{%s}' % footnote_text
+        if '[%s]' % number in line:
+            seenfootnotes.add(number)
         line = line.replace(' [%s]' % number, footnote)
         line = line.replace('[%s]' % number, footnote)
     return line
@@ -208,3 +212,8 @@ for line in lineArray[dialogue_start:]:
     line = re.sub(r'\s?(\[\d+\])\.', r'.\1', line)
     print fixup_footnotes(line)
 print r'\end{linenumbers*}'
+
+# assertions
+for key in footHash:
+    if key not in seenfootnotes:
+        raise ValueError("Footnote %s defined but never used" % key)
