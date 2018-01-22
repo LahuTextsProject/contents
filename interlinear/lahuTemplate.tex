@@ -107,7 +107,7 @@
 
 % makes compilation really slow as we have many acronym references.
 % oh well.
-\usepackage[acronym,toc,nonumberlist,glossaries]{glossaries}
+\usepackage[acronym,toc,nonumberlist,numberedsection=nameref,glossaries]{glossaries}
 \input{abbreviations}
 \input{misc_abbreviations}
 
@@ -128,12 +128,19 @@
 \include{halftitle}
 \maketitle
 \include{copyright}
-
+\clearpage
+\begin{center}
+    \thispagestyle{empty}
+    \vspace*{\fill}
+    \Large \textit{To the Lahu people and their beautiful language}
+    \vspace*{\fill}
+\end{center}
+\clearpage
 \pdfbookmark[0]{Table of Contents}{TOC}
 \tableofcontents
 \lahutableofcontents
-
 \include{preface}
+\include{acknowledgements}
 \thispagestyle{empty}
 \cleardoublepage
 
