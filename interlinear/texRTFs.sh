@@ -13,6 +13,6 @@ for f in `ls ../t2/*.tex`
 do
     r=$(basename "$f")
     echo "editing $r"
-    grep -v 'newpage' $f | python2 editTeX.py > ../transTeX/$r
+    grep -v 'newpage' $f | python editTeX.py > ../transTeX/$r
     #rm $f
 done

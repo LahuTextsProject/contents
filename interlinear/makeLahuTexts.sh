@@ -14,7 +14,7 @@ ln -sf $1 lahutexts.xml
 echo Converting RTFs to LaTeX
 ./texRTFs.sh
 echo Making music scores
-lilypond --ps Lahu_tune.ly
+./lilypond --ps Lahu_tune.ly
 echo Performing fixups
 ./fixups.sh
 cd tex
@@ -25,7 +25,7 @@ cp ../*.tex .
 cp ../../transTeX/*.tex .
 cp ../*.bib .
 echo Generating LaTeX file "${texfile}.tex", timestamp: `date`
-python2 ../generateLaTeX.py $1 ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv
+python ../generateLaTeX.py $1 ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv
 
 # python ../combiner.py ../lahutextstoc.txt
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex

@@ -68,6 +68,8 @@
 \usepackage[nottoc]{tocbibind}
 \usepackage{fix-cm}
 \usepackage{lettrine}
+% leave this here for now, we may need it...
+% \usepackage{authordate1-4}
 
 \setlength{\headsep}{10pt}
 
@@ -107,7 +109,8 @@
 
 % makes compilation really slow as we have many acronym references.
 % oh well.
-\usepackage[acronym,toc,nonumberlist,numberedsection=nameref,glossaries]{glossaries}
+\usepackage[acronym,toc,nonumberlist,numberedsection=nameref]{glossaries}
+\newglossary*{lexicon}{Lexicon}
 \input{abbreviations}
 \input{misc_abbreviations}
 \input{lexical_glossary}
