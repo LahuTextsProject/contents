@@ -25,7 +25,7 @@ cp ../*.tex .
 cp ../../transTeX/*.tex .
 cp ../*.bib .
 echo Generating LaTeX file "${texfile}.tex", timestamp: `date`
-python2 ../generateLaTeX.py $1 ../lahucatalog.tsv ../annotated_abbreviations.tsv
+python2 ../generateLaTeX.py $1 ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv
 
 # python ../combiner.py ../lahutextstoc.txt
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex

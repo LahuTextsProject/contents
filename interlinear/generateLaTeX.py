@@ -214,3 +214,26 @@ form_class_info = parse_form_class_file(sys.argv[3])
 abbreviation_file = codecs.open('abbreviations.tex', 'w', 'utf-8')
 for key, value in form_class_info.iteritems():
     print >> abbreviation_file, '\\newacronym{%s}{%s}{%s}' % (key, value[1], value[0])
+abbreviation_file.close()
+
+def parse_glosses_by_frequency(filename):
+    # we assume that the most frequent glosses for a word are read first
+    # cf. triples.csv
+    with open(filename, 'rt') as f:
+        csvfile = csv.reader(f, delimiter='\t', encoding='utf-8')
+        lexicon = {}
+        for info in csvfile:
+            word = info[1].strip()
+            formclass = info[2].strip()
+            gloss = info[3].strip()
+            lexicon[word] = lexicon.get(word, []) + [[formclass, gloss]]
+        return lexicon
+
+lexicon = parse_glosses_by_frequency(sys.argv[4])
+glossary_file = codecs.open('lexical_glossary.tex', 'w', 'utf-8')
+for key, value in lexicon.iteritems():
+    print >> glossary_file, r'\newglossaryentry{%s}{name=%s, description = {\begin{enumerate}' % (key, key)
+    for gloss in value:
+        print >> glossary_file, '\item %s %s' % (gloss[0], gloss[1])
+    print >> glossary_file, r'\end{enumerate}}}'
+glossary_file.close()

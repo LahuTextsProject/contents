@@ -110,6 +110,7 @@
 \usepackage[acronym,toc,nonumberlist,numberedsection=nameref,glossaries]{glossaries}
 \input{abbreviations}
 \input{misc_abbreviations}
+\input{lexical_glossary}
 
 \makeglossaries
 \begin{document}
@@ -147,7 +148,6 @@
 \glsaddall
 \printglossary[type=\acronymtype,title=Form Class Abbreviations]
 \printglossary[title=Miscellaneous Abbreviations]
-\glsunsetall
 
 \mainmatter
 \pdfbookmark[0]{Window onto a Vanished World}{TOC}
@@ -157,6 +157,9 @@
 \cleardoublepage
 
 \backmatter
+\printglossary[type=lexicon, title=Glossary]
+\glsunsetall
+
 \fancyhead[LE]{\large{Bibliography} \vspace{0.5em}}
 \fancyhead[RO]{\large{Bibliography} \vspace{0.5em}}
 \bibliographystyle{authordate1}
