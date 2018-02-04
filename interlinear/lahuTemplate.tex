@@ -115,6 +115,16 @@
 \input{misc_abbreviations}
 \input{lexical_glossary}
 
+% find a way to calculate the size of the baseline precisely
+\newcommand{\quadruplehyphen}{%
+\begin{tikzpicture}[baseline=-0.650ex]%
+\draw [semithick] (0,-0.375ex) -- (1ex,-0.375ex);%
+\draw [semithick] (0,-0.125ex) -- (1ex,-0.125ex);%
+\draw [semithick] (0,0.125ex) -- (1ex,0.125ex);%
+\draw [semithick] (0,0.375ex) -- (1ex,0.375ex);%
+\end{tikzpicture}%
+}
+
 \makeglossaries
 \begin{document}
 
