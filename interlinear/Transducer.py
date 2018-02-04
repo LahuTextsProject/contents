@@ -137,3 +137,9 @@ def transduce(token, twolevels):
 
     return final
 
+def transduce_string(string, twolevels):
+    new = ''
+    for token in string.split():
+        new += transduce(token, twolevels)
+        new += ' '
+    return new[:-1]

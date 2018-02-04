@@ -25,11 +25,19 @@ cp ../*.tex .
 cp ../../transTeX/*.tex .
 cp ../*.bib .
 echo Generating LaTeX file "${texfile}.tex", timestamp: `date`
-python ../generateLaTeX.py $1 ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv
+xml_file=$1
+shift
+python ../generateLaTeX.py $xml_file ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv "$@"
 
 # python ../combiner.py ../lahutextstoc.txt
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex
-#
+
+if [ "$@" ] # assumes both will be added
+then
+    sed -i -e 's/%\\baptisttableofcontents/\\baptisttableofcontents/' ${texfile}.tex
+    sed -i -e 's/%\\chinesetableofcontents/\\chinesetableofcontents/' ${texfile}.tex
+fi
+
 echo Compiling LaTeX file "${texfile}.tex", step 1 of 3, timestamp: `date`
 xelatex -interaction nonstopmode ${texfile} > ${texfile}.stdout.log
 echo Generating glossaries

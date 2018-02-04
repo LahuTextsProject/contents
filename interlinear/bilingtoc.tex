@@ -1,22 +1,47 @@
 \makeatletter
 \newcommand\lahutableofcontents{%
-  \if@twocolumn
-    \@restonecoltrue\onecolumn
-  \else
-    \@restonecolfalse
-  \fi
-  \begin{otherlanguage}{lahu}
   \chapter*{%
     \contentsname
     \@mkboth{\MakeUppercase\contentsname}
             {\MakeUppercase\contentsname}%
   }%
-  \@starttoc{tec}%
-  \end{otherlanguage}
-  \if@restonecol\twocolumn\fi
+  \@starttoc{lahutable}%
 }
 \newcommand{\addlahutoc}[2]{%
-  \addcontentsline{tec}{#1}{\protect\numberline{\csname the#1\endcsname}#2}%
+  \addcontentsline{lahutable}{#1}{\protect\numberline{\csname the#1\endcsname}#2}%
+}
+
+\newcommand\chinesetableofcontents{%
+  \chapter*{%
+    \contentsname
+    \@mkboth{\MakeUppercase\contentsname}
+            {\MakeUppercase\contentsname}%
+  }%
+  \@starttoc{chinesetable}%
+}
+\newcommand{\addchinesetoc}[2]{%
+  \addcontentsline{chinesetable}{#1}{\protect\numberline{\csname the#1\endcsname}#2}%
+}
+
+\newcommand\baptisttableofcontents{%
+  \chapter*{%
+    \contentsname
+    \@mkboth{\MakeUppercase\contentsname}
+            {\MakeUppercase\contentsname}%
+  }%
+  \@starttoc{baptisttable}%
+}
+
+\newcommand{\nop}[1]{}
+
+\newcommand{\addbaptisttoc}[2]{%
+  \let\oldphantom\phantom
+  \let\phantom\nop
+  %% FIXME: we have to make \phantom a nop for now. this might make the
+  %% transcription look weird.
+  \addcontentsline{baptisttable}{#1}{\protect\numberline{\csname
+      the#1\endcsname}#2}%
+  \let\phantom\oldphantom
 }
 \makeatother
 
