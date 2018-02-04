@@ -10,6 +10,10 @@ few months until it is ready for publication.
 
 Comments and suggestions are of course most welcome!
 
+# Building
+To build the pdf, run `./makeLahuTexts.sh lahuinterlinear.xml [-bc]`
+where `-b` and `-c` build with baptist and chinese transcriptions, respectively.
+
 # Dependencies
 The following applications/packages are needed to make a final pdf with makeLahuTexts.sh:
 
