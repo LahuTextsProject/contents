@@ -182,7 +182,7 @@ for (i, line) in enumerate(lineArray):
         break
 
 print r'\setcounter{footnote}{0}'
-line_number_pattern = re.compile(r'^\d+[A-Za-z]?(\.|\:)?\s*')
+line_number_pattern = re.compile(r'^(\d+[A-Za-z]?)(\.|\:)?\s*')
 for (prologue, line) in enumerate(lineArray[text_start:]):
     if line_number_pattern.match(line):
         break
@@ -195,10 +195,9 @@ dialogue_start = prologue + text_start
 
 ## dialogue_pattern_1 = re.compile(r'^([^:]{1,20}):')
 ## dialogue_pattern_2 = re.compile(r'^\(([^\)]{1,20})\)')
-print r'\begin{linenumbers*}'
 for line in lineArray[dialogue_start:]:
-    # strip RTF line numbers
-    line = line_number_pattern.sub(r'', line)
+    # normalize line numbering
+    line = line_number_pattern.sub(r'\1. ', line)
     # normalize speaker names
     line = re.sub(r'(Cà-bo|Càbo|CB|Pastor|Teacher)\:', 'T:', line)
     line = re.sub(r'(T-y|Thû-Yì|Thû-yì|Thúyì|TY)\:', 'Ty:', line)
