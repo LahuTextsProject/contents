@@ -98,9 +98,12 @@ def boldLahu(string):
     # preserve all punctuation elements
     words = string.split()
     newstring = ''
-    for word in words:
+    for (i, word) in enumerate(words):
         wordstrip = word.strip(punctuation)
-        if isLahuWord(wordstrip):
+        if isLahuWord(wordstrip) or \
+           (wordstrip == 'a' \
+            and isLahuWord(words[i - 1]) \
+            and isLahuWord(words[i + 1])):
             newstring += word.replace(wordstrip, ('\\textbf{%s}' % wordstrip))
         else:
             newstring += word
