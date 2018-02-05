@@ -191,6 +191,8 @@ for (prologue, line) in enumerate(lineArray[text_start:]):
         break
     elif '[Tape ' in line:
         continue
+    elif '[TAPE ' in line:
+        continue
     else:
         print fixup_footnotes(line)
 
