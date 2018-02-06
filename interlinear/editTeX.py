@@ -6,6 +6,9 @@ import csv
 import unicodedata
 
 from string import punctuation
+from formclass import parse_form_class_file
+
+form_class_info = parse_form_class_file('annotated_abbreviations.tsv')
 
 def normalize_unicode(word):
     return unicodedata.normalize('NFC', unicode(word, 'utf-8'))
@@ -33,6 +36,18 @@ for morpheme in ['ɔ̀',
 ]:
     lahuWords.add(normalize_unicode(morpheme))
 
+def pretty_form_class(line):
+    newstring = ''
+    for word in line.split():
+        wordstrip = word.strip(punctuation)
+        if wordstrip in form_class_info:
+            pretty = str(form_class_info[wordstrip][1])
+            newstring += word.replace(wordstrip, pretty)
+        else:
+            newstring += word
+        newstring += ' '
+    return newstring[:-1]
+
 def fixLine(line):
     line = line.strip()
     line = line.replace(r'\\texttt\{"\}', r'"')
@@ -44,6 +59,8 @@ def fixLine(line):
     line = line.replace('\xc3\x81', '\xc3\xa1')
     line = line.replace('\Huge{}', '')
     line = line.replace('\huge{}', '')
+    # make form class abbreviations look pretty
+    line = pretty_form_class(line)
 
     return line
 

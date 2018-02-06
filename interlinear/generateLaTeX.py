@@ -11,6 +11,7 @@ import argparse
 
 from Transducer import transduce, transduce_string, baptist, chinese, decompose
 from structure import structure, lahu_structure
+from formclass import parse_form_class_file
 
 parser = argparse.ArgumentParser(description='Generate interlinear LaTeX.')
 parser.add_argument('-b', '--with-baptist', action='store_true')
