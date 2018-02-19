@@ -201,8 +201,8 @@ for text in texts:
 
 # write out the texts in order so they can be sucked in by
 # LaTeX in order
-for ((partno, part), (lpartno, lpart))  in zip(enumerate(structure),
-                                               enumerate(lahu_structure)):
+for ((partno, part), (lpartno, lpart)) in zip(enumerate(structure),
+                                              enumerate(lahu_structure)):
     partname = part[0]
     lahupartname = lpart[0]
     print >> filestotex, '\part{%s}' % partname
