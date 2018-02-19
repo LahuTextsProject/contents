@@ -107,7 +107,7 @@
 
 % makes compilation really slow as we have many acronym references.
 % oh well.
-\usepackage[acronym,toc,nonumberlist,numberedsection=nameref]{glossaries}
+\usepackage[acronym,toc,nonumberlist,nopostdot,numberedsection=nameref]{glossaries}
 \newglossary*{lexicon}{Lexicon}
 \input{abbreviations}
 \input{misc_abbreviations}
@@ -170,7 +170,7 @@
 \cleardoublepage
 
 \backmatter
-\printglossary[type=lexicon, title=Glossary]
+\printglossary[type=lexicon, title=Glossary, style=long]
 \glsunsetall
 
 \fancyhead[LE]{\large{Bibliography} \vspace{0.5em}}

@@ -256,8 +256,15 @@ def parse_glosses_by_frequency(filename):
 lexicon = parse_glosses_by_frequency(sys.argv[4])
 glossary_file = codecs.open('lexical_glossary.tex', 'w', 'utf-8')
 for key, value in lexicon.iteritems():
-    print >> glossary_file, r'\newglossaryentry{%s}{name=%s, type=lexicon, description = {\begin{enumerate}' % (key, key)
+    print >> glossary_file, r'\newglossaryentry{%s}{name=%s, type=lexicon, description = {' % (key, key)
+    gloss_dict = {}
     for gloss in value:
-        print >> glossary_file, '\item %s %s' % (gloss[0], gloss[1])
-    print >> glossary_file, r'\end{enumerate}}}'
+        gloss_dict.setdefault(gloss[0], []).append(gloss[1])
+    i = 1
+    for key, senses in gloss_dict.iteritems():
+        if i > 1:
+            print >> glossary_file, ';'
+        glossary_file.write('%d.~(\gls{%s})~%s' % (i, key, ', '.join(senses)))
+        i += 1
+    print >> glossary_file, r'}}'
 glossary_file.close()
