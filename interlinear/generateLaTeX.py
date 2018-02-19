@@ -116,6 +116,7 @@ for text in texts:
     # ok, let's parse each text and create the needed data structures
     # we create one output text for each input text
     OutLaTeX = codecs.open(outputfilename, 'w', 'utf-8')
+    print >> OutLaTeX, '\setcounter{equation}{0}'
     print >> OutLaTeX, '\section{%s}' % titlestring
     print >> OutLaTeX, '\label{sec:%s}' % textnumber
     print >> OutLaTeX, '\\addlahutoc{section}{%s}' % lahutitlestring
