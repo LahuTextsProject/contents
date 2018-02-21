@@ -247,6 +247,8 @@ def parse_glosses_by_frequency(filename):
         csvfile = csv.reader(f, delimiter='\t', encoding='utf-8')
         lexicon = {}
         for info in csvfile:
+            if len(info) != 4:
+                continue
             word = info[1].strip()
             formclass = info[2].strip()
             gloss = info[3].strip()
