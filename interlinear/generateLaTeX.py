@@ -12,6 +12,7 @@ import argparse
 from Transducer import transduce, transduce_string, baptist, chinese, decompose
 from structure import structure, lahu_structure
 from formclass import parse_form_class_file
+from collections import OrderedDict
 
 parser = argparse.ArgumentParser(description='Generate interlinear LaTeX.')
 parser.add_argument('-b', '--with-baptist', action='store_true')
@@ -255,10 +256,58 @@ def parse_glosses_by_frequency(filename):
             lexicon[word] = lexicon.get(word, []) + [[formclass, gloss]]
         return lexicon
 
+# our alphabet ordering:
+# a b c ch d e ɛ ə f g g̈ h i ɨ j k kh l m n ŋ o ɔ p ph q qh š
+# t th u v w y ʔ
+# tones: ´ ` ¯ ^ ^ʔ `ʔ
+# TODO implement this if latex can't do it
+# lahu_alphabet = ['a', 'b', 'c', 'ch', 'd', 'e', 'ɛ', 'ə', 'f', 'g', 'g̈', 'h', 'i', 'ɨ', 'j', 'k', 'kh', 'l', 'm', 'n', 'ŋ', 'o', 'ɔ', 'p', 'ph', 'q', 'qh', 'š', 't', 'th', 'u', 'v', 'w', 'y', 'ʔ']
+
+# lahu_tones = ['´', '`', '^', '¯', '^ʔ', '`ʔ']
+
+# def lahu_alphabet_sort(string):
+#     tone_count = len(lahu_tones)
+#     return len(lahu_tones)
+class _OrderedDictMaker(object):
+    def __getitem__(self, keys):
+        if not isinstance(keys, tuple):
+            keys = (keys,)
+        assert all(isinstance(key, slice) for key in keys)
+
+        return OrderedDict([(k.start, k.stop) for k in keys])
+
+ordereddict = _OrderedDictMaker()
+
+def make_sort_string(string):
+    # HACK: this might not work 100% of the time
+    special = ordereddict[
+        'a': 'aa', 'b': 'ba', 'c': 'ca', 'cah': 'cz', 'd': 'da',
+        'e': 'ea', 'ɛ': 'eb', 'ə': 'ec', 'f': 'fa', 'g': 'ga',
+        'g̈': 'g̈a', 'h': 'ha', 'i': 'ia', 'ɨ': 'iz', 'j': 'ja',
+        'k': 'ka', 'kaha': 'kz', 'l': 'la', 'n': 'na', 'ŋ':
+        'nz', 'o': 'oa', 'ɔ': 'oz', 'p': 'pa', 'paha': 'pz',
+        'q': 'qa', 'qaha': 'qz', 's': 'sa', 'š': 'sz', 't':
+        'ta', 'taha': 'tz', 'u': 'ua', 'v': 'va', 'w': 'wa',
+        'y': 'ya', 'z': 'za', 'ʔ': 'zz',
+        'á': 'ab', 'â': 'ac', 'à': 'ad', 'ā': 'ae',
+        'aczz': 'af', 'adzz': 'ag', 'ã': 'ah',
+        'é': 'eb', 'ê': 'ec', 'è': 'ed', 'ē': 'ee',
+        'eczz': 'ef', 'edzz': 'eg', 'ẽ': 'ef',
+        'í': 'ib', 'î': 'ic', 'ì': 'id', 'ī': 'ie',
+        'iczz': 'if', 'idzz': 'ig', 'ĩ': 'ih',
+        'ó': 'ob', 'ô': 'oc', 'ò': 'od', 'ō': 'oe',
+        'oczz': 'of', 'odzz': 'og', 'õ': 'oh',
+        'ú': 'ub', 'û': 'uc', 'ù': 'ud', 'ū': 'ue',
+        'uczz': 'uf', 'udzz': 'ug', 'ũ': 'uh']
+    string = string.lower()
+    for key, value in special.iteritems():
+        string = string.replace(key, value)
+    return string
+
 lexicon = parse_glosses_by_frequency(sys.argv[4])
 glossary_file = codecs.open('lexical_glossary.tex', 'w', 'utf-8')
 for key, value in lexicon.iteritems():
-    print >> glossary_file, r'\newglossaryentry{%s}{name=%s, type=lexicon, description = {' % (key, key)
+    print >> glossary_file, r'\newglossaryentry{%s}{name=%s, type=lexicon, sort=%s, description = {' % (key, key, make_sort_string(key))
     gloss_dict = {}
     for gloss in value:
         gloss_dict.setdefault(gloss[0], []).append(gloss[1])
