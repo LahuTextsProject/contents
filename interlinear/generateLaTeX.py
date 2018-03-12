@@ -238,7 +238,8 @@ for ((partno, part), (lpartno, lpart)) in zip(enumerate(structure),
 form_class_info = parse_form_class_file(sys.argv[3])
 abbreviation_file = codecs.open('abbreviations.tex', 'w', 'utf-8')
 for key, value in form_class_info.iteritems():
-    print >> abbreviation_file, '\\newacronym{%s}{%s}{%s}' % (key, value[1], value[0])
+    print >> abbreviation_file, '\\newacronym[sort=%s]{%s}{%s}{%s}' \
+        % (key, key, value[1], value[0])
 abbreviation_file.close()
 
 def parse_glosses_by_frequency(filename):

@@ -15,10 +15,11 @@ def normalize_unicode(word):
 
 def makeLahuWords():
     words = set()
-    with open('elements.csv', 'rb') as triples:
-        reader = csv.reader(triples, delimiter = '\t')
+    with open('pruned.csv', 'rb') as triples:
+        reader = csv.reader(triples, delimiter='\t')
         for row in reader:
-            words.add(normalize_unicode(row[0]))
+            if row and row[0]:
+                words.add(normalize_unicode(row[0]))
     return words
 
 lahuWords = makeLahuWords()
@@ -26,12 +27,11 @@ lahuWords = makeLahuWords()
 # or otherwise words that can't be reanalyzed into
 # smaller pieces and not in the dictionary
 for morpheme in ['ɔ̀',
-                 'cɛ́ʔ', # Transcribed Burmese morpheme
-                 'Kɔ́lɔ',
+                 'cɛ́ʔ',  # Transcribed Burmese morpheme
                  'nîʔkho',
                  'lɔ̂kì',
                  'rê',
-                 'šo', # Iron
+                 'šo',  # Iron
                  'tàʔ'
 ]:
     lahuWords.add(normalize_unicode(morpheme))
@@ -50,6 +50,8 @@ def pretty_form_class(line):
 
 def fixLine(line):
     line = line.strip()
+    # sub in allofam symbol, as Charis SIL doesn't support it
+    line = line.replace('\xe2\xaa\xa4', r'$\glj$')
     line = line.replace(r'\\texttt\{"\}', r'"')
     line = line.replace(r'\\texttt\{\'\}', r"'")
     line = re.sub(r'\\texttt\{(.*?)\}', r'\1', line)
@@ -232,7 +234,6 @@ for line in lineArray[dialogue_start:]:
     # move footnote mark outside period: xxx xx[99]. ->  xxx xx.[99]
     line = re.sub(r'\s?(\[\d+\])\.', r'.\1', line)
     print fixup_footnotes(line)
-print r'\end{linenumbers*}'
 
 # assertions
 for key in footHash:

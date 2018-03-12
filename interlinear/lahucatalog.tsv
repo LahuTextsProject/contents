@@ -11,7 +11,7 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 10	1	1	1_3	24:16	27:07	02:51	11	Hymn		482-516				Y			n			482	516	34	1456.0	1627.0	x		171.0	0.20				
 11	1	1	1_3	27:07	31:02	03:55	12	The Widow and the Pharisees (Part I)	sermon	517-567	16	12	Y	Y	012a_sermon_the_widows_mites.rtf	Entered	y	Also with fair Lh. copy; with relevant Bible passage added		517	567	50	1627.0	1862.0	x	12	235.0	0.21			y	y
 12	1	1	1_3	31:02	32:42	01:40	13	Hymn: "Jesus Save Us"		568-590				Y		Defer	n			568	590	22	1862.0	1962.0	x		100.0	0.22				
-13	1	1	1_3	32:43	36:35	03:52	14	The Widow and Pharisees (Part II)		591-646	16	13	Y	Y	014a_sermon_the_widows_mites.rtf	Combine	y	Also with fair Lh. copy; with relevant Bible passage added		591	646	55	1963.0	2195.0			232.0	0.24			y	y
+13	1	1	1_3	32:43	36:35	03:52	14	The Widow and the Pharisees (Part II)		591-646	16	13	Y	Y	014a_sermon_the_widows_mites.rtf	Combine	y	Also with fair Lh. copy; with relevant Bible passage added		591	646	55	1963.0	2195.0			232.0	0.24			y	y
 14	1	1	1_3	36:35	40:25	03:50	15	Preventive medicine	lecture	647-704	5	4	Y	Y	015_lectures_on_medicine.rtf 	Entered	y	Also with fair Lh. copy		647	704	57	2195.0	2425.0	x	15	230.0	0.25			y	y
 15	1	1	1_3	40:30	41:34	01:04	16	Traditional Lahu poetry		707-724				Y	(missing)	Defer	n			707	724	17	2430.0	2494.0	x		64.0	0.27				
 16	1	1	1_3	41:34	43:27	01:53	17	Spirits that bite and those that don't	lecture	726-754	12	4	Y	Y	017_spirits_that_bite_and_those_that_don_t.rtf 	Entered	y	"Spirits that bite and those that don't"; Also with fair Lh. copy		726	754	28	2494.0	2607.0	x	17	113.0	0.25			y	y
@@ -129,8 +129,8 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 137	4	2	8_3	14:37	15:30	00:53	129	The boastful cock and the hawk	fable	447-458	7	2	Y	Y	129_the_boastful_cock_and_the_hawk.rtf 	Entered	y	PLB fable		447	458	11	877.0	930.0	x	129	53.0	0.21			y	y
 138	4	2	8_3	15:35	16:05	00:30	130	Catching crabs with granny		459-464	4	4	Y	Y	130_hunting_crabs_with_granny.rtf 	Entered	y			459	464	5	935.0	965.0	x	130	30.0	0.17			y	
 139	4	2	8_3	16:08	21:12	05:04	131	Harvesting rice and catching crabs: struggling to survive with lazy husbands	women's dialogue	465-525	4	3	Y	Y	131_struggling_to_survive_with_lazy_husbands_harvesting_rce__catching_crabs.rtf	Entered	y			465	525	60	968.0	1272.0	x	131	304.0	0.20			y	y
-140	4	2	9_1	00:00	01:55	01:55	132	The snake and the widow's daughters (Version I)	story	526-550	8	15	Y	Y	132_the_widow_with_a_snake_for_a_son-in-law.rtf	Entered	y	See nos. 133 and 141a		526	550	24	0.0	115.0		132	115.0	0.21				
-141	4	2	9_1	01:56	05:04	03:08	133	The snake and the widow's daughters (Version II)		551-592	4	18		Y	133_the_snake_and_the_widow_s_daughters.rtf 	Entered	y	Retold by Paul with Lahu fair copy; also cf. 141a		551	592	41	116.0	304.0	x		188.0	0.22			y	y
+140	4	2	9_1	00:00	01:55	01:55	132	The snake and the widow's daughters (Version I)	story	526-550	4	18	Y	Y	132_the_widow_with_a_snake_for_a_son-in-law.rtf	Entered	y	See nos. 133 and 141a		526	550	24	0.0	115.0		132	115.0	0.21				
+141	4	2	9_1	01:56	05:04	03:08	133	The snake and the widow's daughters (Version II)		551-592	4	19		Y	133_the_snake_and_the_widow_s_daughters.rtf 	Entered	y	Retold by Paul with Lahu fair copy; also cf. 141a		551	592	41	116.0	304.0	x		188.0	0.22			y	y
 142	4	1	9_2	00:00	02:57	02:57	134	I long thee, Jerusalem		008-031	15	10	Y	Y	134_i_long_for_thee__jerusalem.rtf 	Entered	y			8	31	23	0.0	177.0	x		177.0	0.13			y	y
 143	4	1	9_2	02:58	09:42	06:44	135	I am the Way		032-090	16	3	Y	Y	135_sermon_i_am_the_way.rtf	Entered	y			32	90	58	178.0	582.0	x	135	404.0	0.14			y	y
 144	4	1	9_2	09:44	13:37	03:53	137	Man escapes from the primeval gourd	myth	091-125	12	3	Y	Y	137_mans_primeval_gourd_goes_missing_and_god_looks_for_it.rtf 	Entered	y	Cf. no. 74		91	125	34	584.0	817.0	x	137	233.0	0.15			y	y
@@ -189,6 +189,6 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 50	4	1	3_3	06:02	07:23	01:21	47b	Love-song		332-346				Y		Defer	n		x	332	346	14	362.0	443.0	x		81.0	0.17				
 51	4	1	3_3	07:24	07:52	00:28	47c	Kachin song		348-352				Y			n	Sung by Matisoff		348	352	4	444.0	472.0	x		28.0	0.14				
 82	7	2	5_2	01:01	03:44	02:43	77a	Wooing the maidens (Part II)		159-184	5	9	Y	Y	077a_wooing_the_maidens.rtf	Entered	y	Continuation of no. 70; not translated		159	184	25	61.0	224.0	x	77a	163.0	0.15			y	y
-88	7	2	5_3	20:01	22:19	02:18	82a	The smoker and the non-smoker dispute a pipe (Version II)	story	679-718	7	9	Y	Y	082a_the_smoker_and_the_non-smoker.rtf	Entered	y	No pauses from 81-83; cf. no. 121		679	718	39	1201.0	1339.0	x	82a	138.0	0.28			y	y
+88	7	2	5_3	20:01	22:19	02:18	82a	The smoker and the non-smoker dispute a pipe (Version I)	story	679-718	7	9	Y	Y	082a_the_smoker_and_the_non-smoker.rtf	Entered	y	No pauses from 81-83; cf. no. 121		679	718	39	1201.0	1339.0	x	82a	138.0	0.28			y	y
 93	3	2	6_1	13:23	18:00	04:37	86a	Hymn		122-164				Y	(missing)	Defer	n			122	164	42	803.0	1080.0	x		277.0	0.15				
 																	n															

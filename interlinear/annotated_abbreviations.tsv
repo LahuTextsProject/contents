@@ -85,4 +85,4 @@ v.V	prehead versatile verb	\textsubscript{v}V
 V.v	post-head versatile verb
 V+Vv	verb + post-head versatile verb	V+V\textsubscript{v}
 vV + Vh	pre-head versatile verb + main verb (pre-head concatenation)	\textsubscript{v}V+V\textsubscript{h}
-Vh	V\textsubscript{h}	V\textsubscript{h}
+Vh	main verb (pre-head concatenation)	V\textsubscript{h}

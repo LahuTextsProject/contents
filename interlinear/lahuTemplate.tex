@@ -18,6 +18,9 @@
 \setmainfont[Renderer=ICU,Mapping=tex-text]{Charis SIL}
 \newcommand{\TC}[1]{{\tradchinesefont #1}}
 \newcommand{\SC}[1]{{\simpchinesefont #1}}
+\usepackage{amsmath}
+\usepackage{unicode-math}
+\setmathfont[ Path = /usr/share/fonts/OTF/]{STIX2Math.otf}
 
 \newcommand\direct[1] {[{\DirectStyle #1}]}
 \newcommand\DirectStyle {\slshape}
@@ -153,10 +156,11 @@
 \lahutableofcontents
 %\baptisttableofcontents
 %\chinesetableofcontents
-\include{preface}
-\include{acknowledgements}
+
 \thispagestyle{empty}
 \cleardoublepage
+\include{preface}
+\include{acknowledgments}
 
 \glsaddall
 \part*{Symbols and Abbreviations}
@@ -176,11 +180,12 @@
 \printglossary[type=lexicon, title=Glossary, style=long, sort=letter]
 \glsunsetall
 
-\fancyhead[LE]{\large{Bibliography} \vspace{0.5em}}
-\fancyhead[RO]{\large{Bibliography} \vspace{0.5em}}
+\cleardoublepage
 \bibliographystyle{authordate1}
 \renewcommand{\bibname}{References}
 \nocite{*}
 \bibliography{stedtreferences}
+\fancyhead[LE]{\large{Bibliography} \vspace{0.5em}}
+\fancyhead[RO]{\large{Bibliography} \vspace{0.5em}}
 
 \end{document}
