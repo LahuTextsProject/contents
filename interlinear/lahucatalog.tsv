@@ -9,9 +9,9 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 8	1	1	1_3	07:56	12:29	04:33	8	A Lahu hunting expedition	playlet	287-333	3	1	Y	Y	008_a_lahu_hunting_expedition.rtf 	Entered	y	Also Lh. fair copy		287	333	46	476.0	749.0	x	8	273.0	0.17			y	y
 9	1	1	1_3	12:33	24:14	11:41	9	Agriculture and livelihood	discussion	334-413	2	2	Y	Y	009to10_agriculture_and_the_need_for_unity.rtf	Entered	y	Also Lh. fair copy	x	334	413	79	753.0	1454.0	x	9	701.0	0.11			y	y
 10	1	1	1_3	24:16	27:07	02:51	11	Hymn		482-516				Y			n			482	516	34	1456.0	1627.0	x		171.0	0.20				
-11	1	1	1_3	27:07	31:02	03:55	12	The Widow and the Pharisees (Part I)	sermon	517-567	16	12	Y	Y	012a_sermon_the_widows_mites.rtf	Entered	y	Also with fair Lh. copy; with relevant Bible passage added		517	567	50	1627.0	1862.0	x	12	235.0	0.21			y	y
+11	1	1	1_3	27:07	31:02	03:55	12	The Widow and the Pharisees	sermon	517-567	16	10	Y	Y	012to14_sermon__the_widow_s_mites.rtf	Entered	y	Also with fair Lh. copy; with relevant Bible passage added		517	567	50	1627.0	1862.0	x	12	235.0	0.21			y	y
 12	1	1	1_3	31:02	32:42	01:40	13	Hymn: "Jesus Save Us"		568-590				Y		Defer	n			568	590	22	1862.0	1962.0	x		100.0	0.22				
-13	1	1	1_3	32:43	36:35	03:52	14	The Widow and the Pharisees (Part II)		591-646	16	13	Y	Y	014a_sermon_the_widows_mites.rtf	Combine	y	Also with fair Lh. copy; with relevant Bible passage added		591	646	55	1963.0	2195.0			232.0	0.24			y	y
+13	1	1	1_3	32:43	36:35	03:52	14	The Widow and the Pharisees (Part II)		591-646	16	13	Y	Y	014a_sermon_the_widows_mites.rtf	Merged into 12	n 	Also with fair Lh. copy; with relevant Bible passage added		591	646	55	1963.0	2195.0			232.0	0.24			y	y
 14	1	1	1_3	36:35	40:25	03:50	15	Preventive medicine	lecture	647-704	5	4	Y	Y	015_lectures_on_medicine.rtf 	Entered	y	Also with fair Lh. copy		647	704	57	2195.0	2425.0	x	15	230.0	0.25			y	y
 15	1	1	1_3	40:30	41:34	01:04	16	Traditional Lahu poetry		707-724				Y	(missing)	Defer	n			707	724	17	2430.0	2494.0	x		64.0	0.27				
 16	1	1	1_3	41:34	43:27	01:53	17	Spirits that bite and those that don't	lecture	726-754	12	4	Y	Y	017_spirits_that_bite_and_those_that_don_t.rtf 	Entered	y	"Spirits that bite and those that don't"; Also with fair Lh. copy		726	754	28	2494.0	2607.0	x	17	113.0	0.25			y	y
@@ -77,7 +77,7 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 81	7	2	5_2	00:00	00:56	00:56	77	Jews harp music		149-157				Y		Entered	n			149	157	8	0.0	56.0	x	77	56.0	0.14				
 83	7	2	5_2	03:45	18:15	14:30	78	The government offers us new land		185-330	6	6	Y	Y	078_the_government_offers_us_new_lands.rtf 	Entered	y			185	330	145	225.0	1095.0	x	78	870.0	0.17			y	y
 84	7	2	5_3	00:00	02:47	02:47	79	Sermon fragment		409-442				Y	(missing)	Defer	n		x	409	442	33	0.0	167.0	x		167.0	0.20				
-85	7	2	5_3	02:49	14:31	11:42	80	Christmas and the New Rice Festival	discussion	443-596	5	17		Y	080_christmas_new_year_s_and_the_new_rice_festival.rtf 	Entered	y			443	596	153	169.0	871.0	x	80	702.0	0.22			y	y
+85	7	2	5_3	02:49	14:31	11:42	80	Christmas and the New Rice Festival	discussion	443-596	5	16		Y	080_christmas_new_year_s_and_the_new_rice_festival.rtf 	Entered	y			443	596	153	169.0	871.0	x	80	702.0	0.22			y	y
 86	7	2	5_3	14:33	15:53	01:20	81	The buffalo bugger and the rabbit hunters	story	597-616	9	5	Y	Y	081_the_buffalo_bugger_and_the_rabbit_hunters.rtf	Entered	y	No pauses from 81-83		597	616	19	873.0	953.0	x	81	80.0	0.24			y	y
 																															y	
 89	7	2	5_3	22:15	25:12	02:57	83	The three lazy men and the princess (Version I)	story	718-769	8	6	Y	Y	083_the_three_lazy_men_and_the_princess.rtf 	Entered	y	Continued in no. 120		718	769	51	1335.0	1512.0	x	83	177.0	0.29				
@@ -129,10 +129,10 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 137	4	2	8_3	14:37	15:30	00:53	129	The boastful cock and the hawk	fable	447-458	7	2	Y	Y	129_the_boastful_cock_and_the_hawk.rtf 	Entered	y	PLB fable		447	458	11	877.0	930.0	x	129	53.0	0.21			y	y
 138	4	2	8_3	15:35	16:05	00:30	130	Catching crabs with granny		459-464	4	4	Y	Y	130_hunting_crabs_with_granny.rtf 	Entered	y			459	464	5	935.0	965.0	x	130	30.0	0.17			y	
 139	4	2	8_3	16:08	21:12	05:04	131	Harvesting rice and catching crabs: struggling to survive with lazy husbands	women's dialogue	465-525	4	3	Y	Y	131_struggling_to_survive_with_lazy_husbands_harvesting_rce__catching_crabs.rtf	Entered	y			465	525	60	968.0	1272.0	x	131	304.0	0.20			y	y
-140	4	2	9_1	00:00	01:55	01:55	132	The snake and the widow's daughters (Version I)	story	526-550	4	18	Y	Y	132_the_widow_with_a_snake_for_a_son-in-law.rtf	Entered	y	See nos. 133 and 141a		526	550	24	0.0	115.0		132	115.0	0.21				
-141	4	2	9_1	01:56	05:04	03:08	133	The snake and the widow's daughters (Version II)		551-592	4	19		Y	133_the_snake_and_the_widow_s_daughters.rtf 	Entered	y	Retold by Paul with Lahu fair copy; also cf. 141a		551	592	41	116.0	304.0	x		188.0	0.22			y	y
-142	4	1	9_2	00:00	02:57	02:57	134	I long thee, Jerusalem		008-031	15	10	Y	Y	134_i_long_for_thee__jerusalem.rtf 	Entered	y			8	31	23	0.0	177.0	x		177.0	0.13			y	y
-143	4	1	9_2	02:58	09:42	06:44	135	I am the Way		032-090	16	3	Y	Y	135_sermon_i_am_the_way.rtf	Entered	y			32	90	58	178.0	582.0	x	135	404.0	0.14			y	y
+140	4	2	9_1	00:00	01:55	01:55	132	The snake and the widow's daughters (Version I)	story	526-550	8	15	Y	Y	132_the_widow_with_a_snake_for_a_son-in-law.rtf	Entered	y	See nos. 133 and 141a		526	550	24	0.0	115.0		132	115.0	0.21				
+141	4	2	9_1	01:56	05:04	03:08	133	The snake and the widow's daughters (Version II)		551-592	8	16		Y	133_the_snake_and_the_widow_s_daughters.rtf 	Entered	y	Retold by Paul with Lahu fair copy; also cf. 141a		551	592	41	116.0	304.0	x		188.0	0.22			y	y
+142	4	1	9_2	00:00	02:57	02:57	134	I long for thee, Jerusalem		008-031	15	10	Y	Y	134_i_long_for_thee__jerusalem.rtf 	Entered	y			8	31	23	0.0	177.0	x		177.0	0.13			y	y
+143	4	1	9_2	02:58	09:42	06:44	135	I am the Way		032-090	16	11	Y	Y	135_sermon_i_am_the_way.rtf	Entered	y			32	90	58	178.0	582.0	x	135	404.0	0.14			y	y
 144	4	1	9_2	09:44	13:37	03:53	137	Man escapes from the primeval gourd	myth	091-125	12	3	Y	Y	137_mans_primeval_gourd_goes_missing_and_god_looks_for_it.rtf 	Entered	y	Cf. no. 74		91	125	34	584.0	817.0	x	137	233.0	0.15			y	y
 145	4	1	9_2	13:40	16:20	02:40	138	There the flowers do not wither		126-151	15	11		Y	138_hymn_there_the_flowers_do_not_wither.rtf	Entered	y			126	151	25	820.0	980.0	x		160.0	0.16			y	y
 146	4	1	9_2	16:22	22:46	06:24	139	God struggles with the Titan	myth	151-213	12	1	Y	Y	139_god_struggles_with_the_titan.rtf 	Entered	y			151	213	62	982.0	1366.0	x	139	384.0	0.16			y	y
@@ -175,9 +175,9 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 185							205	Funerary chants (I)			12	12			205_funerary_chants_i.rtf	Entered	y														y	y
 186							206	Funerary chants (II)			12	13			206_funerary_chants_ii.rtf	Entered	y														y	y
 187							207	Prayer for game			12	8			207_prayer_for_game.rtf	Entered	y														y	y
-91	3	2	6_1	02:00	11:20	09:20	208a	The recent disharmony in our village (Part I)		026-102	16	10	Y	Y	208_gods_word_and_the_recent_disharmony_in_our_village.rtf 	Entered	y	A hymn is sung first		26	102	76	120.0	680.0	x	#N/A	560.0	0.14			y	y
+91	3	2	6_1	02:00	11:20	09:20	208	The recent disharmony in our village		026-102	16	9	Y	Y	208_gods_word_and_the_recent_disharmony_in_our_village.rtf 	Entered	y	A hymn is sung first		26	102	76	120.0	680.0	x		560.0	0.14			y	y
 94	3	2	6_1	18:01	24:27	06:26	208b	The recent disharmony in our village (Part II)		164-224	16	11		Y	85b_continued_from_85a_Sermon_the_recent_disharmony_in_our_village.rtf	Entered	y			164	224	60	1081.0	1467.0	x	#N/A	386.0	0.16			y	y
-189							209	Frère Jacques			14	6	Y																		y	y
+189							209	Frère Jacques			14	6	Y	Y	209_frere_jacques.rtf	Entered	y														y	y
 188							107b	The tiger is getting ripe			11	7			107b_the_tiger_is_getting_ripe.rtf	Entered	y														y	y
 191							107c	Taking off his pants to have a smoke			11	10			107c_Taking_off__his_pants_to_have_a_smoke.rtf	Entered	y														y	y
 190							107d	A sticky problem			11	9			107d_a_sticky_problem_that_parakeet_will_stick_at_nothing.rtf	Entered	y														y	y
@@ -185,10 +185,10 @@ Row	Reel	Side	File	Start	End	Duration	NID	Title	DisType	TapeDuration	Genre	Seque
 165	5	2	10_2	00:00	01:40	01:40	156a	Continuation of No. 156		241-268				Y	(missing)	Defer	n	Red Lahu		241	268	27	0.0	100.0	x	#N/A	100.0	0.27				
 33	1	2	2_3	21:25	26:54	05:29	33a	Hymn		605-689				Y	(missing)	Defer	n		x	605	689	84	1285.0	1614.0	x	#N/A	329.0	0.26				
 47	4	1	3_3	00:10	00:42	00:32	46a	Welcome to Shatodo village		266-273	1	4	Y	Y	046a_welcome_to_shatodo_village.rtf 	Entered	y	First 10 seconds of audio are missing		266	273	7	10.0	42.0	x	46a	32.0	0.22			y	y
-49	4	1	3_3	04:19	06:01	01:42	47a	When we go hunting		332-346	14	3		Y	047a_when_we_go_hunting_song.rtf	Entered	y		x	332	346	14	259.0	361.0	x		102.0	0.14			y	y
+49	4	1	3_3	04:19	06:01	01:42	47a	When we go hunting		332-346	3	2		Y	047a_when_we_go_hunting_song.rtf	Entered	y		x	332	346	14	259.0	361.0	x		102.0	0.14			y	y
 50	4	1	3_3	06:02	07:23	01:21	47b	Love-song		332-346				Y		Defer	n		x	332	346	14	362.0	443.0	x		81.0	0.17				
 51	4	1	3_3	07:24	07:52	00:28	47c	Kachin song		348-352				Y			n	Sung by Matisoff		348	352	4	444.0	472.0	x		28.0	0.14				
 82	7	2	5_2	01:01	03:44	02:43	77a	Wooing the maidens (Part II)		159-184	5	9	Y	Y	077a_wooing_the_maidens.rtf	Entered	y	Continuation of no. 70; not translated		159	184	25	61.0	224.0	x	77a	163.0	0.15			y	y
-88	7	2	5_3	20:01	22:19	02:18	82a	The smoker and the non-smoker dispute a pipe (Version I)	story	679-718	7	9	Y	Y	082a_the_smoker_and_the_non-smoker.rtf	Entered	y	No pauses from 81-83; cf. no. 121		679	718	39	1201.0	1339.0	x	82a	138.0	0.28			y	y
+88	7	2	5_3	20:01	22:19	02:18	82	The smoker and the non-smoker dispute a pipe (Version I)	story	679-718	7	9	Y	Y	082a_the_smoker_and_the_non-smoker.rtf	Entered	y	No pauses from 81-83; cf. no. 121		679	718	39	1201.0	1339.0	x	82	138.0	0.28			y	y
 93	3	2	6_1	13:23	18:00	04:37	86a	Hymn		122-164				Y	(missing)	Defer	n			122	164	42	803.0	1080.0	x		277.0	0.15				
 																	n															

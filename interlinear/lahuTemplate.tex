@@ -27,6 +27,10 @@
 
 \usepackage{fullpage}
 \usepackage{parskip}
+% prevent overlapping title names and section numbering
+\usepackage{tocloft}
+\addtolength{\cftsecnumwidth}{10pt}
+\addtolength{\cftpartnumwidth}{10pt}
 %\usepackage[toc]{multitoc}
 %\usepackage{supertabular,ltxtable,booktabs}
 \setcounter{LTchunksize}{600} % use more memory for fewer compiles
