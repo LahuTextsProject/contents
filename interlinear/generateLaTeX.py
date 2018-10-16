@@ -306,17 +306,31 @@ def make_sort_string(string):
     return string
 
 lexicon = parse_glosses_by_frequency(sys.argv[4])
-glossary_file = codecs.open('lexical_glossary.tex', 'w', 'utf-8')
-for key, value in lexicon.iteritems():
-    print >> glossary_file, r'\newglossaryentry{%s}{name=%s, type=lexicon, sort=%s, description = {' % (key, key, make_sort_string(key))
-    gloss_dict = {}
-    for gloss in value:
-        gloss_dict.setdefault(gloss[0], []).append(gloss[1])
-    i = 1
-    for key, senses in gloss_dict.iteritems():
-        if i > 1:
-            print >> glossary_file, ';'
-        glossary_file.write('%d.~(\gls{%s})~%s' % (i, key, ', '.join(senses)))
-        i += 1
-    print >> glossary_file, r'}}'
-glossary_file.close()
+def output_glossary(filename, sort_key, language=None):
+    glossary_file = codecs.open(filename, 'w', 'utf-8')
+    j = 0
+    for key, value in lexicon.iteritems():
+        if language:
+            language_name = 'baptist' if language == baptist else 'chinese'
+            print >> glossary_file, r'\newglossaryentry{%s%s}{name=%s, type=%s, sort=%s, description = {' \
+                % (language_name, j,
+                   transduce_string(transduce_string(key, decompose), language),
+                   language_name,
+                   sort_key(key))
+        else:
+            print >> glossary_file, r'\newglossaryentry{%s}{name=%s, type=lexicon, sort=%s, description = {' % (key, key, sort_key(key))
+        j += 1
+        gloss_dict = {}
+        for gloss in value:
+            gloss_dict.setdefault(gloss[0], []).append(gloss[1])
+        i = 1
+        for key, senses in gloss_dict.iteritems():
+            if i > 1:
+                print >> glossary_file, ';'
+            glossary_file.write('%d.~(\gls{%s})~%s' % (i, key, ', '.join(senses)))
+            i += 1
+        print >> glossary_file, r'}}'
+    glossary_file.close()
+output_glossary('lexical_glossary.tex', make_sort_string)
+#output_glossary('blexical_glossary.tex', make_sort_string, language=baptist)
+output_glossary('clexical_glossary.tex', make_sort_string, language=chinese)

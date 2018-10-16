@@ -115,10 +115,17 @@
 % makes compilation really slow as we have many acronym references.
 % oh well.
 \usepackage[acronym,toc,nonumberlist,nopostdot,numberedsection=nameref]{glossaries}
-\newglossary*{lexicon}{Lexicon}
 \input{abbreviations}
 \input{misc_abbreviations}
+
+\newglossary*{lexicon}{Lexicon}
 \input{lexical_glossary}
+
+\newglossary*{baptist}{Lexicon}
+%\input{blexical_glossary}
+
+\newglossary*{chinese}{Lexicon}
+\input{clexical_glossary}
 
 % find a way to calculate the size of the baseline precisely
 \newcommand{\quadruplehyphen}{%
@@ -158,8 +165,8 @@
 \pdfbookmark[0]{Table of Contents}{TOC}
 \tableofcontents
 \lahutableofcontents
-%\baptisttableofcontents
-%\chinesetableofcontents
+\baptisttableofcontents
+\chinesetableofcontents
 
 \thispagestyle{empty}
 \cleardoublepage
@@ -183,6 +190,8 @@
 \backmatter
 \setglossarysection{chapter}
 \printglossary[type=lexicon, title=Glossary, style=long, sort=letter]
+\printglossary[type=baptist, title=Glossary, style=long, sort=letter]
+\printglossary[type=chinese, title=Glossary, style=long, sort=letter]
 \glsunsetall
 
 \cleardoublepage
