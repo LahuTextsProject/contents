@@ -20,7 +20,7 @@ decompose = {'\xc9\x99': '\xc9\x99', '\xc5\x8d': 'o\xcc\x84', '\xc9\x9b': '\xc9\
              '\xc4\x81': 'a\xcc\x84', 'w\xc9\x9b': 'w\xc9\x9b', '\xc3\xba': 'u\xcc\x81', '\xc3\xae': 'i\xcc\x82',
              'a': 'a', 'c': 'c', 'b': 'b', '\xcc\x82': '\xcc\x82', 'd': 'd', 'g': 'g', 'f': 'f', 'i': 'i', 'h': 'h',
              'k': 'k', 'j': 'j', 'm': 'm', 'l': 'l', 'o': 'o', 'n': 'n', 'q': 'q', 'p': 'p', 'u': 'u', 't': 't',
-             'v': 'v', '\xcc\x82\xca\x94': '\xcc\x82\xca\x94', 'qh': 'qh', '\xcc\x84': '\xcc\x84',
+             'v': 'v', 'w': 'w', '\xcc\x82\xca\x94': '\xcc\x82\xca\x94', 'qh': 'qh', '\xcc\x84': '\xcc\x84',
              '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":",
              'ch\xc9\xa8': 'ch\xc9\xa8'}
 
