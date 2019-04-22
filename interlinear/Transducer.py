@@ -36,7 +36,16 @@ baptist = {'ch': 'ch', 'a\xcc\x81w': 'ao\xc2\xaf', 'a\xcc\x81y': 'ai\xc2\xaf',
            'a\xcc\x80w': 'ao\xe1\xb5\xa5', '\xe2\x80\xa6': '\xe2\x80\xa6', 'a\xcc\x80y': 'ai\xe1\xb5\xa5',
            'w\xc9\x9b': 'aweh', 'phu': 'hpfuh', 'a': 'a', 'c': 'c', 'e': 'e', '\xcc\x80': '\xe1\xb5\xa5',
            '\xcc\x81': '\xc2\xaf', 'i': 'i', 'k': 'k', 'kh': 'hk', 'm': 'm', 'o': 'o', 'q': 'k\xe2\x80\x99',
-           'u': 'uh',
+           # make sure tones come after nasal
+           '\xcc\x84n': 'n\\protect\\underline{\\protect\\phantom{x}}',
+           '\xcc\x81n': 'n\xc2\xaf',
+           '\xcc\x82n': 'n\xcb\x87',
+           '\xcc\x80n': 'n\xe1\xb5\xa5',
+           '\xcc\x84m': 'm\\protect\\underline{\\protect\\phantom{x}}',
+           '\xcc\x81m': 'm\xc2\xaf',
+           '\xcc\x82m': 'm\xcb\x87',
+           '\xcc\x80m': 'm\xe1\xb5\xa5',
+           'u': 'u', '\xc9\xa8': 'ui',
            '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":",
            'y': 'y', '\xc4\xb1': 'i'}
 

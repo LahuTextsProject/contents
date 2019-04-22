@@ -305,18 +305,69 @@ def make_sort_string(string):
         string = string.replace(key, value)
     return string
 
+def make_baptist_sort_string(string):
+    special = ordereddict[
+        'a': 'ac', 'b': 'ba', 'c': 'ca', 'cah': 'cz', 'd': 'da',
+        'e': 'ec', 'ə': 'ez', 'f': 'fa', 'g': 'ga',
+        'g̈': 'g̈a', 'h': 'ha', 'i': 'ia', 'ɛ': 'emc', 'j': 'dz',
+        'k': 'ka', 'kaha': 'kb', 'q': 'kc', 'kcha': 'kd',
+        'l': 'la', 'n': 'na', 'ŋ':
+        'nz', 'o': 'oc', 'ɔ': 'au', # u will handle adding c to this
+        'p': 'pa', 'paha': 'pz',
+        's': 'sa', 'š': 'sz', 't': 'ta', 'taha': 'tz',
+        'u': 'uc', 'ɨ': 'uic', 'v': 'va',
+        # since w is usually translated o- or aw- or u
+        'wem': 'aucem', 'we': 'oce', 'wi': 'uc',
+        'y': 'za', 'z': 'za', 'ʔ': 'zz',
+        # tones on vowels
+        'á': 'ab', 'â': 'aa', 'à': 'ae', 'ā': 'ad',
+        'aazz': 'af', 'aezz': 'ag', 'ã': 'ah',
+        'é': 'eb', 'ê': 'ea', 'è': 'ee', 'ē': 'ed',
+        'eazz': 'ef', 'eezz': 'eg', 'ẽ': 'eh',
+        'í': 'ib', 'î': 'ia', 'ì': 'ie', 'ī': 'id',
+        'iazz': 'if', 'iezz': 'ig', 'ĩ': 'ih',
+        'ó': 'ob', 'ô': 'oa', 'ò': 'oe', 'ō': 'od',
+        'oazz': 'of', 'oezz': 'og', 'õ': 'oh',
+        'ú': 'ub', 'û': 'ua', 'ù': 'ue', 'ū': 'ud',
+        'uazz': 'uf', 'uezz': 'ug', 'ũ': 'uh',
+        # detachable tones for non latin characters
+        '́' : '1' ,  '̂': '2' , '̀' : '3', '̄' : '4',
+        '2zz' : '5', '3zz' : '6',
+        'auc1' : 'aub', 'auc2' : 'aua', 'auc3' : 'aue', 'auc4' : 'aud',
+        'auc5' : 'auf', 'auc6' : 'aug',
+        'uic1' : 'uib', 'uic2' : 'uia', 'uic3' : 'uie', 'uic4' : 'uid',
+        'uic5' : 'uif', 'uic6' : 'uig',
+        'emc1' : 'emb', 'emc2' : 'ema', 'emc3' : 'eme', 'emc4' : 'emd',
+        'emc5' : 'emf', 'emc6' : 'emg',
+        # imperfectly phonemicized things:
+        # cɨ > tcuh
+        'caui' : 'tbui',
+        # chɨ > tsuh
+        'czaui' : 'tcaui']
+    string = string.lower()
+    for key, value in special.iteritems():
+        string = string.replace(key, value)
+    return string
+
 lexicon = parse_glosses_by_frequency(sys.argv[4])
 def output_glossary(filename, sort_key, language=None):
     glossary_file = codecs.open(filename, 'w', 'utf-8')
     j = 0
     for key, value in lexicon.iteritems():
-        if language:
-            language_name = 'baptist' if language == baptist else 'chinese'
+        if language == baptist:
+            form = transduce_string(transduce_string(key, decompose), language)
             print >> glossary_file, r'\newglossaryentry{%s%s}{name=%s, type=%s, sort=%s, description = {' \
-                % (language_name, j,
-                   transduce_string(transduce_string(key, decompose), language),
-                   language_name,
+                % ("baptist", j,
+                   form,
+                   "baptist",
                    sort_key(key))
+        elif language == chinese:
+            form = transduce_string(transduce_string(key, decompose), language)
+            print >> glossary_file, r'\newglossaryentry{%s%s}{name=%s, type=%s, sort=%s, description = {' \
+                % ("chinese", j,
+                   form,
+                   "chinese",
+                   sort_key(form))
         else:
             print >> glossary_file, r'\newglossaryentry{%s}{name=%s, type=lexicon, sort=%s, description = {' % (key, key, sort_key(key))
         j += 1
@@ -332,5 +383,5 @@ def output_glossary(filename, sort_key, language=None):
         print >> glossary_file, r'}}'
     glossary_file.close()
 output_glossary('lexical_glossary.tex', make_sort_string)
-#output_glossary('blexical_glossary.tex', make_sort_string, language=baptist)
-output_glossary('clexical_glossary.tex', make_sort_string, language=chinese)
+output_glossary('blexical_glossary.tex', make_baptist_sort_string, language=baptist)
+output_glossary('clexical_glossary.tex', lambda x: x, language=chinese)
