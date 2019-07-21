@@ -17,7 +17,7 @@ structure = [
         [11, 'Bilingual humor']
     ]],
     ['Lahu spiritual and musical life', [
-        [12, 'Traditional "theo - animism"'],
+        [12, 'Traditional "theo-animism"'],
         [13, 'Traditional songs'],
         [14, 'Modern secular songs'],
         [15, 'Christian hymns and Bible readings'],
