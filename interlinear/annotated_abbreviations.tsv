@@ -1,6 +1,6 @@
 Adv	adverb
 Adv.interrog	interrogative adverb
-Adv.onomat 	onomatopoetic
+Adv.onomat 	onomatopoetic adverbial
 Adv+V 	adverb + verb
 AE	adverbial expression
 AEext 	extentive adverbial	AE\textsubscript{ext}
@@ -8,8 +8,9 @@ AE.stat	stative adverbial
 B.n	bound nominal morpheme
 B.v 	bound verbal morpheme
 Cl.ext 	extentive clause
-Clf 	final clause
+Clf 	final clause	Cl\textsubscript{f}
 Cl.nf	non-final clause
+Clfclassifier	classifier	Clf
 Conj	conjunction
 C.r	resultative complement
 Dem	demonstrative
@@ -21,12 +22,15 @@ Elab.n	nominal elaborate expression
 Elab.v	verbal elaborate expression
 Elab.v + V	verbal elaborate expression + verb	Elab\textsubscript{v}+V
 Eth	ethnonym
-Extd.Elab	extended elaborate expression (more than 4 syllable)
+Extd.Elab	extended elaborate expression (more than 4 syllable)	Elab\textsubscript{extd}
 Interj	interjection
+LRC	left relative clause (precedes head noun)
+LRC + Nh	left relative clause plus head noun	LRC + N\textsubscript{h}
 M.pfx	prefixable morpheme (may be preceded by ɔ̀-)
 N	noun
 N.dvb	deverbal noun (derived from a clause containing only a VP)
 N.ext	extentive noun
+N.h	head noun
 N.intg	interrogative noun
 N.lim	limited noun
 N.loc	locative noun
@@ -36,7 +40,7 @@ NP.ext	extentive noun phrase
 NPext	extentive noun phrase	N\textsubscript{ext}
 NP.intg	interrogative noun phrase
 N.place	name of a place
-NPLoc	locative noun phrase	NP\textsubscript{Loc}
+NPLoc	locative noun phrase	NP\textsubscript{loc}
 N+Pn	noun + noun-particle	N + P\textsubscript{n}
 N.poss + ve	genitive modifier	N\textsubscript{poss}+\textbf{ve}
 NPq	quantified noun phrase	NP\textsubscript{q}
@@ -45,10 +49,11 @@ NP.time	temporal noun phrase
 N.sd	special demonstrative noun
 Nsd + Pn	special demonstrative noun + noun particle	N\textsubscript{sd}+P\textsubscript{n}
 N.spec + V	specifying noun + verb	N\textsubscript{spec}+V
-Nspec+V	specifying noun + verb	N\textsubscript{spec}+V
 N.time	temporal noun
+N.rh	head of a relative clause; relative-clause head
+Nrh + RRC	head noun modified by a right relative clause N\textsubscript{rh} + RRC
 Num	numeral
-Num+Clf+Num	numeral plus classifier; quantity expression (equivalent to ``Q``)	Num+Clf+Num
+Num+Clf+Num	numeral plus classifier; quantity expression (equivalent to ``Q``)	Num+Clf
 Onomat	onomatopoeia
 OV	object plus verb; object-verb construction
 P.adv	adverbial particle
@@ -56,21 +61,23 @@ P.n	nominal particle
 Pron	pronoun
 Pron.intg	interrogative pronoun
 Prt	particle
+P.u	unrestricted particle (can follow either noun or verb)
 P.uf	final unrestricted particle
 P.unf	non-final unrestricted particle
 P.univ	universal unrestricted particle
 P.univ+P.univ	universal unrestricted particle + universal unrestricted particle	P\textsubscript{univ}+P\textsubscript{univ}
 P.v	verb particle
-Pv	verb particle P\textsubscript{v}
 P.v-nom	nominalizing verb particle
 P.v+P.quot	verb particle + quotative particle	P\textsubscript{v}+P\textsubscript{quot}
 Pv+Pv	verb particle + verb particle	P\textsubscript{v}+P\textsubscript{v}
 P.v + V.v	verb particle + post-head versatile verb	P\textsubscript{v}+V\textsubscript{v}
-Q	numeral plus classifier; quantity expression (eqiuvalent to ``Num + Clf``)
+Q	numeral plus classifier; quantity expression (eqiuvalent to ``Num + Clf'')
 Q.time	temporal quantity expression
-Quasi-Elab.n	quasi-elaborate expression (4 syllables but none repeated)
+Quasi-Elab.n	quasi-elaborate expression (4 syllables but none repeated)	Quasi-Elab
 QUOT	quotative
 RC	relative clause
+RRC	right relative clause (follows head noun)
+S	sentence; subject
 SV	subject plus verb; subject-verb construction
 S+VP	sentence + verb phrase
 Temp Nom	temporal nominal
@@ -85,4 +92,6 @@ v.V	prehead versatile verb	\textsubscript{v}V
 V.v	post-head versatile verb
 V+Vv	verb + post-head versatile verb	V+V\textsubscript{v}
 vV + Vh	pre-head versatile verb + main verb (pre-head concatenation)	\textsubscript{v}V+V\textsubscript{h}
-Vh	main verb (pre-head concatenation)	V\textsubscript{h}
+Vh	main verb; verb head	V\textsubscript{h}
+Vh + Vv	main verb plus post-head versatile verb (post-head concatenation)	V\textsubscript{h} + V\textsubscript{v}
+VV	versatile verb
