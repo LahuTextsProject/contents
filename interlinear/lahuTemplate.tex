@@ -163,6 +163,15 @@
     \vspace*{\fill}
 \end{center}
 \clearpage
+\include{acknowledgments}
+\include{preface}
+
+\glsaddall
+\part*{Symbols and Abbreviations}
+\addcontentsline{toc}{chapter}{Symbols and Abbreviations}
+\setglossarysection{section}
+\printglossary[type=\acronymtype,title=Form Class Abbreviations]
+\printglossary[title=Miscellaneous Abbreviations]
 \pdfbookmark[0]{Table of Contents}{TOC}
 \tableofcontents
 \lahutableofcontents
@@ -171,15 +180,6 @@
 
 \thispagestyle{empty}
 \cleardoublepage
-\include{preface}
-\include{acknowledgments}
-
-\glsaddall
-\part*{Symbols and Abbreviations}
-\addcontentsline{toc}{chapter}{Symbols and Abbreviations}
-\setglossarysection{section}
-\printglossary[type=\acronymtype,title=Form Class Abbreviations]
-\printglossary[title=Miscellaneous Abbreviations]
 
 \mainmatter
 \pdfbookmark[0]{Window onto a Vanished World}{TOC}
@@ -190,6 +190,7 @@
 
 \backmatter
 \setglossarysection{chapter}
+\addcontentsline{lahutable}{chapter}{dîʔšōnēli-ɛ́}
 \printglossary[type=lexicon, title=Glossary, style=long, sort=letter]
 \printglossary[type=baptist, title=Glossary, style=long, sort=letter]
 \printglossary[type=chinese, title=Glossary, style=long, sort=letter]
@@ -198,6 +199,7 @@
 \cleardoublepage
 \bibliographystyle{authordate1}
 \renewcommand{\bibname}{References}
+\addcontentsline{lahutable}{chapter}{Lâhū-khɔ̂ cá dàʔ ve lìʔ-qôʔ}
 \nocite{*}
 \bibliography{stedtreferences}
 \fancyhead[LE]{\large{Bibliography} \vspace{0.5em}}
