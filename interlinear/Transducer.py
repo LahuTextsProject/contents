@@ -21,9 +21,11 @@ decompose = {'\xc9\x99': '\xc9\x99', '\xc5\x8d': 'o\xcc\x84', '\xc9\x9b': '\xc9\
              'a': 'a', 'c': 'c', 'b': 'b', '\xcc\x82': '\xcc\x82', 'd': 'd', 'g': 'g', 'f': 'f', 'i': 'i', 'h': 'h',
              'k': 'k', 'j': 'j', 'm': 'm', 'l': 'l', 'o': 'o', 'n': 'n', 'q': 'q', 'p': 'p', 'u': 'u', 't': 't',
              'v': 'v', 'w': 'w', '\xcc\x82\xca\x94': '\xcc\x82\xca\x94', 'qh': 'qh', '\xcc\x84': '\xcc\x84',
-             '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":",
-             'ch\xc9\xa8': 'ch\xc9\xa8'}
+             '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":", ";": ";",
+             ")": ")", "(": "(",
+             'ch\xc9\xa8': 'ch\xc9\xa8', 'r': 'r', 's': 's'}
 
+# pu for some reason not pui.
 baptist = {'ch': 'ch', 'a\xcc\x81w': 'ao\xc2\xaf', 'a\xcc\x81y': 'ai\xc2\xaf',
            '\xcc\x80\xca\x94': '\xe2\x80\xb8', '\xc5\xa1\xc9\xa8': 'suh', 'pu': 'pfuh', 'g': 'g', 'th': 'ht',
            'ph': 'hp', 'g\xcc\x88': 'g\xe2\x80\x99', 'c\xc9\xa8': 'tcuh', '\xcc\x84': '\\protect\\underline{\\protect\\phantom{x}}',
@@ -46,8 +48,9 @@ baptist = {'ch': 'ch', 'a\xcc\x81w': 'ao\xc2\xaf', 'a\xcc\x81y': 'ai\xc2\xaf',
            '\xcc\x82m': 'm\xcb\x87',
            '\xcc\x80m': 'm\xe1\xb5\xa5',
            'u': 'u', '\xc9\xa8': 'ui',
-           '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":",
-           'y': 'y', '\xc4\xb1': 'i'}
+           '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":", ";": ";",
+           ")": ")", "(": "(",
+           'y': 'y', '\xc4\xb1': 'i', 'r' : 'r', 's' : 's'}
 
 chinese = {'ch': 'ch', 'a\xcc\x81w': 'aoq', 'a\xcc\x81y': 'aiq', '\xcc\x80\xca\x94': 'r',
            '\xc5\xa1\xc9\xa8': 'seu', '\xc3\xa2': 'ad', '\xc3\xa2w': 'aod', 'th': 'th', 'ph': 'ph',
@@ -60,7 +63,7 @@ chinese = {'ch': 'ch', 'a\xcc\x81w': 'aoq', 'a\xcc\x81y': 'aiq', '\xcc\x80\xca\x
            'g\xcc\x88': 'x', 'c': 'c', 'e': 'e', '\xcc\x80': 'l', '\xcc\x81': 'q', 'i': 'i', 'k': 'k', 'kh': 'kh',
            'm': 'm', 'o': 'o', 'q': 'q', 'u': 'u', 'y': 'y', '\xc4\xb1': 'i',
            '-': '-', ',': ',', '.': '.', '"': '"', "'": "'", ":": ":",
-           } #includes diphthongs
+           'r' : 'r' , 's' : 's'} #includes diphthongs
 
 
 def runop(filename, dict):

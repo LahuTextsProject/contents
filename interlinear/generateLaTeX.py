@@ -380,13 +380,17 @@ def output_glossary(filename, sort_key, language=None):
         for gloss in value:
             gloss_dict.setdefault(gloss[0], []).append(gloss[1])
         i = 1
-        for key, senses in gloss_dict.iteritems():
-            if i > 1:
-                print >> glossary_file, ';'
-            glossary_file.write('%d.~(\gls{%s})~%s' % (i, key, ', '.join(senses)))
-            i += 1
+        if len(gloss_dict.keys()) == 1:
+            key = gloss_dict.keys()[0]
+            glossary_file.write('(\gls{%s})~%s' % (key, ', '.join(gloss_dict[key])))
+        else:
+            for key, senses in gloss_dict.iteritems():
+                if i > 1:
+                    print >> glossary_file, ';'
+                glossary_file.write('%d.~(\gls{%s})~%s' % (i, key, ', '.join(senses)))
+                i += 1
         print >> glossary_file, r'}}'
     glossary_file.close()
-output_glossary('lexical_glossary.tex', make_sort_string)
-output_glossary('blexical_glossary.tex', make_baptist_sort_string, language=baptist)
+#output_glossary('lexical_glossary.tex', make_sort_string)
+#output_glossary('blexical_glossary.tex', make_baptist_sort_string, language=baptist)
 output_glossary('clexical_glossary.tex', lambda x: x, language=chinese)
