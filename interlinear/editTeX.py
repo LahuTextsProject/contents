@@ -15,7 +15,7 @@ def normalize_unicode(word):
 
 def makeLahuWords():
     words = set()
-    with open('pruned.csv', 'rb') as triples:
+    with open('pruned_elements.csv', 'rb') as triples:
         reader = csv.reader(triples, delimiter='\t')
         for row in reader:
             if row and row[0]:
