@@ -391,6 +391,6 @@ def output_glossary(filename, sort_key, language=None):
                 i += 1
         print >> glossary_file, r'}}'
     glossary_file.close()
-#output_glossary('lexical_glossary.tex', make_sort_string)
-#output_glossary('blexical_glossary.tex', make_baptist_sort_string, language=baptist)
+output_glossary('lexical_glossary.tex', make_sort_string)
+output_glossary('blexical_glossary.tex', make_baptist_sort_string, language=baptist)
 output_glossary('clexical_glossary.tex', lambda x: x, language=chinese)
