@@ -14,7 +14,10 @@ ln -sf $1 lahutexts.xml
 echo Converting RTFs to LaTeX
 ./texRTFs.sh
 echo Making music scores
+# for charles' linux:
 lilypond --ps Lahu_tune.ly
+# for jb's mac:
+# /Applications/LilyPond.app/Contents/Resources/bin/lilypond --ps Lahu_tune.ly
 echo Performing fixups
 ./fixups.sh
 cd tex
@@ -32,7 +35,7 @@ python2 ../generateLaTeX.py $xml_file ../lahucatalog.tsv ../annotated_abbreviati
 # python ../combiner.py ../lahutextstoc.txt
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex
 
-# this is commented out as we want both lahu and baptist translations
+# this is commented out as we want both chinese and baptist transcriptions
 if [ "$@" ] # assumes both will be added
 then
     sed -i -e 's/%\\baptisttableofcontents/\\baptisttableofcontents/' ${texfile}.tex
