@@ -54,6 +54,7 @@ def fixLine(line):
     line = line.replace('\xe2\xaa\xa4', r'$\glj$')
     line = line.replace(r'\\texttt\{"\}', r'"')
     line = line.replace(r'\\texttt\{\'\}', r"'")
+    line = re.sub(r'"(.*?)"', r"``\1''", line)
     line = re.sub(r'\\texttt\{(.*?)\}', r'\1', line)
     line = re.sub(r'([A-Z])\@(.*?)\@', r'$\1_\2$', line)
     line = re.sub(r'\@([a-z])\@(.*?)', r'$_{\1}\2$', line)
