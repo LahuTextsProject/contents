@@ -58,13 +58,13 @@
 \title{Window onto a Vanished World:\\Lahu texts from Thailand in the 1960’s}
 \author{James A. Matisoff}
 \date{2019}
-\usepackage[bookmarks]{hyperref}
-\hypersetup{%
-        pdfborder={0 0 1},
-        pdfborderstyle={/S/U/W 1}, % make links underlined (instead of surrounded by red boxes)
-        pdftitle = {Window onto a Vanished World}, 
-        pdfauthor = {\textcopyright\ The Regents of the University of California},
-}
+%\usepackage[bookmarks]{hyperref}
+%\hypersetup{%
+%       pdfborder={0 0 1},
+%       pdfborderstyle={/S/U/W 1}, % make links underlined (instead of surrounded by red boxes)
+%       pdftitle = {Window onto a Vanished World},
+%       pdfauthor = {\textcopyright\ The Regents of the University of California},
+%}
 
 \makeatletter
 %\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
@@ -159,18 +159,18 @@
 \thispagestyle{empty}
 \cleardoublepage
 \include{halftitle}
-
 \thispagestyle{empty}
 \cleardoublepage
+
 \maketitle
-
 \thispagestyle{empty}
 \cleardoublepage
-\include{copyright}
 
-\thispagestyle{empty}
-\cleardoublepage
-\include{abstract}
+% \include{copyright}
+
+% \thispagestyle{empty}
+% \cleardoublepage
+% \include{abstract}
 
 \begin{center}
     \thispagestyle{empty}
@@ -199,8 +199,8 @@
 \pdfbookmark[0]{Table of Contents}{TOC}
 \tableofcontents
 \lahutableofcontents
-\baptisttableofcontents
 \chinesetableofcontents
+\baptisttableofcontents
 
 \thispagestyle{empty}
 \cleardoublepage
@@ -211,23 +211,21 @@
 % insert includes here
 
 \cleardoublepage
-
 \backmatter
 \setglossarysection{chapter}
 \addcontentsline{lahutable}{chapter}{dîʔšōnēli-ɛ́}
+\printglossary[type=lexicon, title={Glossary}, style=long, sort=letter]
 \addcontentsline{baptisttable}{chapter}{diˆshon\protect\underline{\protect\phantom{x}}e\protect\underline{\protect\phantom{x}}li-eh¯}
+\printglossary[type=baptist, title={Glossary, in Baptist transcription}, style=long, sort=letter]
 \addcontentsline{chinesetable}{chapter}{ditshofnefli-ieq}
-\printglossary[type=lexicon, title=Glossary, style=long, sort=letter]
-\printglossary[type=baptist, title=Glossary, style=long, sort=letter]
-\printglossary[type=chinese, title=Glossary, style=long, sort=letter]
+\printglossary[type=chinese, title={Glossary, in Chinese transcription}, style=long, sort=letter]
 \glsunsetall
 
 \cleardoublepage
 \bibliographystyle{authordate1}
 \renewcommand{\bibname}{References}
 \addcontentsline{lahutable}{chapter}{Lâhū-khɔ̂ cá dàʔ ve lìʔ-qôʔ}
-\addcontentsline{baptisttable}{chapter}{Laˇhu\protect\underline{\protect\phantom{x}}-hkawˇ
-  ca¯ da‸ ve li‸-k’oˆ}
+\addcontentsline{baptisttable}{chapter}{Laˇhu\protect\underline{\protect\phantom{x}}-hkawˇ ca¯ da‸ ve li‸-k’oˆ}
 \addcontentsline{chinesetable}{chapter}{Ladhuf-khawd caq dar ve lir-qot}
 \nocite{*}
 \bibliography{stedtreferences}
