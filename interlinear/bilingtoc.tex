@@ -39,8 +39,7 @@
   \let\phantom\nop
   %% FIXME: we have to make \phantom a nop for now. this might make the
   %% transcription look weird.
-  \addcontentsline{baptisttable}{#1}{\protect\numberline{\csname
-      the#1\endcsname}#2}%
+  \addcontentsline{baptisttable}{#1}{\protect\numberline{\csname the#1\endcsname}#2}%
   \let\phantom\oldphantom
 }
 \makeatother
