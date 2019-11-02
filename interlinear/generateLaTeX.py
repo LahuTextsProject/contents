@@ -154,7 +154,7 @@ for text in texts:
                 for w in s.findall('.//word'):
                     itemToOutput = ' {}'
                     for i in w.findall('.//item'):
-                        if i.attrib['type'] == 'punct':
+                        if i.attrib['type'] == 'punct' or i.text == '--':
                             if level in ['msa']:
                                 form = ''
                             elif level in ['gls']:
