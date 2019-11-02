@@ -24,8 +24,8 @@
 
 \usepackage{amsmath}
 \usepackage{unicode-math}
-\setmathfont[ Path = /usr/share/fonts/OTF/]{STIX2Math.otf}
-% \setmathfont{STIX Two Math}
+%\setmathfont[ Path = /usr/share/fonts/OTF/]{STIX2Math.otf}
+%\setmathfont{STIX Two Math}
 
 \newcommand\direct[1] {[{\DirectStyle #1}]}
 \newcommand\DirectStyle {\slshape}
@@ -38,7 +38,7 @@
 \addtolength{\cftpartnumwidth}{10pt}
 %\usepackage[toc]{multitoc}
 %\usepackage{supertabular,ltxtable,booktabs}
-\setcounter{LTchunksize}{600} % use more memory for fewer compiles
+%\setcounter{LTchunksize}{600} % use more memory for fewer compiles
 \usepackage{graphicx}
 \usepackage[export]{adjustbox} % loads also graphicx
 \usepackage{float}
@@ -196,17 +196,17 @@
 \setglossarysection{section}
 \printglossary[type=\acronymtype,title=Form Class Abbreviations]
 \printglossary[title=Miscellaneous Abbreviations]
-\pdfbookmark[0]{Table of Contents}{TOC}
+%\pdfbookmark[0]{Table of Contents}{TOC}
 \tableofcontents
 \lahutableofcontents
-\chinesetableofcontents
 \baptisttableofcontents
+\chinesetableofcontents
 
 \thispagestyle{empty}
 \cleardoublepage
 
 \mainmatter
-\pdfbookmark[0]{Window onto a Vanished World}{TOC}
+%\pdfbookmark[0]{Window onto a Vanished World}{TOC}
 
 % insert includes here
 
@@ -214,7 +214,7 @@
 \backmatter
 \setglossarysection{chapter}
 \addcontentsline{lahutable}{chapter}{dîʔšōnēli-ɛ́}
-\printglossary[type=lexicon, title={Glossary}, style=long, sort=letter]
+\printglossary[type=lexicon, title={Glossary, phonemic transcription}, style=long, sort=letter]
 \addcontentsline{baptisttable}{chapter}{diˆshon\protect\underline{\protect\phantom{x}}e\protect\underline{\protect\phantom{x}}li-eh¯}
 \printglossary[type=baptist, title={Glossary, in Baptist transcription}, style=long, sort=letter]
 \addcontentsline{chinesetable}{chapter}{ditshofnefli-ieq}
