@@ -15,13 +15,13 @@ from formclass import parse_form_class_file
 from collections import OrderedDict
 
 parser = argparse.ArgumentParser(description='Generate interlinear LaTeX.')
-parser.add_argument('-b', '--with-baptist', action='store_true')
-parser.add_argument('-c', '--with-chinese', action='store_true')
-parser.add_argument('args', nargs=4)
+#parser.add_argument('-b', '--with-baptist', action='store_true')
+#parser.add_argument('-c', '--with-chinese', action='store_true')
+parser.add_argument('args', nargs=5)
 
 parsed_args = parser.parse_args()
-with_baptist = parsed_args.with_baptist
-with_chinese = parsed_args.with_chinese
+# with_baptist = parsed_args.with_baptist
+# with_chinese = parsed_args.with_chinese
 
 def parse_catalog_file(filename):
     try:
@@ -121,12 +121,12 @@ for text in texts:
     print >> OutLaTeX, '\section{%s}' % titlestring
     print >> OutLaTeX, '\label{sec:%s}' % textnumber
     print >> OutLaTeX, '\\addlahutoc{section}{%s}' % lahutitlestring
-    if with_baptist:
-        print >> OutLaTeX, '\\addbaptisttoc{section}{%s}' % \
-            transduce_string(transduce_string(lahutitlestring, decompose), baptist)
-    if with_chinese:
-        print >> OutLaTeX, '\\addchinesetoc{section}{%s}' % \
-        transduce_string(transduce_string(lahutitlestring, decompose), chinese)
+    # if with_baptist:
+    #     print >> OutLaTeX, '\\addbaptisttoc{section}{%s}' % \
+    #         transduce_string(transduce_string(lahutitlestring, decompose), baptist)
+    # if with_chinese:
+    #     print >> OutLaTeX, '\\addchinesetoc{section}{%s}' % \
+    #     transduce_string(transduce_string(lahutitlestring, decompose), chinese)
     phrases = text.findall('.//phrases')
     print >> OutLaTeX, '\\begin{examples}'
     sentences = []
@@ -135,10 +135,10 @@ for text in texts:
             # sentencenumber = s.find(".//item[@type='segnum']")
             print >> OutLaTeX, "\\item\n"
             print >> OutLaTeX, "\glll ",
-            if with_baptist:
-                BaptistSentence = ''
-            if with_chinese:
-                ChineseSentence = ''
+            # if with_baptist:
+            #     BaptistSentence = ''
+            # if with_chinese:
+            #     ChineseSentence = ''
             for w in s.findall('.//word'):
                 for i in w.findall('.//item'):
                     if i.attrib['type'] in ['txt','punct']:
@@ -146,10 +146,10 @@ for text in texts:
                         form = i.text
                         form = transduce(form,decompose)
                         form = escape(form)
-                        if with_baptist:
-                            BaptistSentence += ' %s' % transduce(form,baptist)
-                        if with_chinese:
-                            ChineseSentence += ' %s' % transduce(form,chinese)
+                        # if with_baptist:
+                        #     BaptistSentence += ' %s' % transduce(form,baptist)
+                        # if with_chinese:
+                        #     ChineseSentence += ' %s' % transduce(form,chinese)
             for level in ['txt', 'msa', 'gls']:
                 for w in s.findall('.//word'):
                     itemToOutput = ' {}'
@@ -173,18 +173,18 @@ for text in texts:
                 print >> OutLaTeX
             print >> OutLaTeX, '\glt'
             print >> OutLaTeX, '\glend' + '\n'
-            sentences.append([BaptistSentence if with_baptist else None, \
-                              ChineseSentence if with_chinese else None])
+            # sentences.append([BaptistSentence if with_baptist else None, \
+            #                   ChineseSentence if with_chinese else None])
     print >> OutLaTeX, '\\end{examples}'
 
-    if with_chinese:
-        print >> OutLaTeX, '\subsection*{%s}' % 'Chinese'
-        for i,sentence in enumerate(sentences):
-            print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[1].replace(' ,',',').replace(' .','.'))
-    if with_baptist:
-        print >> OutLaTeX, '\subsection*{%s}' % 'Baptist'
-        for i,sentence in enumerate(sentences):
-            print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[0].replace(' ,',',').replace(' .','.'))
+    # if with_chinese:
+    #     print >> OutLaTeX, '\subsection*{%s}' % 'Chinese'
+    #     for i,sentence in enumerate(sentences):
+    #         print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[1].replace(' ,',',').replace(' .','.'))
+    # if with_baptist:
+    #     print >> OutLaTeX, '\subsection*{%s}' % 'Baptist'
+    #     for i,sentence in enumerate(sentences):
+    #         print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[0].replace(' ,',',').replace(' .','.'))
 
     if textnumber in catalog:
         if catalog[textnumber][1] != '':
@@ -209,12 +209,12 @@ for ((partno, part), (lpartno, lpart)) in zip(enumerate(structure),
     print >> filestotex, '\part{%s}' % partname
     print >> filestotex, '\label{part:%s}' % partname
     print >> filestotex, '\\addlahutoc{part}{%s}' % lahupartname
-    if with_baptist:
-        print >> filestotex, '\\addbaptisttoc{part}{%s}' % \
-            transduce_string(transduce_string(lahupartname, decompose), baptist)
-    if with_chinese:
-        print >> filestotex, '\\addchinesetoc{part}{%s}' % \
-            transduce_string(transduce_string(lahupartname, decompose), chinese)
+    # if with_baptist:
+    #     print >> filestotex, '\\addbaptisttoc{part}{%s}' % \
+    #         transduce_string(transduce_string(lahupartname, decompose), baptist)
+    # if with_chinese:
+    #     print >> filestotex, '\\addchinesetoc{part}{%s}' % \
+    #         transduce_string(transduce_string(lahupartname, decompose), chinese)
     print "part %s. %s" % (partno+1, partname)
     for ((chapterno, genre), (lchapterno, lgenre)) in zip(enumerate(part[1]),
                                                           enumerate(lpart[1])):
@@ -223,12 +223,12 @@ for ((partno, part), (lpartno, lpart)) in zip(enumerate(structure),
         print >> filestotex, '\chapter{%s}' % chaptername
         print >> filestotex, '\label{chapter:%s}' % chaptername.replace('"', '')
         print >> filestotex, '\\addlahutoc{chapter}{%s}' % lahuchaptername
-        if with_baptist:
-            print >> filestotex, '\\addbaptisttoc{chapter}{%s}' % \
-                transduce_string(transduce_string(lahuchaptername, decompose), baptist)
-        if with_chinese:
-            print >> filestotex, '\\addchinesetoc{chapter}{%s}' % \
-                transduce_string(transduce_string(lahuchaptername, decompose), chinese)
+        # if with_baptist:
+        #     print >> filestotex, '\\addbaptisttoc{chapter}{%s}' % \
+        #         transduce_string(transduce_string(lahuchaptername, decompose), baptist)
+        # if with_chinese:
+        #     print >> filestotex, '\\addchinesetoc{chapter}{%s}' % \
+        #         transduce_string(transduce_string(lahuchaptername, decompose), chinese)
         print "  chapter %s %s" % (chapterno+1, chaptername)
         for textnumber in sorted(listoffiles.keys()):
             if int(textnumber) == genre[0]:

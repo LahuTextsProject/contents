@@ -2,24 +2,31 @@ if [[ `pwd` != */interlinear ]]; then
   echo "you must cd to directory interlinear before invoking this script"
   exit
 fi
-#
-# cd to the tex directory for all the work, copy files as necessary
-#
 texfile="WindowsForgottenWorld"
 echo
 echo "=============================================================================="
 echo Starting run `date`
-echo Making symbolic link lahutexts.xml
+case $2 in baptist|chinese|matisovian)
+      which_part="$2"
+      echo "Will generate the '$which_part' transcription version." ;;
+    *)
+      echo 'Second argument must be one of baptist|chinese|matisovian'
+      exit 1 ;;
+esac
+echo Making symbolic link lahutexts.xml. source is: $1
 ln -sf $1 lahutexts.xml
 echo Converting RTFs to LaTeX
 ./texRTFs.sh
 echo Making music scores
 # for charles' linux:
-lilypond --ps Lahu_tune.ly
+# lilypond --ps Lahu_tune.ly
 # for jb's mac:
-# /Applications/LilyPond.app/Contents/Resources/bin/lilypond --ps Lahu_tune.ly
+/Applications/LilyPond.app/Contents/Resources/bin/lilypond --ps Lahu_tune.ly
 echo Performing fixups
 ./fixups.sh
+#
+# cd to the tex directory for heavy lifting, copy files as necessary from elsewhere
+#
 cd tex
 rm -r *
 cp ../*.eps .
@@ -30,17 +37,10 @@ cp ../*.bib .
 echo Generating LaTeX file "${texfile}.tex", timestamp: `date`
 xml_file=$1
 shift
-python2 ../generateLaTeX.py $xml_file ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv "$@"
+echo "python2 ../generateLaTeX.py $xml_file ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv $which_part"
+python2 ../generateLaTeX.py $xml_file ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv "$which_part"
 
-# python ../combiner.py ../lahutextstoc.txt
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex
-
-# this is commented out as we want both chinese and baptist transcriptions
-if [ "$@" ] # assumes both will be added
-then
-    sed -i -e 's/%\\baptisttableofcontents/\\baptisttableofcontents/' ${texfile}.tex
-    sed -i -e 's/%\\chinesetableofcontents/\\chinesetableofcontents/' ${texfile}.tex
-fi
 
 echo Compiling LaTeX file "${texfile}.tex", step 1 of 3, timestamp: `date`
 xelatex -interaction nonstopmode ${texfile} > ${texfile}.stdout.log
