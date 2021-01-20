@@ -100,6 +100,7 @@ def read_translation_sentences(translation_file):
                 sentences.append(sentence)
             sentence = match.group(2)
         elif sentence and (line != '\n'):
+            sentence += ' '
             sentence += line
     return sentences
 
