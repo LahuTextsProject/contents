@@ -82,6 +82,27 @@ def parsetitle(title):
     titlestring = titlestring.replace('#','\\#')
     return (textnumber, titlestring)
 
+sentence_pattern = re.compile('(\d+)\. *(.*)')
+# read all sentences from the translation file.
+def read_translation_sentences(translation_file):
+    sentences = []
+    sentence = None
+    while True:
+        line = translation_file.readline()
+        match = sentence_pattern.match(line)
+        if line is '':
+            # end of file
+            if sentence:
+                sentences.append(sentence)
+            break
+        elif match:
+            if sentence:
+                sentences.append(sentence)
+            sentence = match.group(2)
+        elif sentence and (line != '\n'):
+            sentence += line
+    return sentences
+
 for text in texts:
     # extract title info, add this info to our list of texts
     for item in text.findall(".//item"):
@@ -113,6 +134,13 @@ for text in texts:
     except:
         # skip anything that is not sequenced
         pass
+
+    # open the translation file to try and slurp up the translated line.
+    translation_file = open('%s.tex' % catalog[textnumber][1], "r")
+    translation_sentences = read_translation_sentences(translation_file)
+    translation_file.close()
+
+    # skip to the lines in the translation file that are numbered.
 
     # ok, let's parse each text and create the needed data structures
     # we create one output text for each input text
@@ -171,11 +199,20 @@ for text in texts:
                         itemToOutput = ' {%s}' % form
                     print >> OutLaTeX, itemToOutput,
                 print >> OutLaTeX
-            print >> OutLaTeX, '\glt'
+            try:
+                translation_sentence = translation_sentences.pop(0)
+            except IndexError:
+                print("There aren't enough free translation sentences in this text to match the interlinear!")
+                translation_sentence = 'Ran out of free translation sentences!'
+            print >> OutLaTeX, '\glt ' + translation_sentence
             print >> OutLaTeX, '\glend' + '\n'
             # sentences.append([BaptistSentence if with_baptist else None, \
             #                   ChineseSentence if with_chinese else None])
     print >> OutLaTeX, '\\end{examples}'
+
+    # check if we have more free translation lines than there are interlinear sentences.
+    if translation_sentences is not []:
+        print("There are more free translation sentences in this text than there are interlinear sentences!")
 
     # if with_chinese:
     #     print >> OutLaTeX, '\subsection*{%s}' % 'Chinese'
