@@ -100,6 +100,7 @@ def read_translation_sentences(translation_file):
                 sentences.append(sentence)
             sentence = match.group(2)
         elif sentence and (line != '\n'):
+            sentence += ' '
             sentence += line
     return sentences
 
@@ -141,12 +142,11 @@ for text in texts:
     translation_sentences = read_translation_sentences(translation_file)
     translation_file.close()
 
-    # skip to the lines in the translation file that are numbered.
-
     # ok, let's parse each text and create the needed data structures
     # we create one output text for each input text
     OutLaTeX = codecs.open(outputfilename, 'w', 'utf-8')
     print >> OutLaTeX, '\setcounter{equation}{0}'
+    print >> OutLaTeX, '\setcounter{footnote}{0}'
     print >> OutLaTeX, '\section{%s}' % titlestring
     print >> OutLaTeX, '\label{sec:%s}' % textnumber
     print >> OutLaTeX, '\\addlahutoc{section}{%s}' % lahutitlestring
