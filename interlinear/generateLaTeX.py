@@ -136,7 +136,8 @@ for text in texts:
         pass
 
     # open the translation file to try and slurp up the translated line.
-    translation_file = open('%s.tex' % catalog[textnumber][1], "r")
+    translation_file_name = catalog[textnumber][1]
+    translation_file = open('%s.tex' % translation_file_name, "r")
     translation_sentences = read_translation_sentences(translation_file)
     translation_file.close()
 
@@ -202,17 +203,20 @@ for text in texts:
             try:
                 translation_sentence = translation_sentences.pop(0)
             except IndexError:
-                print("There aren't enough free translation sentences in this text to match the interlinear!")
+                print(translation_file_name + " not enough free translation sentences to match the interlinear!")
                 translation_sentence = 'Ran out of free translation sentences!'
-            print >> OutLaTeX, '\glt ' + translation_sentence
-            print >> OutLaTeX, '\glend' + '\n'
+            print >> OutLaTeX, '\glt `' + translation_sentence + "'"
+            print >> OutLaTeX, ' \glend' + '\n'
             # sentences.append([BaptistSentence if with_baptist else None, \
             #                   ChineseSentence if with_chinese else None])
     print >> OutLaTeX, '\\end{examples}'
 
     # check if we have more free translation lines than there are interlinear sentences.
     if translation_sentences is not []:
-        print("There are more free translation sentences in this text than there are interlinear sentences!")
+        print(translation_file_name + " more free translation sentences than there are interlinear sentences!")
+    else:
+        print(translation_file_name + " translation sentences and interlinear sentences match up!")
+
 
     # if with_chinese:
     #     print >> OutLaTeX, '\subsection*{%s}' % 'Chinese'
