@@ -141,6 +141,7 @@ for text in texts:
     translation_file = open('%s.tex' % translation_file_name, "r")
     translation_sentences = read_translation_sentences(translation_file)
     translation_file.close()
+    num_translations = len(translation_sentences)
 
     # ok, let's parse each text and create the needed data structures
     # we create one output text for each input text
@@ -157,6 +158,7 @@ for text in texts:
     #     print >> OutLaTeX, '\\addchinesetoc{section}{%s}' % \
     #     transduce_string(transduce_string(lahutitlestring, decompose), chinese)
     phrases = text.findall('.//phrases')
+    num_phrases = len(phrases)
     print >> OutLaTeX, '\\begin{examples}'
     sentences = []
     for p in phrases:
@@ -200,22 +202,23 @@ for text in texts:
                         itemToOutput = ' {%s}' % form
                     print >> OutLaTeX, itemToOutput,
                 print >> OutLaTeX
-            try:
-                translation_sentence = translation_sentences.pop(0)
-            except IndexError:
-                print(translation_file_name + " not enough free translation sentences to match the interlinear!")
-                translation_sentence = 'Ran out of free translation sentences!'
-            print >> OutLaTeX, '\glt `' + translation_sentence + "'"
-            print >> OutLaTeX, ' \glend' + '\n'
-            # sentences.append([BaptistSentence if with_baptist else None, \
-            #                   ChineseSentence if with_chinese else None])
+        try:
+            translation_sentence = translation_sentences.pop(0)
+        except IndexError:
+            translation_sentence = 'Ran out of free translation sentences!'
+        print >> OutLaTeX, '\glt `' + translation_sentence + "'"
+        print >> OutLaTeX, ' \glend' + '\n'
     print >> OutLaTeX, '\\end{examples}'
 
     # check if we have more free translation lines than there are interlinear sentences.
-    if translation_sentences is not []:
+    if num_phrases > num_translations:
+        print(translation_file_name + " not enough free translation sentences to match the interlinear!")
+    elif num_phrases < num_translations:
+    # if translation_sentences != []:
         print(translation_file_name + " more free translation sentences than there are interlinear sentences!")
     else:
         print(translation_file_name + " translation sentences and interlinear sentences match up!")
+    print('phrases: %s translations: %s diff: %s' % (num_phrases, num_translations, num_phrases - num_translations))
 
 
     # if with_chinese:
