@@ -46,8 +46,8 @@ N.poss + ve	genitive modifier	N\textsubscript{poss}+\textbf{ve}
 NPq	quantified noun phrase	NP\textsubscript{q}
 Nprop	proper noun	N\textsubscript{prop}
 NP.time	temporal noun phrase
-N.sd	special demonstrative noun
-Nsd + Pn	special demonstrative noun + noun particle	N\textsubscript{sd}+P\textsubscript{n}
+N.sd	spatial demonstrative noun
+Nsd + Pn	spatial demonstrative noun + noun particle	N\textsubscript{sd}+P\textsubscript{n}
 N.spec + V	specifying noun + verb	N\textsubscript{spec}+V
 N.time	temporal noun
 N.rh	head of a relative clause; relative-clause head
