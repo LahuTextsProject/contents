@@ -3,12 +3,12 @@
 
 import re
 import sys
-import unicodecsv as csv
+import csv
 import codecs
 
 def parse_form_class_file(filename):
     with open(filename, 'rt') as f:
-        csvfile = csv.reader(f, delimiter='\t', encoding='utf-8')
+        csvfile = csv.reader(f, delimiter='\t')
         forms = {}
         for info in csvfile:
             key = str(info[0]).strip()

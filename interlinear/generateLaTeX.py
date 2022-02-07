@@ -2,11 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import xml.etree.ElementTree as ET
-import codecs
 import sys
 import os
 import re
-import unicodecsv as csv
+import csv
 import argparse
 
 from Transducer import transduce, transduce_string, baptist, chinese, decompose
@@ -25,15 +24,15 @@ parsed_args = parser.parse_args()
 
 def parse_catalog_file(filename):
     try:
-        catalog_file = open(filename, 'rb')
+        catalog_file = open(filename, 'r')
     except IOError:
         message = 'Expected to be able to read %s, but it was not found or unreadable' % filename
         exit()
 
-    csvfile = csv.reader(catalog_file, delimiter="\t", encoding='utf-8')
+    csvfile = csv.reader(catalog_file, delimiter="\t")
     catalog = {}
     # skip header row
-    csvfile.next()
+    next(csvfile)
     for info in csvfile:
         # are we using this text?
         if info[17] != 'y':
@@ -56,12 +55,12 @@ def escape(str):
     #str = str.replace('-','\\-')
     return str
 
-with open(sys.argv[1], 'rt') as f:
+with open(sys.argv[1], 'r') as f:
     tree = ET.parse(f)
 
 # we'll be reorganizing (reordering) the files as they come in.
 # (they don't come in in any useful order)
-filestotex = codecs.open('includes.tex', 'w', 'utf-8')
+filestotex = open('includes.tex', 'w')
 listoffiles = {}
 
 catalog = parse_catalog_file(sys.argv[2])
@@ -76,8 +75,8 @@ def parsetitle(title):
         textnumber  = textnumbermatch.group(1)
         titlestring =  textnumbermatch.group(2)
     else:
-        raise ValueError("No text number found for", title.text) 
-            
+        raise ValueError("No text number found for", title.text)
+
     titlestring = titlestring.replace('&','\\&')
     titlestring = titlestring.replace('#','\\#')
     return (textnumber, titlestring)
@@ -90,7 +89,7 @@ def read_translation_sentences(translation_file):
     while True:
         line = translation_file.readline()
         match = sentence_pattern.match(line)
-        if line is '':
+        if line == '':
             # end of file
             if sentence:
                 sentences.append(sentence)
@@ -145,27 +144,32 @@ for text in texts:
 
     # ok, let's parse each text and create the needed data structures
     # we create one output text for each input text
-    OutLaTeX = codecs.open(outputfilename, 'w', 'utf-8')
-    print >> OutLaTeX, '\setcounter{equation}{0}'
-    print >> OutLaTeX, '\setcounter{footnote}{0}'
-    print >> OutLaTeX, '\section{%s}' % titlestring
-    print >> OutLaTeX, '\label{sec:%s}' % textnumber
-    print >> OutLaTeX, '\\addlahutoc{section}{%s}' % lahutitlestring
+    OutLaTeX = open(outputfilename, 'w')
+    print('\setcounter{equation}{0}', file=OutLaTeX)
+    print('\setcounter{footnote}{0}', file=OutLaTeX)
+    print('\section{%s}' % titlestring, file=OutLaTeX)
+    print('\label{sec:%s}' % textnumber, file=OutLaTeX)
+    print('\\addlahutoc{section}{%s}' % lahutitlestring, file=OutLaTeX)
     # if with_baptist:
-    #     print >> OutLaTeX, '\\addbaptisttoc{section}{%s}' % \
+    #     print('\\addbaptisttoc{section}{%s}' % \, file=OutLaTeX)
     #         transduce_string(transduce_string(lahutitlestring, decompose), baptist)
     # if with_chinese:
-    #     print >> OutLaTeX, '\\addchinesetoc{section}{%s}' % \
+    #     print('\\addchinesetoc{section}{%s}' % \, file=OutLaTeX)
     #     transduce_string(transduce_string(lahutitlestring, decompose), chinese)
-    phrases = text.findall('.//phrases')
+    phrases = text.findall('.//phrases/word')
     num_phrases = len(phrases)
-    print >> OutLaTeX, '\\begin{examples}'
-    sentences = []
+    print('\\begin{examples}', file=OutLaTeX)
+    # sentences = []
     for p in phrases:
-        for s in p.findall('.//word/words'):
-            # sentencenumber = s.find(".//item[@type='segnum']")
-            print >> OutLaTeX, "\\item\n"
-            print >> OutLaTeX, "\glll ",
+        sentencenumber = p.find(".//item[@type='segnum']")
+        try:
+            sentencenumber = sentencenumber.text
+        except:
+            sentencenumber = 'not found'
+        # print(f'{textnumber}, {titlestring}: sentence {sentencenumber}')
+        for s in p.findall('.//words'):
+            print("\\item\n", file=OutLaTeX)
+            print("\glll ", end='', file=OutLaTeX)
             # if with_baptist:
             #     BaptistSentence = ''
             # if with_chinese:
@@ -173,7 +177,7 @@ for text in texts:
             for w in s.findall('.//word'):
                 for i in w.findall('.//item'):
                     if i.attrib['type'] in ['txt','punct']:
-                        #form = codecs.encode(i.text,'utf8')
+                        #form = encode(i.text,'utf8')
                         form = i.text
                         form = transduce(form,decompose)
                         form = escape(form)
@@ -200,15 +204,18 @@ for text in texts:
                         if i.attrib['type'] == 'msa' and level == 'msa':
                             form = '\gls{%s}' % form.strip()
                         itemToOutput = ' {%s}' % form
-                    print >> OutLaTeX, itemToOutput,
-                print >> OutLaTeX
+                    print(itemToOutput, end='', file=OutLaTeX)
+                print('', file=OutLaTeX)
+                # print(f'{level} ', end='')
         # try:
         #     translation_sentence = translation_sentences.pop(0)
         # except IndexError:
         #     translation_sentence = 'Ran out of free translation sentences!'
-        print >> OutLaTeX, '\glt `' # + translation_sentence + "'"
-        print >> OutLaTeX, ' \glend' + '\n'
-    print >> OutLaTeX, '\\end{examples}'
+        #print('\glt `', file=OutLaTeX) + translation_sentence + "'", file=OutLaTeX)
+        print(' \glot {}', file=OutLaTeX)
+        print('\glend' + '\n', file=OutLaTeX)
+        # print(f'ended {sentencenumber}')
+    print('\\end{examples}', file=OutLaTeX)
 
     # # check if we have more free translation lines than there are interlinear sentences.
     # if num_phrases > num_translations:
@@ -222,25 +229,25 @@ for text in texts:
 
 
     # if with_chinese:
-    #     print >> OutLaTeX, '\subsection*{%s}' % 'Chinese'
+    #     print('\subsection*{%s}' % 'Chinese', file=OutLaTeX)
     #     for i,sentence in enumerate(sentences):
-    #         print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[1].replace(' ,',',').replace(' .','.'))
+    #         print( '[%s] %s \\\\\\relax' % (i+1, sentence[1].replace(' ,',',').replace(' .','.')), file=OutLaTeX)
     # if with_baptist:
-    #     print >> OutLaTeX, '\subsection*{%s}' % 'Baptist'
+    #     print('\subsection*{%s}' % 'Baptist', file=OutLaTeX)
     #     for i,sentence in enumerate(sentences):
-    #         print >> OutLaTeX,  '[%s] %s \\\\\\relax' % (i+1, sentence[0].replace(' ,',',').replace(' .','.'))
+    #         print( '[%s] %s \\\\\\relax' % (i+1, sentence[0].replace(' ,',',').replace(' .','.')), file=OutLaTeX)
 
     if textnumber in catalog:
         if catalog[textnumber][1] != '':
             if os.path.isfile(catalog[textnumber][1] + '.tex'):
-                print >> OutLaTeX, '\subsection*{%s}' % 'Translation'
+                print('\subsection*{%s}' % 'Translation', file=OutLaTeX)
                 # make sure our English titles are consistent
-                print >> OutLaTeX, r'\textbf{%s}'% titlestring
-                print >> OutLaTeX, '\input{%s}' % catalog[textnumber][1]
+                print(r'\textbf{%s}'% titlestring, file=OutLaTeX)
+                print('\input{%s}' % catalog[textnumber][1], file=OutLaTeX)
             else:
-                print '>>> translation file not found for #%s : %s.tex' % (textnumber, catalog[textnumber][1])
+                print('>>> translation file not found for #%s : %s.tex' % (textnumber, catalog[textnumber][1]))
         else:
-            print '>>>  no translation file listed for #%s : %s' % (textnumber, catalog[textnumber][0])
+            print('>>>  no translation file listed for #%s : %s' % (textnumber, catalog[textnumber][0]))
 
     OutLaTeX.close()
 
@@ -250,52 +257,52 @@ for ((partno, part), (lpartno, lpart)) in zip(enumerate(structure),
                                               enumerate(lahu_structure)):
     partname = part[0]
     lahupartname = lpart[0]
-    print >> filestotex, '\part{%s}' % partname
-    print >> filestotex, '\label{part:%s}' % partname
-    print >> filestotex, '\\addlahutoc{part}{%s}' % lahupartname
+    print('\part{%s}' % partname, file=filestotex)
+    print('\label{part:%s}' % partname, file=filestotex)
+    print('\\addlahutoc{part}{%s}' % lahupartname, file=filestotex)
     # if with_baptist:
-    #     print >> filestotex, '\\addbaptisttoc{part}{%s}' % \
+    #     print('\\addbaptisttoc{part}{%s}' % \, file=filestotex)
     #         transduce_string(transduce_string(lahupartname, decompose), baptist)
     # if with_chinese:
-    #     print >> filestotex, '\\addchinesetoc{part}{%s}' % \
+    #     print('\\addchinesetoc{part}{%s}' % \, file=filestotex)
     #         transduce_string(transduce_string(lahupartname, decompose), chinese)
-    print "part %s. %s" % (partno+1, partname)
+    print("part %s. %s" % (partno+1, partname))
     for ((chapterno, genre), (lchapterno, lgenre)) in zip(enumerate(part[1]),
                                                           enumerate(lpart[1])):
         chaptername = genre[1]
         lahuchaptername = lgenre[1]
-        print >> filestotex, '\chapter{%s}' % chaptername
-        print >> filestotex, '\label{chapter:%s}' % chaptername.replace('"', '')
-        print >> filestotex, '\\addlahutoc{chapter}{%s}' % lahuchaptername
+        print('\chapter{%s}' % chaptername, file=filestotex)
+        print('\label{chapter:%s}' % chaptername.replace('"', ''), file=filestotex)
+        print('\\addlahutoc{chapter}{%s}' % lahuchaptername, file=filestotex)
         # if with_baptist:
-        #     print >> filestotex, '\\addbaptisttoc{chapter}{%s}' % \
+        #     print('\\addbaptisttoc{chapter}{%s}' % \, file=filestotex)
         #         transduce_string(transduce_string(lahuchaptername, decompose), baptist)
         # if with_chinese:
-        #     print >> filestotex, '\\addchinesetoc{chapter}{%s}' % \
+        #     print('\\addchinesetoc{chapter}{%s}' % \, file=filestotex)
         #         transduce_string(transduce_string(lahuchaptername, decompose), chinese)
-        print "  chapter %s %s" % (chapterno+1, chaptername)
+        print("  chapter %s %s" % (chapterno+1, chaptername))
         for textnumber in sorted(listoffiles.keys()):
             if int(textnumber) == genre[0]:
-                print >> filestotex, '\include{%s}' % listoffiles[textnumber]
-                print "    %s " % textnumber
+                print('\include{%s}' % listoffiles[textnumber], file=filestotex)
+                print("    %s " % textnumber)
 
 form_class_info = parse_form_class_file(sys.argv[3])
-abbreviation_file = codecs.open('abbreviations.tex', 'w', 'utf-8')
-for key, value in form_class_info.iteritems():
+abbreviation_file = open('abbreviations.tex', 'w')
+for key, value in form_class_info.items():
     # periods really screw up the sorting.
-    print >> abbreviation_file, '\\newacronym[sort=%s]{%s}{%s}{%s}' \
+    print('\\newacronym[sort=%s]{%s}{%s}{%s}' \
         % (value[1].replace("\\textsubscript{v", "v")
            .replace("\\textsubscript{", "a")
            .replace("}", "")
            .replace("\\textbf{", ""),
-           key, value[1], value[0])
+           key, value[1], value[0]), file=abbreviation_file)
 abbreviation_file.close()
 
 def parse_glosses_by_frequency(filename):
     # we assume that the most frequent glosses for a word are read first
     # cf. triples.csv
-    with open(filename, 'rt') as f:
-        csvfile = csv.reader(f, delimiter='\t', encoding='utf-8')
+    with open(filename, 'r') as f:
+        csvfile = csv.reader(f, delimiter='\t')
         lexicon = {}
         for info in csvfile:
             if len(info) != 4:
@@ -350,7 +357,7 @@ def make_sort_string(string):
         'ú': 'ub', 'û': 'uc', 'ù': 'ud', 'ū': 'ue',
         'uczz': 'uf', 'udzz': 'ug', 'ũ': 'uh']
     string = string.lower()
-    for key, value in special.iteritems():
+    for key, value in special.items():
         string = string.replace(key, value)
     return string
 
@@ -394,46 +401,46 @@ def make_baptist_sort_string(string):
         # chɨ > tsuh
         'czaui' : 'tcaui']
     string = string.lower()
-    for key, value in special.iteritems():
+    for key, value in special.items():
         string = string.replace(key, value)
     return string
 
 lexicon = parse_glosses_by_frequency(sys.argv[4])
 def output_glossary(filename, sort_key, language=None):
-    glossary_file = codecs.open(filename, 'w', 'utf-8')
+    glossary_file = open(filename, 'w')
     j = 0
-    for key, value in lexicon.iteritems():
+    for key, value in lexicon.items():
         if language == baptist:
             form = transduce_string(transduce_string(key, decompose), language)
-            print >> glossary_file, r'\newglossaryentry{%s%s}{name=%s, type=%s, sort=%s, description = {' \
+            print(r'\newglossaryentry{%s%s}{name=%s, type=%s, sort=%s, description = {' \
                 % ("baptist", j,
                    form,
                    "baptist",
-                   sort_key(key))
+                   sort_key(key)), file=glossary_file)
         elif language == chinese:
             form = transduce_string(transduce_string(key, decompose), language)
-            print >> glossary_file, r'\newglossaryentry{%s%s}{name=%s, type=%s, sort=%s, description = {' \
+            print(r'\newglossaryentry{%s%s}{name=%s, type=%s, sort=%s, description = {' \
                 % ("chinese", j,
                    form,
                    "chinese",
-                   sort_key(form))
+                   sort_key(form)), file=glossary_file)
         else:
-            print >> glossary_file, r'\newglossaryentry{%s}{name=%s, type=lexicon, sort=%s, description = {' % (key, key, sort_key(key))
+            print(r'\newglossaryentry{%s}{name=%s, type=lexicon, sort=%s, description = {' % (key, key, sort_key(key)), file=glossary_file)
         j += 1
         gloss_dict = {}
         for gloss in value:
             gloss_dict.setdefault(gloss[0], []).append(gloss[1])
         i = 1
         if len(gloss_dict.keys()) == 1:
-            key = gloss_dict.keys()[0]
+            key = list(gloss_dict.keys())[0]
             glossary_file.write('(\gls{%s})~%s' % (key, ', '.join(gloss_dict[key])))
         else:
-            for key, senses in gloss_dict.iteritems():
+            for key, senses in gloss_dict.items():
                 if i > 1:
-                    print >> glossary_file, ';'
+                    print(';', file=glossary_file)
                 glossary_file.write('%d.~(\gls{%s})~%s' % (i, key, ', '.join(senses)))
                 i += 1
-        print >> glossary_file, r'}}'
+        print(r'}}', file=glossary_file)
     glossary_file.close()
 output_glossary('lexical_glossary.tex', make_sort_string)
 output_glossary('blexical_glossary.tex', make_baptist_sort_string, language=baptist)

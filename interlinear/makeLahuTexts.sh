@@ -4,7 +4,6 @@ if [[ `pwd` != */interlinear ]]; then
 fi
 texfile="WindowsForgottenWorld"
 xml_file=$1
-mkdir -p ../t2
 echo
 echo "=============================================================================="
 echo Starting run `date`
@@ -15,36 +14,44 @@ case $2 in baptist|chinese|matisovian)
       echo 'Second argument must be one of baptist|chinese|matisovian'
       exit 1 ;;
 esac
-echo Making symbolic link lahutexts.xml. source is: $1
-cp $xml_file lahutexts.xml
-echo Converting RTFs to LaTeX
-./texRTFs.sh
-echo Making music scores
-if [[ `uname` == "Darwin" ]]
-then
-   # for jb's mac:
-   /Applications/LilyPond.app/Contents/Resources/bin/lilypond --ps Lahu_tune.ly
-else
-   # for charles' linux:
-   lilypond --ps Lahu_tune.ly
-fi
-echo Performing fixups
-./fixups.sh
+
+# we now skip this part ... use the generate .eps file
+#echo Making music scores
+#if [[ `uname` == "Darwin" ]]
+#then
+#   # for jb's mac:
+#   /Applications/LilyPond.app/Contents/Resources/bin/lilypond --ps Lahu_tune.ly
+#else
+#   # for charles' linux:
+#   lilypond --ps Lahu_tune.ly
+#fi
+# echo Performing fixups
+# ./fixups.sh
 #
 # cd to the tex directory for heavy lifting, copy files as necessary from elsewhere
-#
+
+# the tex directory is the 'working directory' all text files, go in there
+rm -rf tex
+mkdir tex
 cd tex
-rm -r *
+
 cp ../*.eps .
-cp ../$xml_file .
+cp ../$xml_file lahutexts.xml
 cp ../*.tex .
 cp ../../transTeX/*.tex .
 cp ../*.bib .
+cp ../lahucatalog.tsv .
+cp ../annotated_abbreviations.tsv .
+
 echo Generating LaTeX file "${texfile}.tex", timestamp: `date`
 
 shift
-echo "python ../generateLaTeX.py $xml_file ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv $which_part"
-/usr/bin/python ../generateLaTeX.py $xml_file ../lahucatalog.tsv ../annotated_abbreviations.tsv ../triples.csv "$which_part"
+
+# echo Preparing intermediate files
+../PrepareFiles.sh
+
+echo "python3 ../generateLaTeX.py lahutexts.xml lahucatalog.tsv annotated_abbreviations.tsv triples.csv $which_part"
+python3 ../generateLaTeX.py lahutexts.xml lahucatalog.tsv annotated_abbreviations.tsv triples.csv "$which_part"
 
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex
 

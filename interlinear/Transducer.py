@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 
-import codecs
 import csv, sys
-
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 decompose = {'\xc9\x99': '\xc9\x99', '\xc5\x8d': 'o\xcc\x84', '\xc9\x9b': '\xc9\x9b', 'ch': 'ch',
              '\xc5\x8b': '\xc5\x8b', '\xc5\xab': 'u\xcc\x84', 'y\xc9\xa8': 'y\xc9\xa8',
@@ -104,8 +100,8 @@ def runop(filename, dict):
         newerframe.append(newline)
     for line in newerframe:
         for word in line:
-            print word,
-        print
+            print(word, end='')
+        print()
 
 
 def findConstituent(token, kys):
