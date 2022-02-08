@@ -2,6 +2,8 @@
 %!TEX encoding = UTF-8 Unicode
 \documentclass[10pt,twoside]{book}
 
+% prevent overlapping title names and section numbering
+\usepackage{tocloft}
 \input{bilingtoc}
 
 \usepackage{epigraph}
@@ -32,8 +34,6 @@
 
 \usepackage{fullpage}
 \usepackage{parskip}
-% prevent overlapping title names and section numbering
-\usepackage{tocloft}
 \addtolength{\cftsecnumwidth}{10pt}
 \addtolength{\cftpartnumwidth}{10pt}
 %\usepackage[toc]{multitoc}
@@ -93,7 +93,7 @@
 \renewcommand*{\chaptermark}[1]{ \markboth{#1}{} }
 
 \fancyhead[RE]{Window onto a Vanished World \vspace{0.9em}}
-\fancyhead[LO]{ \vspace{0.9em}}
+\fancyhead[LO]{Lahu texts from Thailand in the 1960’s \vspace{0.9em}}
 
 \fancyhead[RO]{\leftmark \vspace{0.9em}}
 \fancyhead[LE]{\rightmark \vspace{0.9em}}
@@ -120,8 +120,6 @@
 % makes compilation really slow as we have many acronym references.
 % oh well.
 \usepackage[acronym,toc,nonumberlist,nopostdot,numberedsection=nameref]{glossaries}
-\input{abbreviations}
-\input{misc_abbreviations}
 
 \newglossary*{lexicon}{Lexicon}
 \input{lexical_glossary}
@@ -166,10 +164,11 @@
 \thispagestyle{empty}
 \cleardoublepage
 
-% \include{copyright}
+\include{copyright}
+\thispagestyle{empty}
+\cleardoublepage
 
-% \thispagestyle{empty}
-% \cleardoublepage
+% no abstract
 % \include{abstract}
 
 \begin{center}
@@ -194,16 +193,20 @@
 \part*{Symbols and Abbreviations}
 \addcontentsline{toc}{chapter}{Symbols and Abbreviations}
 \setglossarysection{section}
+\input{abbreviations}
+\input{misc_abbreviations}
 \printglossary[type=\acronymtype,title=Form Class Abbreviations]
 \printglossary[title=Miscellaneous Abbreviations]
+
+\thispagestyle{empty}
+\cleardoublepage
+
 %\pdfbookmark[0]{Table of Contents}{TOC}
 \tableofcontents
 \lahutableofcontents
 % \baptisttableofcontents
 % \chinesetableofcontents
 
-\thispagestyle{empty}
-\cleardoublepage
 
 \mainmatter
 %\pdfbookmark[0]{Window onto a Vanished World}{TOC}
@@ -214,11 +217,11 @@
 \backmatter
 \setglossarysection{chapter}
 \addcontentsline{lahutable}{chapter}{dîʔšōnēli-ɛ́}
-\printglossary[type=lexicon, title={Glossary, phonemic transcription}, style=long, sort=letter]
+\printglossary[type=lexicon, title={Glossary, phonemic transcription}, style={long}]
 %\addcontentsline{baptisttable}{chapter}{diˆshon\protect\underline{\protect\phantom{x}}e\protect\underline{\protect\phantom{x}}li-eh¯}
-%\printglossary[type=baptist, title={Glossary, in Baptist transcription}, style=long, sort=letter]
+%\printglossary[type=baptist, title={Glossary, in Baptist transcription}, style={long}, sort={letter}]
 %\addcontentsline{chinesetable}{chapter}{ditshofnefli-ieq}
-%\printglossary[type=chinese, title={Glossary, in Chinese transcription}, style=long, sort=letter]
+%\printglossary[type=chinese, title={Glossary, in Chinese transcription}, style={long}, sort={letter}]
 \glsunsetall
 
 \cleardoublepage
