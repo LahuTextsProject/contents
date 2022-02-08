@@ -56,15 +56,15 @@ python3 ../generateLaTeX.py lahutexts.xml lahucatalog.tsv annotated_abbreviation
 sed -e '/% insert includes here/r./includes.tex' lahuTemplate.tex > ${texfile}.tex
 
 echo Compiling LaTeX file "${texfile}.tex", step 1 of 3, timestamp: `date`
-xelatex -interaction nonstopmode ${texfile} > ${texfile}.stdout.log
+xelatex -interaction nonstopmode ${texfile} > ${texfile}.stdout1.log
 echo Generating glossaries
 makeglossaries ${texfile} > ${texfile}.glossaries.stdout.log
 echo Generating bibliography
 bibtex ${texfile} > ${texfile}.bibtex.stdout.log
 echo Compiling LaTeX file "${texfile}.tex", step 2 of 3, timestamp: `date`
-xelatex -interaction nonstopmode ${texfile} >> ${texfile}.stdout.log
+xelatex -interaction nonstopmode ${texfile} > ${texfile}.stdout2.log
 echo Compiling LaTeX file "${texfile}.tex", step 3 of 3, timestamp: `date`
-xelatex -interaction nonstopmode ${texfile} >> ${texfile}.stdout.log
+xelatex -interaction nonstopmode ${texfile} > ${texfile}.stdout3.log
 echo Done. `date`
-echo Output is tex/${texfile}.tex, logs are in ${texfile}.stdout.log
+echo Output is tex/${texfile}.tex, logs are in the 3 ${texfile}.stdoutN.log files
 echo "=============================================================================="
