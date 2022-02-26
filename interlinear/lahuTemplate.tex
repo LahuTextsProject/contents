@@ -55,9 +55,9 @@
 
 \usepackage{fancyhdr}
 
-\title{Window onto a Vanished World:\\Lahu texts from Thailand in the 1960’s}
-\author{James A. Matisoff}
-\date{2019}
+% \title{Window onto a Vanished World:\\Lahu texts from Thailand in the 1960’s}
+% \author{James A. Matisoff}
+% \date{2019}
 %\usepackage[bookmarks]{hyperref}
 %\hypersetup{%
 %       pdfborder={0 0 1},
@@ -92,8 +92,9 @@
 \renewcommand*{\sectionmark}[1]{ \markright{#1} }
 \renewcommand*{\chaptermark}[1]{ \markboth{#1}{} }
 
-\fancyhead[RE]{Window onto a Vanished World \vspace{0.9em}}
-\fancyhead[LO]{Lahu texts from Thailand in the 1960’s \vspace{0.9em}}
+% no 'inner' running headers for book title any more
+\fancyhead[RE]{ \vspace{0.9em}}
+\fancyhead[LO]{ \vspace{0.9em}}
 
 \fancyhead[RO]{\leftmark \vspace{0.9em}}
 \fancyhead[LE]{\rightmark \vspace{0.9em}}
@@ -156,32 +157,62 @@
 
 \thispagestyle{empty}
 \cleardoublepage
-\include{halftitle}
-\thispagestyle{empty}
-\cleardoublepage
+%\include{halftitle}
+%\thispagestyle{empty}
+%\cleardoublepage
 
-\maketitle
+% \maketitle
 \thispagestyle{empty}
-\cleardoublepage
+\begin{center}
 
+\vspace{4cm}
+{\Large CoRSAL Occasional Publications}
+
+\vspace{2cm}
+
+{\Large Volume 2}
+
+\vspace{8cm}
+
+Series editor: Shobana Chelliah
+
+\includegraphics[scale=0.15]{CoRSAL-Logo-BW-v03.png}
+
+\end{center}
+\cleardoublepage
+\thispagestyle{empty}
+\begin{center}
+\vspace{4cm}
+{\huge Window onto a Vanished World:\\Lahu texts from Thailand in the 1960’s}
+
+\vspace{2cm}
+
+{\Large James A. Matisoff}
+\vspace{2cm}
+
+2022
+
+\vspace{2cm}
+
+Edited by
+
+John B. Lowe
+
+Charles Zhang
+
+\vspace{2cm}
+\includegraphics[scale=1]{AquilineBooksUNT.png}
+\end{center}
 \include{copyright}
-\thispagestyle{empty}
-\cleardoublepage
-
-% no abstract
-% \include{abstract}
-
 \begin{center}
     \thispagestyle{empty}
     \vspace*{\fill}
     \Large \textit{To the Lahu people and their beautiful language}
     \vspace*{\fill}
 \end{center}
-
 \thispagestyle{empty}
 \cleardoublepage
 \include{acknowledgments}
-
 \thispagestyle{empty}
 \cleardoublepage
 \include{preface}
