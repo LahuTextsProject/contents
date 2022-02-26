@@ -36,6 +36,7 @@ mkdir tex
 cd tex
 
 cp ../*.eps .
+cp ../*.png .
 cp ../$xml_file lahutexts.xml
 cp ../*.tex .
 cp ../../transTeX/*.tex .
