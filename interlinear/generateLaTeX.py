@@ -259,8 +259,8 @@ for ((partno, part), (lpartno, lpart)) in zip(enumerate(structure),
     partname = part[0]
     lahupartname = lpart[0]
     print('\part{%s}' % partname, file=filestotex)
-    print('\label{part:%s}' % partname, file=filestotex)
     print('\\addlahutoc{part}{%s}' % lahupartname, file=filestotex)
+    print('\label{part:%s}' % partname, file=filestotex)
     # if with_baptist:
     #     print('\\addbaptisttoc{part}{%s}' % \, file=filestotex)
     #         transduce_string(transduce_string(lahupartname, decompose), baptist)
@@ -273,8 +273,8 @@ for ((partno, part), (lpartno, lpart)) in zip(enumerate(structure),
         chaptername = genre[1]
         lahuchaptername = lgenre[1]
         print('\chapter{%s}' % chaptername, file=filestotex)
-        print('\label{chapter:%s}' % chaptername.replace('"', ''), file=filestotex)
         print('\\addlahutoc{chapter}{%s}' % lahuchaptername, file=filestotex)
+        print('\label{chapter:%s}' % chaptername.replace('"', ''), file=filestotex)
         # if with_baptist:
         #     print('\\addbaptisttoc{chapter}{%s}' % \, file=filestotex)
         #         transduce_string(transduce_string(lahuchaptername, decompose), baptist)
