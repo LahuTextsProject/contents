@@ -52,7 +52,6 @@
 \raggedbottom
 
 \usepackage{layout}
-
 \usepackage{fancyhdr}
 
 % \title{Window onto a Vanished World:\\Lahu texts from Thailand in the 1960’s}
@@ -72,7 +71,15 @@
 \makeatother
 
 \usepackage{covington}
-\usepackage{acronym}
+\usepackage{chngcntr}
+\counterwithout{equation}{chapter}
+
+% uniquely number examples with chapter.text
+% thesection = part.chapter.section already...
+% \renewcommand{\theequation}{\thesection.\arabic{equation}}
+% use a single number, restart for each text
+% \renewcommand{\theequation}{arabic{equation}}
+
 \usepackage{natbib}
 % references in toc
 \usepackage[nottoc]{tocbibind}
@@ -82,6 +89,7 @@
 % \usepackage{authordate1-4}
 
 \setlength{\headsep}{10pt}
+\setlength{\headheight}{26pt}
 
 \titleformat{\chapter}[hang]{\large\bfseries}{\thechapter}{10pt}{\large\bfseries}
 
@@ -99,7 +107,7 @@
 \fancyhead[RO]{\leftmark \vspace{0.9em}}
 \fancyhead[LE]{\rightmark \vspace{0.9em}}
 
-\renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\headrulewidth}{0.4pt}
 
 \lfoot{}
 \cfoot{\thepage}
@@ -121,6 +129,8 @@
 % makes compilation really slow as we have many acronym references.
 % oh well.
 \usepackage[acronym,toc,nonumberlist,nopostdot,numberedsection=nameref]{glossaries}
+\input{abbreviations}
+\input{misc_abbreviations}
 
 \newglossary*{lexicon}{Lexicon}
 \input{lexical_glossary}
@@ -143,66 +153,18 @@
 
 \makeglossaries
 \begin{document}
-
 %\layout
 %\the\textwidth
 %
 %\the\columnwidth
 %
 %\the\columnsep
-
 %\setcounter{secnumdepth}{0} % don't number sections, just chapters
-
 \frontmatter
 
-\thispagestyle{empty}
-\cleardoublepage
-%\include{halftitle}
-%\thispagestyle{empty}
-%\cleardoublepage
-
+% we have custom title pages now... don't need maketitle
 % \maketitle
-\thispagestyle{empty}
-\begin{center}
-
-\vspace{4cm}
-{\Large CoRSAL Occasional Publications}
-
-\vspace{2cm}
-
-{\Large Volume 2}
-
-\vspace{8cm}
-
-Series editor: Shobana Chelliah
-
-\includegraphics[scale=0.15]{CoRSAL-Logo-BW-v03.png}
-
-\end{center}
-\clearpage{\thispagestyle{empty}\cleardoublepage}
-\begin{center}
-\thispagestyle{empty}
-\vspace{4cm}
-{\huge Window onto a Vanished World:\\\vspace{.75em}Lahu texts from Thailand in the 1960’s}
-
-\vspace{3cm}
-
-{\Large James A. Matisoff}
-\vspace{2cm}
-
-2022
-
-\vspace{2cm}
-
-Edited by
-
-John B. Lowe
-
-Charles Zhang
-
-\vspace{4cm}
-\includegraphics[scale=1]{AquilineBooksUNT.png}
-\end{center}
+\include{titlepages}
 \include{copyright}
 \begin{center}
     \thispagestyle{empty}
@@ -210,21 +172,18 @@ Charles Zhang
     \Large \textit{To the Lahu people and their beautiful language}
     \vspace*{\fill}
 \end{center}
+\glsaddall
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 \include{acknowledgments}
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 \include{preface}
-\clearpage{\thispagestyle{empty}\cleardoublepage}
-\glsaddall
+\clearpage{\thispagestyle{empty}}
 \part*{Symbols and Abbreviations}
 \addcontentsline{toc}{chapter}{Symbols and Abbreviations}
 \setglossarysection{section}
-\input{abbreviations}
-\input{misc_abbreviations}
 \printglossary[type=\acronymtype,title=Form Class Abbreviations]
 \printglossary[title=Miscellaneous Abbreviations]
-
-\thispagestyle{empty}
+% \thispagestyle{empty}
 \cleardoublepage
 
 %\pdfbookmark[0]{Table of Contents}{TOC}
