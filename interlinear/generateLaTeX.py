@@ -148,6 +148,7 @@ for text in texts:
     print('\setcounter{equation}{0}', file=OutLaTeX)
     print('\setcounter{footnote}{0}', file=OutLaTeX)
     print('\section{%s}' % titlestring, file=OutLaTeX)
+    print('\\thispagestyle{plain}', file=OutLaTeX)
     print('\label{sec:%s}' % textnumber, file=OutLaTeX)
     print('\\addlahutoc{section}{%s}' % lahutitlestring, file=OutLaTeX)
     # if with_baptist:
