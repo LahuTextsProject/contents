@@ -69,3 +69,4 @@ xelatex -interaction nonstopmode ${texfile} > ${texfile}.stdout3.log
 echo Done. `date`
 echo Output is tex/${texfile}.tex, logs are in the 3 ${texfile}.stdoutN.log files
 echo "=============================================================================="
+cp WindowsForgottenWorld.pdf WindowsForgottenWorld_`date +%Y%m%d%H%M`.pdf
