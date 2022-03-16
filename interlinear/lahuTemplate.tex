@@ -165,6 +165,7 @@
 % we have custom title pages now... don't need maketitle
 % \maketitle
 \include{titlepages}
+\clearpage
 \include{copyright}
 \begin{center}
     \thispagestyle{empty}
@@ -173,6 +174,14 @@
     \vspace*{\fill}
 \end{center}
 \glsaddall
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+%\pdfbookmark[0]{Table of Contents}{TOC}
+\tableofcontents
+\lahutableofcontents
+% \baptisttableofcontents
+% \chinesetableofcontents
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+\include{foreword}
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 \include{acknowledgments}
 \clearpage{\thispagestyle{empty}\cleardoublepage}
@@ -185,13 +194,6 @@
 \printglossary[title=Miscellaneous Abbreviations]
 % \thispagestyle{empty}
 \cleardoublepage
-
-%\pdfbookmark[0]{Table of Contents}{TOC}
-\tableofcontents
-\lahutableofcontents
-% \baptisttableofcontents
-% \chinesetableofcontents
-
 
 \mainmatter
 %\pdfbookmark[0]{Window onto a Vanished World}{TOC}
@@ -219,5 +221,6 @@
 \bibliography{stedtreferences}
 \fancyhead[LE]{\large{References} \vspace{0.5em}}
 \fancyhead[RO]{\large{References} \vspace{0.5em}}
-
+\clearpage{\thispagestyle{empty}\cleardoublepage}
+\include{back_blurb}
 \end{document}
