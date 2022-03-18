@@ -242,8 +242,8 @@ for text in texts:
         if catalog[textnumber][1] != '':
             if os.path.isfile(catalog[textnumber][1] + '.tex'):
                 print('\subsection*{%s}' % 'Translation', file=OutLaTeX)
-                # make sure our English titles are consistent
-                print(r'\textbf{%s}'% titlestring, file=OutLaTeX)
+                # English titles is redundant here. don't use...
+                # print(r'\textbf{%s}'% titlestring, file=OutLaTeX)
                 print('\input{%s}' % catalog[textnumber][1], file=OutLaTeX)
             else:
                 print('>>> translation file not found for #%s : %s.tex' % (textnumber, catalog[textnumber][1]))

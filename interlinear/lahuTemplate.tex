@@ -185,7 +185,11 @@
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 \include{acknowledgments}
 \clearpage{\thispagestyle{empty}\cleardoublepage}
+% prevent right running header in preface: there is no reasonable value
+\fancyhead[RO]{ \vspace{0.9em}}
 \include{preface}
+% reinstate it
+\fancyhead[RO]{\leftmark \vspace{0.9em}}
 \clearpage{\thispagestyle{empty}}
 \part*{Symbols and Abbreviations}
 \addcontentsline{toc}{chapter}{Symbols and Abbreviations}
@@ -223,4 +227,5 @@
 \fancyhead[RO]{\large{References} \vspace{0.5em}}
 \clearpage{\thispagestyle{empty}\cleardoublepage}
 \include{back_blurb}
+\clearpage{\thispagestyle{empty}\cleardoublepage}
 \end{document}
