@@ -66,8 +66,8 @@
 %}
 
 \makeatletter
-%\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
-%\patchcmd{\chapter}{}{}{}{}
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+\patchcmd{\chapter}{}{}{}{}
 \makeatother
 
 \usepackage{covington}
