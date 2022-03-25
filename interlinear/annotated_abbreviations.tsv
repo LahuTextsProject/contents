@@ -22,7 +22,7 @@ Elab.n	nominal elaborate expression
 Elab.v	verbal elaborate expression
 Elab.v + V	verbal elaborate expression + verb	Elab\textsubscript{v}+V
 Eth	ethnonym
-Extd.Elab	extended elaborate expression (more than 4 syllable)	Elab\textsubscript{extd}
+Extd.Elab	extended elaborate expression (more than 4 syllables)	Elab\textsubscript{extd}
 Interj	interjection
 LRC	left relative clause (precedes head noun)
 LRC + Nh	left relative clause plus head noun	LRC + N\textsubscript{h}
@@ -30,12 +30,11 @@ M.pfx	prefixable morpheme (may be preceded by ɔ̀-)
 N	noun
 N.dvb	deverbal noun (derived from a clause containing only a VP)
 N.ext	extentive noun
-N.h	head noun
 N.intg	interrogative noun
 N.lim	limited noun
 N.loc	locative noun
 NP	noun phrase
-N.pers	personal names
+N.pers	personal name
 NP.ext	extentive noun phrase
 NPext	extentive noun phrase	N\textsubscript{ext}
 NP.intg	interrogative noun phrase
@@ -50,8 +49,6 @@ N.sd	spatial demonstrative noun
 Nsd + Pn	spatial demonstrative noun + noun particle	N\textsubscript{sd}+P\textsubscript{n}
 N.spec + V	specifying noun + verb	N\textsubscript{spec}+V
 N.time	temporal noun
-N.rh	head of a relative clause; relative-clause head
-Nrh + RRC	head noun modified by a right relative clause N\textsubscript{rh} + RRC
 Num	numeral
 Num+Clf+Num	numeral plus classifier; quantity expression (equivalent to ``Q``)	Num+Clf
 Onomat	onomatopoeia
